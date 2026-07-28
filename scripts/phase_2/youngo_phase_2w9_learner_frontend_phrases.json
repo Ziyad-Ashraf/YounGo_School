@@ -1,0 +1,334 @@
+{
+    "clear_coupon": {
+        "english": "Clear coupon",
+        "arabic": "مسح الكوبون"
+    },
+    "manual_payment_submission_is_not_available_for_this_order_state.": {
+        "english": "Manual payment submission is not available for this order state.",
+        "arabic": "إرسال الدفع اليدوي غير متاح لحالة الطلب هذه."
+    },
+    "manual_payment_upload_is_disabled_for_zero-total_subscription_checkout._subscription_activation_is_deferred.": {
+        "english": "Manual payment upload is disabled for zero-total subscription checkout. subscription activation is deferred.",
+        "arabic": "رفع الدفع اليدوي معطّل لعملية دفع اشتراك بإجمالي صفري. يتم تأجيل تفعيل الاشتراك."
+    },
+    "manual_payment_will_be_available_soon.": {
+        "english": "Manual payment will be available soon.",
+        "arabic": "سيكون الدفع اليدوي متاحًا قريبًا."
+    },
+    "rejected": {
+        "english": "Rejected",
+        "arabic": "مرفوض"
+    },
+    "this_zero-amount_coupon_cannot_activate_access_yet.": {
+        "english": "This zero-amount coupon cannot activate access yet.",
+        "arabic": "لا يمكن لهذا الكوبون بقيمة صفرية تفعيل الوصول بعد."
+    },
+    "you_may_submit_a_new_screenshot_if_the_order_is_still_eligible.": {
+        "english": "You may submit a new screenshot if the order is still eligible.",
+        "arabic": "يمكنك إرسال لقطة شاشة جديدة إذا كان الطلب لا يزال مؤهلاً."
+    },
+    "your_manual_payment_review_is_approved._access_issuance_is_handled_by_a_later_approval_phase.": {
+        "english": "Your manual payment review is approved. access issuance is handled by a later approval phase.",
+        "arabic": "تمت الموافقة على مراجعة دفعتك اليدوية. تتم معالجة إصدار الوصول في مرحلة موافقة لاحقة."
+    },
+    "back_to_courses": {
+        "english": "Back to courses",
+        "arabic": "العودة إلى الكورسات"
+    },
+    "checkout_is_not_enabled": {
+        "english": "Checkout is not enabled",
+        "arabic": "الدفع غير مفعّل"
+    },
+    "configured_mode": {
+        "english": "Configured mode",
+        "arabic": "الوضع المُعد"
+    },
+    "local_sandbox_only": {
+        "english": "Local sandbox only",
+        "arabic": "بيئة اختبار محلية فقط"
+    },
+    "no_gateway_is_active": {
+        "english": "No gateway is active",
+        "arabic": "لا توجد بوابة دفع نشطة"
+    },
+    "pending_review": {
+        "english": "Pending review",
+        "arabic": "قيد المراجعة"
+    },
+    "reason": {
+        "english": "Reason",
+        "arabic": "السبب"
+    },
+    "this_local_checkout_skeleton_does_not_create_orders,_open_paymob,_issue_access,_or_use_legacy_gateway_rows.": {
+        "english": "This local checkout skeleton does not create orders, open paymob, issue access, or use legacy gateway rows.",
+        "arabic": "هيكل الدفع المحلي هذا لا ينشئ طلبات، ولا يفتح Paymob، ولا يصدر وصولًا، ولا يستخدم صفوف بوابات الدفع القديمة."
+    },
+    "youngo_checkout_routes_are_present_for_local_planning_only._payment_actions_are_disabled.": {
+        "english": "Youngo checkout routes are present for local planning only. payment actions are disabled.",
+        "arabic": "مسارات الدفع في YounGo موجودة للتخطيط المحلي فقط. إجراءات الدفع معطّلة."
+    },
+    "your_payment_screenshot_was_submitted_and_is_waiting_for_admin_review._access_is_not_granted_until_approval.": {
+        "english": "Your payment screenshot was submitted and is waiting for admin review. access is not granted until approval.",
+        "arabic": "تم إرسال لقطة شاشة الدفع الخاصة بك وهي بانتظار مراجعة المسؤول. لن يُمنح الوصول حتى تتم الموافقة."
+    },
+    "accepted_files": {
+        "english": "Accepted files",
+        "arabic": "الملفات المقبولة"
+    },
+    "access_counts": {
+        "english": "Access counts",
+        "arabic": "أعداد الوصول"
+    },
+    "access_summary": {
+        "english": "Access summary",
+        "arabic": "ملخص الوصول"
+    },
+    "account": {
+        "english": "Account",
+        "arabic": "الحساب"
+    },
+    "account_navigation": {
+        "english": "Account navigation",
+        "arabic": "التنقل في الحساب"
+    },
+    "add_your_facebook_link": {
+        "english": "Add your facebook link",
+        "arabic": "أضف رابط فيسبوك الخاص بك"
+    },
+    "add_your_linkedin_link": {
+        "english": "Add your linkedin link",
+        "arabic": "أضف رابط لينكدإن الخاص بك"
+    },
+    "add_your_twitter_link": {
+        "english": "Add your twitter link",
+        "arabic": "أضف رابط تويتر الخاص بك"
+    },
+    "billing": {
+        "english": "Billing",
+        "arabic": "الفوترة"
+    },
+    "browse_included_courses": {
+        "english": "Browse included courses",
+        "arabic": "تصفح الكورسات المشمولة"
+    },
+    "checkout": {
+        "english": "Checkout",
+        "arabic": "الدفع"
+    },
+    "checkout_request": {
+        "english": "Checkout request",
+        "arabic": "طلب الدفع"
+    },
+    "completed": {
+        "english": "Completed",
+        "arabic": "مكتمل"
+    },
+    "continue_courses_from_enrolments,_school-granted_access,_and_youngo_course_access_in_one_place.": {
+        "english": "Continue courses from enrolments, school-granted access, and youngo course access in one place.",
+        "arabic": "تابع الكورسات من التسجيلات ووصول المدرسة ووصول YounGo في مكان واحد."
+    },
+    "continue_learning": {
+        "english": "Continue learning",
+        "arabic": "متابعة التعلم"
+    },
+    "coupon": {
+        "english": "Coupon",
+        "arabic": "الكوبون"
+    },
+    "coupon_changes_are_available_only_while_the_order_is_still_draft.": {
+        "english": "Coupon changes are available only while the order is still draft.",
+        "arabic": "تتوفر تغييرات الكوبون فقط أثناء بقاء الطلب مسودة."
+    },
+    "course_progress": {
+        "english": "Course progress",
+        "arabic": "تقدم الكورس"
+    },
+    "courses_will_appear_after_access_is_granted": {
+        "english": "Courses will appear after access is granted",
+        "arabic": "ستظهر الكورسات بعد منح الوصول"
+    },
+    "enrolled_and_school-granted_courses_will_appear_here_without_creating_payments_or_checkout_orders.": {
+        "english": "Enrolled and school-granted courses will appear here without creating payments or checkout orders.",
+        "arabic": "ستظهر هنا الكورسات المسجل بها والممنوحة من المدرسة بدون إنشاء مدفوعات أو طلبات دفع."
+    },
+    "enter_coupon_code": {
+        "english": "Enter coupon code",
+        "arabic": "أدخل رمز الكوبون"
+    },
+    "enter_current_password": {
+        "english": "Enter current password",
+        "arabic": "أدخل كلمة المرور الحالية"
+    },
+    "final_amount": {
+        "english": "Final amount",
+        "arabic": "المبلغ النهائي"
+    },
+    "final_amount_to_pay": {
+        "english": "Final amount to pay",
+        "arabic": "المبلغ النهائي للدفع"
+    },
+    "if_your_school_grants_subscription_access_later,_it_will_appear_here.": {
+        "english": "If your school grants subscription access later, it will appear here.",
+        "arabic": "إذا منحتك المدرسة وصول اشتراك لاحقًا، فسيظهر هنا."
+    },
+    "in_progress": {
+        "english": "In progress",
+        "arabic": "قيد التقدم"
+    },
+    "instapay": {
+        "english": "Instapay",
+        "arabic": "InstaPay"
+    },
+    "keep_learner_details_current_while_youngo_continues_using_the_existing_academy_lms_account_system.": {
+        "english": "Keep learner details current while youngo continues using the existing academy lms account system.",
+        "arabic": "حافظ على تحديث بيانات المتعلم بينما يستمر YounGo في استخدام نظام حسابات Academy LMS الحالي."
+    },
+    "learner_access": {
+        "english": "Learner access",
+        "arabic": "وصول المتعلم"
+    },
+    "learner_account": {
+        "english": "Learner account",
+        "arabic": "حساب المتعلم"
+    },
+    "learner_space": {
+        "english": "Learner space",
+        "arabic": "مساحة المتعلم"
+    },
+    "learning_access_for": {
+        "english": "Learning access for",
+        "arabic": "وصول التعلم لـ"
+    },
+    "learning_summary": {
+        "english": "Learning summary",
+        "arabic": "ملخص التعلم"
+    },
+    "maximum_size": {
+        "english": "Maximum size",
+        "arabic": "الحجم الأقصى"
+    },
+    "my_access": {
+        "english": "My access",
+        "arabic": "وصولي"
+    },
+    "no_active_course_access": {
+        "english": "No active course access",
+        "arabic": "لا يوجد وصول نشط للكورسات"
+    },
+    "no_active_courses_yet": {
+        "english": "No active courses yet",
+        "arabic": "لا توجد كورسات نشطة بعد"
+    },
+    "no_active_subscription_access": {
+        "english": "No active subscription access",
+        "arabic": "لا يوجد وصول اشتراك نشط"
+    },
+    "no_coupon_applied": {
+        "english": "No coupon applied",
+        "arabic": "لم يتم تطبيق كوبون"
+    },
+    "no_purchases_yet": {
+        "english": "No purchases yet",
+        "arabic": "لا توجد مشتريات بعد"
+    },
+    "no_subscription_yet": {
+        "english": "No subscription yet",
+        "arabic": "لا يوجد اشتراك بعد"
+    },
+    "open_instapay_link": {
+        "english": "Open instapay link",
+        "arabic": "فتح رابط InstaPay"
+    },
+    "open_my_courses": {
+        "english": "Open my courses",
+        "arabic": "فتح كورساتي"
+    },
+    "orders": {
+        "english": "Orders",
+        "arabic": "الطلبات"
+    },
+    "payment_account": {
+        "english": "Payment account",
+        "arabic": "حساب الدفع"
+    },
+    "personal_details": {
+        "english": "Personal details",
+        "arabic": "التفاصيل الشخصية"
+    },
+    "profile": {
+        "english": "Profile",
+        "arabic": "الملف الشخصي"
+    },
+    "profile_info": {
+        "english": "Profile info",
+        "arabic": "معلومات الملف الشخصي"
+    },
+    "profile_photo": {
+        "english": "Profile photo",
+        "arabic": "صورة الملف الشخصي"
+    },
+    "purchase_history_is_empty": {
+        "english": "Purchase history is empty",
+        "arabic": "سجل المشتريات فارغ"
+    },
+    "purchased_courses": {
+        "english": "Purchased courses",
+        "arabic": "الكورسات المشتراة"
+    },
+    "review_active_school-granted_access_and_subscription_status_without_checkout_or_payment_actions.": {
+        "english": "Review active school-granted access and subscription status without checkout or payment actions.",
+        "arabic": "راجع وصول المدرسة النشط وحالة الاشتراك بدون إجراءات دفع أو إتمام شراء."
+    },
+    "review_course_purchases_and_open_invoices_generated_by_the_existing_academy_lms_payment_records.": {
+        "english": "Review course purchases and open invoices generated by the existing academy lms payment records.",
+        "arabic": "راجع مشتريات الكورسات والفواتير المفتوحة الناتجة عن سجلات دفع Academy LMS الحالية."
+    },
+    "school_grants": {
+        "english": "School grants",
+        "arabic": "منح المدرسة"
+    },
+    "signed_in_as": {
+        "english": "Signed in as",
+        "arabic": "مسجل الدخول باسم"
+    },
+    "start_a_youngo_learning_path": {
+        "english": "Start a youngo learning path",
+        "arabic": "ابدأ مسار تعلم في YounGo"
+    },
+    "student_profile": {
+        "english": "Student profile",
+        "arabic": "ملف الطالب"
+    },
+    "submit_payment_for_review": {
+        "english": "Submit payment for review",
+        "arabic": "إرسال الدفع للمراجعة"
+    },
+    "subscription_status": {
+        "english": "Subscription status",
+        "arabic": "حالة الاشتراك"
+    },
+    "transaction_screenshot": {
+        "english": "Transaction screenshot",
+        "arabic": "لقطة شاشة المعاملة"
+    },
+    "update_photo": {
+        "english": "Update photo",
+        "arabic": "تحديث الصورة"
+    },
+    "view_my_access": {
+        "english": "View my access",
+        "arabic": "عرض وصولي"
+    },
+    "when_a_course_is_enrolled_or_school-granted,_it_will_appear_here_with_active_lesson_access.": {
+        "english": "When a course is enrolled or school-granted, it will appear here with active lesson access.",
+        "arabic": "عند التسجيل في كورس أو منحه من المدرسة، سيظهر هنا مع وصول نشط للدروس."
+    },
+    "when_a_course_purchase_is_completed_through_the_existing_lms_checkout,_it_will_appear_here_with_invoice_access.": {
+        "english": "When a course purchase is completed through the existing lms checkout, it will appear here with invoice access.",
+        "arabic": "عند إتمام شراء كورس عبر نظام الدفع الحالي، سيظهر هنا مع إمكانية الوصول للفاتورة."
+    },
+    "user_profile": {
+        "english": "User profile",
+        "arabic": "الملف الشخصي"
+    }
+}

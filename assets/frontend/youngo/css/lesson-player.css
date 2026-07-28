@@ -1,0 +1,571 @@
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap");
+
+body.youngo-lesson-player {
+  --youngo-lesson-purple: #420f79;
+  --youngo-lesson-secondary: #7e42ab;
+  --youngo-lesson-warm: #f2bd76;
+  --youngo-lesson-bg: #faf8ff;
+  --youngo-lesson-soft: #f3f3fc;
+  --youngo-lesson-text: #191b22;
+  --youngo-lesson-muted: #4b4451;
+  --youngo-lesson-border: #cdc3d3;
+  --youngo-lesson-shadow: 0 16px 38px rgba(66, 15, 121, 0.1);
+  margin: 0;
+  background:
+    radial-gradient(circle at 10% 10%, rgba(242, 189, 118, 0.18), transparent 28%),
+    linear-gradient(180deg, #ffffff 0%, var(--youngo-lesson-bg) 48%, #ffffff 100%);
+  color: var(--youngo-lesson-text);
+  font-family: "Plus Jakarta Sans", "Inter", Arial, sans-serif;
+}
+
+body.youngo-lesson-player a,
+body.youngo-lesson-player button,
+body.youngo-lesson-player input {
+  outline-color: var(--youngo-lesson-secondary);
+  outline-offset: 3px;
+}
+
+.youngo-lesson-header {
+  min-height: 74px;
+  border-bottom: 1px solid rgba(205, 195, 211, 0.72);
+  background: rgba(255, 255, 255, 0.96);
+  box-shadow: 0 12px 30px rgba(66, 15, 121, 0.08);
+  backdrop-filter: blur(18px);
+}
+
+.youngo-lesson-header__inner {
+  width: min(100% - 48px, 1360px);
+  min-height: 74px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 180px minmax(0, 1fr) auto;
+  gap: 20px;
+  align-items: center;
+}
+
+.youngo-lesson-brand {
+  display: inline-flex;
+  align-items: center;
+}
+
+.youngo-lesson-brand img {
+  width: auto;
+  max-width: 160px;
+  max-height: 46px;
+  object-fit: contain;
+}
+
+.youngo-logo-fallback {
+  display: none;
+  align-items: center;
+  min-height: 42px;
+  color: var(--youngo-lesson-purple);
+  font-size: 24px;
+  font-weight: 800;
+}
+
+.youngo-lesson-heading {
+  min-width: 0;
+  text-align: center;
+}
+
+.youngo-lesson-heading a {
+  color: var(--youngo-lesson-text);
+  text-decoration: none;
+}
+
+.youngo-lesson-heading a:hover {
+  color: var(--youngo-lesson-purple);
+}
+
+.youngo-lesson-heading strong {
+  display: block;
+  overflow: hidden;
+  color: var(--youngo-lesson-text);
+  font-size: 17px;
+  font-weight: 800;
+  line-height: 1.25;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.youngo-lesson-progress {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  margin-top: 8px;
+  color: var(--youngo-lesson-muted);
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.youngo-lesson-progress__bar {
+  overflow: hidden;
+  width: min(220px, 38vw);
+  height: 7px;
+  border-radius: 999px;
+  background: #efe8fb;
+}
+
+.youngo-lesson-progress__bar span {
+  display: block;
+  height: 100%;
+  border-radius: inherit;
+  background: linear-gradient(90deg, var(--youngo-lesson-purple), var(--youngo-lesson-warm));
+}
+
+.youngo-lesson-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: flex-end;
+}
+
+.youngo-lesson-action {
+  display: inline-flex;
+  gap: 8px;
+  align-items: center;
+  justify-content: center;
+  min-height: 42px;
+  padding: 10px 14px;
+  border: 1px solid rgba(126, 66, 171, 0.22);
+  border-radius: 999px;
+  background: #ffffff;
+  color: var(--youngo-lesson-purple);
+  font-size: 13px;
+  font-weight: 800;
+  text-decoration: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.youngo-lesson-action:hover {
+  border-color: rgba(66, 15, 121, 0.42);
+  color: var(--youngo-lesson-purple);
+  box-shadow: 0 10px 22px rgba(66, 15, 121, 0.1);
+  transform: translateY(-1px);
+}
+
+.youngo-lesson-action--primary {
+  border-color: var(--youngo-lesson-purple);
+  background: var(--youngo-lesson-purple);
+  color: #ffffff;
+}
+
+.youngo-lesson-action--primary:hover {
+  color: #ffffff;
+}
+
+.course-playing.youngo-lesson-shell {
+  padding: 104px 0 54px;
+}
+
+.youngo-lesson-container {
+  width: min(100% - 48px, 1360px);
+  margin: 0 auto;
+}
+
+.youngo-lesson-grid {
+  align-items: flex-start;
+}
+
+.youngo-lesson-sidebar-column,
+.youngo-lesson-content-column {
+  min-width: 0;
+}
+
+.youngo-lesson-content-panel {
+  overflow: hidden;
+  border: 1px solid var(--youngo-lesson-border);
+  border-radius: 24px;
+  background: #ffffff;
+  box-shadow: var(--youngo-lesson-shadow);
+}
+
+.youngo-lesson-current {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 24px 28px;
+  border-bottom: 1px solid rgba(205, 195, 211, 0.72);
+  background: linear-gradient(135deg, #ffffff, #fbf8ff);
+}
+
+.youngo-lesson-current__eyebrow,
+.youngo-sidebar-eyebrow {
+  display: inline-flex;
+  gap: 8px;
+  align-items: center;
+  margin: 0 0 8px;
+  color: var(--youngo-lesson-secondary);
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.youngo-lesson-current h1 {
+  margin: 0;
+  color: var(--youngo-lesson-text);
+  font-size: 28px;
+  font-weight: 800;
+  line-height: 1.18;
+}
+
+.youngo-lesson-current__meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 14px;
+}
+
+.youngo-lesson-current__meta span,
+.youngo-lesson-type-pill {
+  display: inline-flex;
+  gap: 7px;
+  align-items: center;
+  min-height: 34px;
+  padding: 7px 11px;
+  border-radius: 999px;
+  background: var(--youngo-lesson-soft);
+  color: var(--youngo-lesson-muted);
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.youngo-lesson-type-pill {
+  flex: 0 0 auto;
+  background: #fff6e8;
+  color: var(--youngo-lesson-purple);
+}
+
+.youngo-lesson-content-surface {
+  padding: 24px 28px 28px;
+}
+
+.youngo-lesson-content-frame {
+  overflow: hidden;
+  border-radius: 18px;
+}
+
+.youngo-lesson-content-frame .white-space {
+  padding: 28px;
+  border: 1px solid rgba(205, 195, 211, 0.72);
+  border-radius: 18px;
+  background: #ffffff;
+  color: var(--youngo-lesson-text);
+  font-size: 16px;
+  line-height: 1.75;
+}
+
+.youngo-lesson-content-frame iframe,
+.youngo-lesson-content-frame video {
+  border-radius: 18px;
+}
+
+.youngo-lesson-locked,
+.youngo-lesson-empty {
+  padding: 48px 24px;
+  border: 1px solid rgba(205, 195, 211, 0.72);
+  border-radius: 20px;
+  background: var(--youngo-lesson-soft);
+  color: var(--youngo-lesson-muted);
+  text-align: center;
+}
+
+.youngo-lesson-empty h5 {
+  margin-bottom: 10px;
+  color: var(--youngo-lesson-text);
+  font-size: 24px;
+  font-weight: 800;
+}
+
+body.youngo-lesson-player .course-playing-sidebar {
+  position: sticky;
+  top: 94px;
+  padding: 0;
+  border: 1px solid var(--youngo-lesson-border);
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.96);
+  box-shadow: var(--youngo-lesson-shadow);
+}
+
+.youngo-lesson-sidebar__head {
+  padding: 24px 24px 18px;
+  border-bottom: 1px solid rgba(205, 195, 211, 0.72);
+}
+
+body.youngo-lesson-player .course-playing-sidebar > .title {
+  margin: 0;
+  padding: 0;
+  color: var(--youngo-lesson-text);
+  text-align: left;
+  font-size: 24px;
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+.youngo-lesson-sidebar__summary {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 14px;
+}
+
+.youngo-lesson-sidebar__summary span {
+  display: inline-flex;
+  align-items: center;
+  min-height: 30px;
+  padding: 6px 10px;
+  border-radius: 999px;
+  background: var(--youngo-lesson-soft);
+  color: var(--youngo-lesson-muted);
+  font-size: 12px;
+  font-weight: 800;
+}
+
+body.youngo-lesson-player .custom-accordion .accordion-item {
+  border-bottom: 1px solid rgba(205, 195, 211, 0.58);
+}
+
+body.youngo-lesson-player .custom-accordion .accordion-item:last-child {
+  border-bottom: 0;
+}
+
+body.youngo-lesson-player .custom-accordion .accordion-item .accordion-header .accordion-button {
+  padding: 18px 24px !important;
+  background: #ffffff;
+  color: var(--youngo-lesson-text);
+  font-family: inherit;
+  font-size: 15px;
+  font-weight: 800;
+  line-height: 1.35;
+}
+
+body.youngo-lesson-player .custom-accordion .accordion-item .accordion-header .accordion-button:not(.collapsed) {
+  background: #fbf8ff;
+  color: var(--youngo-lesson-purple);
+}
+
+body.youngo-lesson-player .custom-accordion .accordion-item .accordion-body {
+  padding: 12px 16px 18px;
+  background: #ffffff;
+}
+
+body.youngo-lesson-player .course-content-items .item {
+  padding: 0;
+  border-radius: 16px;
+}
+
+body.youngo-lesson-player .course-content-items .item + .item {
+  margin-top: 8px;
+}
+
+body.youngo-lesson-player .course-content-items .item a {
+  min-height: 58px;
+  padding: 12px 14px;
+  border: 1px solid transparent;
+  border-radius: 16px;
+  color: var(--youngo-lesson-muted);
+  font-family: inherit;
+  font-size: 14px;
+  line-height: 1.35 !important;
+}
+
+body.youngo-lesson-player .course-content-items .item:not(.active) a:hover {
+  border-color: rgba(126, 66, 171, 0.18);
+  background: var(--youngo-lesson-soft);
+  color: var(--youngo-lesson-purple);
+}
+
+body.youngo-lesson-player .course-content-items .item.active {
+  background: transparent;
+}
+
+body.youngo-lesson-player .course-content-items .item.active a {
+  background: var(--youngo-lesson-purple);
+  color: #ffffff;
+  box-shadow: 0 12px 24px rgba(66, 15, 121, 0.18);
+}
+
+.youngo-lesson-title-text {
+  color: inherit;
+  font-weight: 800;
+}
+
+body.youngo-lesson-player .course-content-items .lesson-icon {
+  margin-top: 4px !important;
+  color: inherit;
+  opacity: 0.82;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.youngo-lesson-duration {
+  flex: 0 0 auto;
+  margin-left: auto;
+  color: inherit;
+  font-size: 12px;
+  font-weight: 800;
+  opacity: 0.82;
+}
+
+body.youngo-lesson-player .lesson_checkbox {
+  accent-color: var(--youngo-lesson-purple);
+}
+
+body.youngo-lesson-player .custom-checkbox {
+  flex: 0 0 auto;
+  margin-top: 2px;
+}
+
+.youngo-lesson-tabs {
+  margin-top: 24px;
+}
+
+body.youngo-lesson-player .player-bottom-tabs {
+  gap: 8px;
+  border-bottom: 0;
+}
+
+body.youngo-lesson-player .player-bottom-tabs .nav-link {
+  border: 1px solid rgba(126, 66, 171, 0.18);
+  border-radius: 999px;
+  background: #ffffff;
+  color: var(--youngo-lesson-muted);
+  font-weight: 800;
+}
+
+body.youngo-lesson-player .player-bottom-tabs .nav-link.active {
+  border-color: var(--youngo-lesson-purple);
+  background: var(--youngo-lesson-purple);
+  color: #ffffff;
+}
+
+body.youngo-lesson-player .ct-tabs-content {
+  margin-top: 14px;
+  padding: 24px;
+  border: 1px solid rgba(205, 195, 211, 0.72);
+  border-radius: 20px;
+  background: #ffffff;
+  color: var(--youngo-lesson-text);
+}
+
+body.youngo-lesson-player .live_class,
+body.youngo-lesson-player .alert {
+  border-radius: 18px;
+}
+
+body.youngo-lesson-player .youngo-lesson-resource-link,
+body.youngo-lesson-player .btn_zoom {
+  display: inline-flex;
+  gap: 8px;
+  align-items: center;
+  border-radius: 999px;
+  color: var(--youngo-lesson-purple);
+  font-weight: 800;
+}
+
+body.youngo-lesson-player .card {
+  overflow: hidden;
+  border: 1px solid rgba(205, 195, 211, 0.72);
+  border-radius: 20px;
+  box-shadow: 0 12px 30px rgba(66, 15, 121, 0.06);
+}
+
+body.youngo-lesson-player .card-header {
+  border-bottom: 1px solid rgba(205, 195, 211, 0.72);
+  background: #fbf8ff;
+}
+
+body.youngo-lesson-player .btn-primary {
+  border-color: var(--youngo-lesson-purple);
+  background: var(--youngo-lesson-purple);
+}
+
+@media (max-width: 1080px) {
+  .youngo-lesson-header__inner {
+    grid-template-columns: 140px minmax(0, 1fr);
+  }
+
+  .youngo-lesson-actions {
+    grid-column: 1 / -1;
+    justify-content: center;
+    padding-bottom: 14px;
+  }
+
+  .youngo-lesson-heading {
+    text-align: right;
+  }
+
+  .course-playing.youngo-lesson-shell {
+    padding-top: 142px;
+  }
+}
+
+@media (max-width: 991px) {
+  body.youngo-lesson-player .course-playing-sidebar {
+    position: static;
+  }
+}
+
+@media (max-width: 720px) {
+  .youngo-lesson-header__inner,
+  .youngo-lesson-container {
+    width: min(100% - 32px, 1360px);
+  }
+
+  .youngo-lesson-header__inner {
+    grid-template-columns: 1fr;
+    gap: 12px;
+    padding: 14px 0;
+  }
+
+  .youngo-lesson-brand,
+  .youngo-lesson-actions {
+    justify-content: center;
+  }
+
+  .youngo-lesson-heading {
+    text-align: center;
+  }
+
+  .youngo-lesson-heading strong {
+    white-space: normal;
+  }
+
+  .youngo-lesson-progress {
+    flex-direction: column;
+  }
+
+  .youngo-lesson-progress__bar {
+    width: 100%;
+  }
+
+  .course-playing.youngo-lesson-shell {
+    padding-top: 214px;
+  }
+
+  .youngo-lesson-current {
+    flex-direction: column;
+    padding: 22px 20px;
+  }
+
+  .youngo-lesson-current h1 {
+    font-size: 24px;
+  }
+
+  .youngo-lesson-content-surface,
+  body.youngo-lesson-player .ct-tabs-content {
+    padding: 18px;
+  }
+
+  .youngo-lesson-content-frame .white-space {
+    padding: 20px;
+  }
+
+  .youngo-lesson-action {
+    width: 100%;
+  }
+}

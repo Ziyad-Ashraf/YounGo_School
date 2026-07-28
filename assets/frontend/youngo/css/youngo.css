@@ -1,0 +1,8894 @@
+:root {
+    --youngo-purple: #420f79;
+    --youngo-purple-brand: #5a2d91;
+    --youngo-purple-soft: #f3f3fc;
+    --youngo-purple-tint: #eedcff;
+    --youngo-secondary: #7e42ab;
+    --youngo-magenta: #b93d98;
+    --youngo-warm: #f2bd76;
+    --youngo-bg: #faf8ff;
+    --youngo-text: #191b22;
+    --youngo-muted: #4b4451;
+    --youngo-border: #cdc3d3;
+    --youngo-soft-border: #e7e7f0;
+    --youngo-white: #ffffff;
+    --youngo-shadow: 0 12px 30px rgba(90, 45, 145, 0.08);
+    --youngo-shadow-soft: 0 10px 24px rgba(90, 45, 145, 0.07);
+    --youngo-shadow-strong: 0 24px 60px rgba(66, 15, 121, 0.16);
+}
+
+.youngo-my-courses-hero {
+    padding: 54px 0 42px;
+    background:
+        radial-gradient(circle at 12% 18%, rgba(246, 197, 92, 0.22), transparent 32%),
+        linear-gradient(135deg, rgba(249, 246, 255, 0.98), rgba(236, 229, 255, 0.88));
+    border-bottom: 1px solid var(--youngo-border);
+}
+
+.youngo-my-courses-hero__grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 360px;
+    gap: 40px;
+    align-items: end;
+}
+
+.youngo-my-courses-hero h1 {
+    margin: 10px 0 14px;
+    color: var(--youngo-text);
+    font-size: 48px;
+    line-height: 1.05;
+}
+
+.youngo-my-courses-hero p {
+    max-width: 660px;
+    margin: 0;
+    color: var(--youngo-muted);
+    font-size: 18px;
+    line-height: 1.7;
+}
+
+.youngo-student-card {
+    display: grid;
+    grid-template-columns: 76px minmax(0, 1fr);
+    gap: 18px;
+    align-items: center;
+    padding: 20px;
+    border: 1px solid rgba(126, 66, 171, 0.14);
+    border-radius: 24px;
+    background: rgba(255, 255, 255, 0.82);
+    box-shadow: 0 18px 38px rgba(66, 15, 121, 0.1);
+}
+
+.youngo-student-card img {
+    width: 76px;
+    height: 76px;
+    border: 4px solid #ffffff;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 12px 24px rgba(66, 15, 121, 0.14);
+}
+
+.youngo-student-card span,
+.youngo-student-card small {
+    display: block;
+    color: var(--youngo-muted);
+}
+
+.youngo-student-card span {
+    margin-bottom: 4px;
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.youngo-student-card strong {
+    display: block;
+    color: var(--youngo-text);
+    font-size: 20px;
+    line-height: 1.25;
+}
+
+.youngo-student-card small {
+    margin-top: 4px;
+    font-size: 14px;
+    word-break: break-word;
+}
+
+.youngo-learning-stats {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 16px;
+    margin-top: 34px;
+}
+
+.youngo-learning-stats div {
+    padding: 18px 20px;
+    border: 1px solid rgba(126, 66, 171, 0.12);
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.76);
+}
+
+.youngo-learning-stats span {
+    display: block;
+    color: var(--youngo-muted);
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.youngo-learning-stats strong {
+    display: block;
+    margin-top: 8px;
+    color: var(--youngo-purple);
+    font-size: 32px;
+    line-height: 1;
+}
+
+.youngo-my-courses-page {
+    padding: 52px 0 76px;
+    background: #ffffff;
+}
+
+.youngo-my-courses-toolbar {
+    display: flex;
+    gap: 24px;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 24px;
+}
+
+.youngo-my-courses-toolbar h2 {
+    margin: 6px 0 0;
+    color: var(--youngo-text);
+    font-size: 30px;
+    line-height: 1.2;
+}
+
+.youngo-learning-list {
+    display: grid;
+    gap: 18px;
+}
+
+.youngo-learning-card {
+    display: grid;
+    grid-template-columns: 260px minmax(0, 1fr);
+    overflow: hidden;
+    border: 1px solid var(--youngo-border);
+    border-radius: 24px;
+    background: #ffffff;
+    box-shadow: 0 16px 34px rgba(66, 15, 121, 0.08);
+}
+
+.youngo-learning-card__media {
+    position: relative;
+    display: block;
+    min-height: 210px;
+    background: #f5f0ff;
+}
+
+.youngo-learning-card__media img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.youngo-learning-status {
+    position: absolute;
+    top: 14px;
+    left: 14px;
+    padding: 8px 12px;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.92);
+    color: var(--youngo-purple);
+    font-size: 12px;
+    font-weight: 800;
+    text-transform: uppercase;
+    box-shadow: 0 10px 22px rgba(30, 17, 44, 0.14);
+}
+
+.youngo-learning-status--complete {
+    color: #16784f;
+}
+
+.youngo-learning-status--expired {
+    color: #a53b3b;
+}
+
+.youngo-learning-card__body {
+    display: grid;
+    gap: 16px;
+    padding: 24px;
+}
+
+.youngo-learning-card__top {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.youngo-learning-card__top span {
+    color: var(--youngo-purple);
+    font-size: 13px;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+.youngo-learning-card__top strong {
+    color: var(--youngo-text);
+    font-size: 22px;
+    line-height: 1;
+}
+
+.youngo-learning-card h3 {
+    margin: 0;
+    color: var(--youngo-text);
+    font-size: 24px;
+    line-height: 1.25;
+}
+
+.youngo-learning-card h3 a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.youngo-learning-card h3 a:hover {
+    color: var(--youngo-purple);
+}
+
+.youngo-learning-progress div {
+    overflow: hidden;
+    height: 10px;
+    border-radius: 999px;
+    background: #efe8fb;
+}
+
+.youngo-learning-progress span {
+    display: block;
+    height: 100%;
+    border-radius: inherit;
+    background: linear-gradient(90deg, var(--youngo-purple), var(--youngo-warm));
+}
+
+.youngo-learning-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.youngo-learning-meta span,
+.youngo-learning-expiry {
+    display: inline-flex;
+    gap: 7px;
+    align-items: center;
+    min-height: 34px;
+    padding: 7px 11px;
+    border-radius: 999px;
+    background: var(--youngo-purple-soft);
+    color: var(--youngo-muted);
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.youngo-learning-meta i {
+    color: var(--youngo-purple);
+}
+
+.youngo-learning-access {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    align-items: center;
+}
+
+.youngo-learning-access__badge,
+.youngo-learning-access__source {
+    display: inline-flex;
+    align-items: center;
+    min-height: 30px;
+    padding: 6px 10px;
+    border-radius: 999px;
+    font-size: 12px;
+    font-weight: 800;
+}
+
+.youngo-learning-access__badge {
+    background: rgba(22, 120, 79, 0.12);
+    color: #16784f;
+    text-transform: uppercase;
+}
+
+.youngo-learning-access__source {
+    border: 1px solid rgba(126, 66, 171, 0.18);
+    background: #ffffff;
+    color: var(--youngo-purple);
+}
+
+.youngo-learning-access.is-locked .youngo-learning-access__badge {
+    background: rgba(165, 59, 59, 0.12);
+    color: #a53b3b;
+}
+
+.youngo-learning-access.is-warning .youngo-learning-access__badge {
+    background: rgba(242, 189, 118, 0.28);
+    color: #7a4e07;
+}
+
+.youngo-learning-access__message {
+    margin: -6px 0 0;
+    color: var(--youngo-muted);
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 1.5;
+}
+
+.youngo-learning-card__footer {
+    display: flex;
+    gap: 18px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.youngo-learning-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: flex-end;
+}
+
+.youngo-my-courses-empty {
+    max-width: 680px;
+    margin: 0 auto;
+    padding: 52px 34px;
+    border: 1px solid var(--youngo-border);
+    border-radius: 28px;
+    background: linear-gradient(180deg, #ffffff, #fbf8ff);
+    text-align: center;
+    box-shadow: var(--youngo-shadow);
+}
+
+.youngo-my-courses-empty__icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 76px;
+    height: 76px;
+    margin-bottom: 20px;
+    border-radius: 24px;
+    background: var(--youngo-purple-soft);
+    color: var(--youngo-purple);
+    font-size: 30px;
+}
+
+.youngo-my-courses-empty h2 {
+    margin: 6px 0 12px;
+    color: var(--youngo-text);
+    font-size: 30px;
+}
+
+.youngo-my-courses-empty p:not(.youngo-eyebrow) {
+    max-width: 500px;
+    margin: 0 auto 26px;
+    color: var(--youngo-muted);
+    line-height: 1.7;
+}
+
+@media (max-width: 1040px) {
+    .youngo-my-courses-hero__grid {
+        grid-template-columns: 1fr;
+    }
+
+    .youngo-student-card {
+        max-width: 520px;
+    }
+
+    .youngo-learning-card {
+        grid-template-columns: 220px minmax(0, 1fr);
+    }
+}
+
+@media (max-width: 820px) {
+    .youngo-my-courses-hero h1 {
+        font-size: 38px;
+    }
+
+    .youngo-learning-stats {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .youngo-my-courses-toolbar,
+    .youngo-learning-card__footer {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .youngo-learning-card {
+        grid-template-columns: 1fr;
+    }
+
+    .youngo-learning-card__media {
+        aspect-ratio: 16 / 10;
+        min-height: 0;
+    }
+
+    .youngo-learning-actions {
+        justify-content: flex-start;
+    }
+}
+
+@media (max-width: 620px) {
+    .youngo-my-courses-hero {
+        padding: 38px 0 34px;
+    }
+
+    .youngo-my-courses-hero h1 {
+        font-size: 31px;
+    }
+
+    .youngo-my-courses-hero p {
+        font-size: 16px;
+    }
+
+    .youngo-student-card {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .youngo-student-card img {
+        margin: 0 auto;
+    }
+
+    .youngo-learning-stats {
+        grid-template-columns: 1fr;
+    }
+
+    .youngo-my-courses-toolbar .youngo-button,
+    .youngo-learning-actions,
+    .youngo-learning-actions .youngo-button {
+        width: 100%;
+    }
+
+    .youngo-learning-actions {
+        flex-direction: column;
+    }
+
+    .youngo-learning-card,
+    .youngo-my-courses-empty {
+        border-radius: 20px;
+    }
+
+    .youngo-learning-card__body {
+        padding: 20px;
+    }
+
+    .youngo-learning-card__top {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .youngo-learning-card h3,
+    .youngo-my-courses-toolbar h2,
+    .youngo-my-courses-empty h2 {
+        font-size: 24px;
+    }
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+body.youngo-theme {
+    margin: 0;
+    overflow-x: hidden;
+    background: var(--youngo-bg);
+    color: var(--youngo-text);
+    font-family: "Plus Jakarta Sans", Arial, sans-serif;
+}
+
+body.youngo-theme a,
+body.youngo-theme button,
+body.youngo-theme summary {
+    outline-color: var(--youngo-secondary);
+    outline-offset: 4px;
+}
+
+body.youngo-theme img {
+    max-width: 100%;
+    display: block;
+}
+
+.d-hidden {
+    display: none !important;
+}
+
+.youngo-container {
+    width: min(1280px, calc(100% - 80px));
+    margin: 0 auto;
+}
+
+.youngo-container--narrow {
+    width: min(820px, calc(100% - 80px));
+}
+
+.youngo-main {
+    min-height: 58vh;
+}
+
+.youngo-header,
+.youngo-footer {
+    background: rgba(255, 255, 255, 0.94);
+    border-color: var(--youngo-border);
+}
+
+.youngo-header {
+    position: sticky;
+    top: 0;
+    z-index: 20;
+    border-bottom: 1px solid rgba(205, 195, 211, 0.72);
+    backdrop-filter: blur(18px);
+}
+
+.youngo-header__inner,
+.youngo-footer__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    padding: 16px 0;
+}
+
+.youngo-brand {
+    display: inline-flex;
+    align-items: center;
+    color: var(--youngo-purple);
+    font-size: 24px;
+    font-weight: 800;
+    letter-spacing: 0;
+    text-decoration: none;
+}
+
+.youngo-brand img {
+    max-width: 160px;
+    max-height: 44px;
+    object-fit: contain;
+}
+
+.youngo-nav,
+.youngo-header__actions,
+.youngo-footer__links,
+.youngo-actions {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.youngo-header-icon-link {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border: 1px solid rgba(205, 195, 211, 0.82);
+    border-radius: 999px;
+    background: var(--youngo-white);
+    color: var(--youngo-purple);
+    text-decoration: none;
+    transition: background 160ms ease, border-color 160ms ease, transform 160ms ease;
+}
+
+.youngo-header-icon-link:hover {
+    border-color: rgba(126, 66, 171, 0.45);
+    background: var(--youngo-purple-soft);
+    color: var(--youngo-purple);
+    transform: translateY(-1px);
+}
+
+.youngo-header-icon-link span {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    min-width: 19px;
+    height: 19px;
+    padding: 0 5px;
+    border: 2px solid var(--youngo-white);
+    border-radius: 999px;
+    background: var(--youngo-accent);
+    color: var(--youngo-white);
+    font-size: 11px;
+    font-weight: 800;
+    line-height: 15px;
+    text-align: center;
+}
+
+.youngo-language-switcher {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    min-height: 36px;
+    padding: 4px 8px;
+    border: 1px solid rgba(205, 195, 211, 0.72);
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.84);
+    color: var(--youngo-muted);
+    direction: ltr;
+    font-size: 13px;
+    font-weight: 800;
+}
+
+.youngo-language-switcher a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 34px;
+    min-height: 28px;
+    padding: 4px 8px;
+    border-radius: 999px;
+    color: var(--youngo-muted);
+    text-decoration: none;
+}
+
+.youngo-language-switcher a:hover,
+.youngo-language-switcher a:focus-visible,
+.youngo-language-switcher a.is-active {
+    background: var(--youngo-purple-soft);
+    color: var(--youngo-purple);
+}
+
+html[dir="rtl"] .youngo-header,
+html[dir="rtl"] .youngo-nav,
+html[dir="rtl"] .youngo-header__actions {
+    direction: rtl;
+}
+
+html[dir="rtl"] .youngo-language-switcher {
+    direction: ltr;
+}
+
+html[dir="rtl"] .youngo-account-hero,
+html[dir="rtl"] .youngo-account-page,
+html[dir="rtl"] .youngo-account-layout,
+html[dir="rtl"] .youngo-account-panel,
+html[dir="rtl"] .youngo-account-menu {
+    direction: rtl;
+    text-align: right;
+}
+
+.youngo-nav a,
+.youngo-link,
+.youngo-footer a {
+    color: var(--youngo-muted);
+    font-size: 14px;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.youngo-nav a {
+    padding: 8px 10px;
+    border-radius: 12px;
+}
+
+.youngo-nav a:hover,
+.youngo-link:hover,
+.youngo-footer a:hover {
+    color: var(--youngo-purple);
+}
+
+.youngo-nav a:hover {
+    background: var(--youngo-purple-soft);
+}
+
+.youngo-instructor-page {
+    padding: 28px 0 96px;
+}
+
+.youngo-instructor-hero {
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    gap: 32px;
+    padding: clamp(32px, 6vw, 72px) 0 42px;
+    border-bottom: 1px solid var(--youngo-line, #d8ddd8);
+}
+
+.youngo-instructor-identity {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.youngo-instructor-identity img {
+    width: 116px;
+    height: 116px;
+    border-radius: 28px;
+    object-fit: cover;
+    background: var(--youngo-surface-soft, #eef1ec);
+}
+
+.youngo-instructor-identity h1 {
+    margin: 0;
+    max-width: 14ch;
+}
+
+.youngo-instructor-title {
+    margin: 8px 0 0;
+    color: var(--youngo-muted, #66716a);
+}
+
+.youngo-instructor-stats {
+    display: flex;
+    gap: 24px;
+    color: var(--youngo-muted, #66716a);
+}
+
+.youngo-instructor-stats span {
+    display: grid;
+    gap: 4px;
+    min-width: 82px;
+    font-size: .78rem;
+}
+
+.youngo-instructor-stats strong {
+    color: var(--youngo-ink, #1d2b24);
+    font-size: 1.55rem;
+    line-height: 1;
+}
+
+.youngo-instructor-about {
+    max-width: 680px;
+    padding: 48px 0 18px;
+}
+
+.youngo-instructor-courses {
+    padding-top: 44px;
+}
+
+.youngo-instructor-courses .youngo-section__heading {
+    align-items: end;
+    margin-bottom: 24px;
+}
+
+.youngo-instructor-courses .youngo-section__heading > span {
+    color: var(--youngo-muted, #66716a);
+    font-size: .9rem;
+}
+
+.youngo-instructor-course-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+}
+
+.youngo-instructor-course {
+    display: grid;
+    grid-template-columns: 150px 1fr;
+    gap: 18px;
+    padding: 14px;
+    color: inherit;
+    text-decoration: none;
+    border: 1px solid var(--youngo-line, #d8ddd8);
+    border-radius: 20px;
+    background: var(--youngo-surface, #f8faf7);
+    transition: transform .2s ease, border-color .2s ease;
+}
+
+.youngo-instructor-course:hover {
+    transform: translateY(-3px);
+    border-color: var(--youngo-accent, #779a65);
+}
+
+.youngo-instructor-course img {
+    width: 150px;
+    height: 128px;
+    border-radius: 14px;
+    object-fit: cover;
+}
+
+.youngo-instructor-course > span {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    min-width: 0;
+}
+
+.youngo-instructor-course strong {
+    font-size: 1.05rem;
+    line-height: 1.25;
+}
+
+.youngo-instructor-course small {
+    display: -webkit-box;
+    overflow: hidden;
+    color: var(--youngo-muted, #66716a);
+    line-height: 1.45;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+}
+
+.youngo-instructor-course em {
+    margin-top: auto;
+    color: var(--youngo-accent-strong, #4d7045);
+    font-size: .84rem;
+    font-style: normal;
+    font-weight: 700;
+}
+
+.youngo-instructor-empty {
+    padding: 28px;
+    border-radius: 18px;
+    background: var(--youngo-surface-soft, #eef1ec);
+    color: var(--youngo-muted, #66716a);
+}
+
+@media (max-width: 760px) {
+    .youngo-instructor-hero,
+    .youngo-instructor-identity {
+        align-items: start;
+        flex-direction: column;
+    }
+
+    .youngo-instructor-stats {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .youngo-instructor-course-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.youngo-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    min-height: 46px;
+    max-width: 100%;
+    padding: 12px 20px;
+    border: 1px solid var(--youngo-purple);
+    border-radius: 12px;
+    background: var(--youngo-purple);
+    color: var(--youngo-white);
+    font-size: 14px;
+    font-weight: 800;
+    line-height: 1.2;
+    text-align: center;
+    text-decoration: none;
+    transition: background 160ms ease, border-color 160ms ease, box-shadow 160ms ease, transform 160ms ease;
+}
+
+.youngo-button:hover {
+    background: var(--youngo-purple-brand);
+    border-color: var(--youngo-purple-brand);
+    box-shadow: var(--youngo-shadow);
+    transform: translateY(-1px);
+}
+
+.youngo-button--small {
+    min-height: 38px;
+    padding: 8px 14px;
+}
+
+.youngo-button--secondary {
+    background: var(--youngo-white);
+    color: var(--youngo-purple);
+}
+
+.youngo-button--secondary:hover {
+    background: var(--youngo-purple-soft);
+    color: var(--youngo-purple);
+}
+
+.youngo-button--light {
+    border-color: var(--youngo-white);
+    background: var(--youngo-white);
+    color: var(--youngo-purple);
+}
+
+.youngo-button--ghost-light {
+    border-color: rgba(255, 255, 255, 0.72);
+    background: transparent;
+    color: var(--youngo-white);
+}
+
+.youngo-button--danger {
+    border-color: #b42318;
+    background: #b42318;
+}
+
+.youngo-button--danger:hover {
+    border-color: #912018;
+    background: #912018;
+}
+
+.youngo-text-link {
+    display: inline-flex;
+    align-items: center;
+    min-height: 40px;
+    color: var(--youngo-secondary);
+    font-size: 14px;
+    font-weight: 800;
+    text-decoration: none;
+}
+
+.youngo-text-link:hover {
+    color: var(--youngo-purple);
+    text-decoration: underline;
+    text-underline-offset: 4px;
+}
+
+.youngo-breadcrumb {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 0 0 28px;
+    color: var(--youngo-muted);
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.youngo-breadcrumb a {
+    color: var(--youngo-secondary);
+    text-decoration: none;
+}
+
+.youngo-breadcrumb a:hover {
+    color: var(--youngo-purple);
+}
+
+.youngo-course-hero {
+    position: relative;
+    overflow: hidden;
+    padding: 48px 0 72px;
+    background:
+        radial-gradient(circle at 88% 8%, rgba(242, 189, 118, 0.22), transparent 28%),
+        linear-gradient(135deg, #faf8ff 0%, #f3f3fc 52%, #ffffff 100%);
+}
+
+.youngo-course-hero__grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(340px, 430px);
+    gap: 48px;
+    align-items: start;
+}
+
+.youngo-course-hero__content h1 {
+    max-width: 760px;
+    margin: 0 0 18px;
+    color: var(--youngo-purple);
+    font-size: 48px;
+    font-weight: 800;
+    line-height: 1.08;
+    letter-spacing: 0;
+}
+
+.youngo-course-hero__lead {
+    max-width: 720px;
+    margin: 0 0 24px;
+    color: var(--youngo-muted);
+    font-size: 18px;
+    line-height: 1.7;
+}
+
+.youngo-course-meta,
+.youngo-course-chips {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.youngo-course-meta {
+    margin: 0 0 18px;
+}
+
+.youngo-course-meta > span,
+.youngo-course-instructor-chip,
+.youngo-course-chips span {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    min-height: 38px;
+    padding: 8px 12px;
+    border: 1px solid rgba(205, 195, 211, 0.72);
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.82);
+    color: var(--youngo-muted);
+    font-size: 13px;
+    font-weight: 800;
+    text-decoration: none;
+}
+
+.youngo-course-meta i {
+    color: var(--youngo-magenta);
+}
+
+.youngo-course-instructor-chip img {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.youngo-course-instructor-chip strong {
+    color: var(--youngo-purple);
+}
+
+.youngo-course-chips span {
+    min-height: 34px;
+    background: var(--youngo-purple-tint);
+    color: var(--youngo-purple);
+}
+
+.youngo-course-card,
+.youngo-course-section,
+.youngo-side-card,
+.youngo-related-card,
+.youngo-review-form,
+.youngo-review-card,
+.youngo-instructor-card,
+.youngo-custom-fields article {
+    border: 1px solid rgba(205, 195, 211, 0.76);
+    border-radius: 24px;
+    background: var(--youngo-white);
+    box-shadow: var(--youngo-shadow);
+}
+
+.youngo-course-card {
+    position: sticky;
+    top: 92px;
+    padding: 16px;
+}
+
+.youngo-course-media {
+    position: relative;
+    overflow: hidden;
+    border-radius: 20px;
+    background: var(--youngo-purple-soft);
+    aspect-ratio: 16 / 10;
+}
+
+.youngo-course-media > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.youngo-course-media > button {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 64px;
+    height: 64px;
+    border: 0;
+    border-radius: 50%;
+    background: rgba(66, 15, 121, 0.92);
+    color: var(--youngo-white);
+    font-size: 20px;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+    box-shadow: var(--youngo-shadow-strong);
+}
+
+.youngo-wishlist-toggle {
+    position: absolute;
+    right: 14px;
+    top: 14px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.92);
+    color: var(--youngo-muted);
+    box-shadow: var(--youngo-shadow);
+    cursor: pointer;
+}
+
+.youngo-wishlist-toggle.red-heart,
+.red-heart {
+    color: #d92d7f;
+}
+
+.youngo-course-price {
+    display: flex;
+    align-items: baseline;
+    gap: 12px;
+    padding: 22px 4px 14px;
+}
+
+.youngo-course-price strong {
+    color: var(--youngo-purple);
+    font-size: 32px;
+    font-weight: 800;
+}
+
+.youngo-course-price del {
+    color: var(--youngo-muted);
+    font-size: 16px;
+}
+
+.youngo-course-actions {
+    display: grid;
+    gap: 10px;
+}
+
+.youngo-course-access-status {
+    display: grid;
+    grid-template-columns: 36px 1fr;
+    gap: 12px;
+    align-items: start;
+    margin: 0 0 14px;
+    padding: 13px 14px;
+    border: 1px solid var(--youngo-soft-border);
+    border-radius: 16px;
+    background: #faf8ff;
+    color: var(--youngo-text);
+}
+
+.youngo-course-access-status__badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: #ffffff;
+    color: var(--youngo-purple);
+    box-shadow: 0 8px 20px rgba(75, 51, 161, 0.1);
+}
+
+.youngo-course-access-status strong {
+    display: block;
+    margin-bottom: 3px;
+    font-size: 14px;
+    font-weight: 900;
+}
+
+.youngo-course-access-status p {
+    margin: 0;
+    color: var(--youngo-muted);
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 1.45;
+}
+
+.youngo-course-access-status.is-active {
+    border-color: rgba(28, 150, 95, 0.22);
+    background: #f0fbf6;
+}
+
+.youngo-course-access-status.is-active .youngo-course-access-status__badge {
+    color: #15845a;
+}
+
+.youngo-course-access-status.is-locked {
+    border-color: rgba(202, 73, 93, 0.22);
+    background: #fff5f6;
+}
+
+.youngo-course-access-status.is-locked .youngo-course-access-status__badge {
+    color: #c83250;
+}
+
+.youngo-course-access-status.is-warning {
+    border-color: rgba(189, 125, 20, 0.24);
+    background: #fff8ea;
+}
+
+.youngo-course-access-status.is-warning .youngo-course-access-status__badge,
+.youngo-course-access-status.is-planned .youngo-course-access-status__badge {
+    color: #b86f0e;
+}
+
+.youngo-course-actions .youngo-button {
+    width: 100%;
+}
+
+.youngo-course-facts {
+    display: grid;
+    gap: 10px;
+    margin-top: 18px;
+    padding-top: 18px;
+    border-top: 1px solid var(--youngo-soft-border);
+}
+
+.youngo-course-facts div {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    color: var(--youngo-muted);
+    font-size: 14px;
+}
+
+.youngo-course-facts strong {
+    color: var(--youngo-text);
+}
+
+.youngo-course-body {
+    padding: 64px 0 72px;
+}
+
+.youngo-course-body__grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 300px;
+    gap: 32px;
+    align-items: start;
+}
+
+.youngo-course-content {
+    display: grid;
+    gap: 24px;
+}
+
+.youngo-course-section {
+    padding: 28px;
+}
+
+.youngo-course-section__heading {
+    margin-bottom: 18px;
+}
+
+.youngo-course-section__heading h2,
+.youngo-section__heading h2 {
+    margin: 0;
+    color: var(--youngo-purple);
+    font-size: 28px;
+    line-height: 1.2;
+}
+
+.youngo-rich-text {
+    color: var(--youngo-muted);
+    font-size: 16px;
+    line-height: 1.75;
+}
+
+.youngo-rich-text p:first-child {
+    margin-top: 0;
+}
+
+.youngo-rich-text p:last-child {
+    margin-bottom: 0;
+}
+
+.youngo-check-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+}
+
+.youngo-check-grid div {
+    display: flex;
+    gap: 10px;
+    min-height: 54px;
+    padding: 14px;
+    border-radius: 16px;
+    background: var(--youngo-purple-soft);
+    color: var(--youngo-text);
+    font-weight: 700;
+}
+
+.youngo-check-grid i {
+    margin-top: 3px;
+    color: var(--youngo-magenta);
+}
+
+.youngo-check-grid.is-soft div {
+    background: #fff8ef;
+}
+
+.youngo-curriculum {
+    display: grid;
+    gap: 12px;
+}
+
+.youngo-curriculum-section {
+    border: 1px solid var(--youngo-soft-border);
+    border-radius: 18px;
+    background: #fff;
+    overflow: hidden;
+}
+
+.youngo-curriculum-section summary {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 18px;
+    color: var(--youngo-purple);
+    font-weight: 800;
+    cursor: pointer;
+}
+
+.youngo-curriculum-section summary small {
+    color: var(--youngo-muted);
+    font-weight: 700;
+}
+
+.youngo-curriculum-section ul {
+    display: grid;
+    gap: 0;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    border-top: 1px solid var(--youngo-soft-border);
+}
+
+.youngo-curriculum-section li {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: 12px;
+    align-items: center;
+    padding: 14px 18px;
+    border-top: 1px solid rgba(231, 231, 240, 0.7);
+}
+
+.youngo-curriculum-section li:first-child {
+    border-top: 0;
+}
+
+.youngo-curriculum-section li a {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    color: var(--youngo-text);
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.youngo-curriculum-section li i {
+    color: var(--youngo-secondary);
+}
+
+.youngo-curriculum-section li small {
+    color: var(--youngo-muted);
+}
+
+.youngo-curriculum-section li button {
+    min-height: 32px;
+    padding: 6px 10px;
+    border: 1px solid var(--youngo-purple);
+    border-radius: 999px;
+    background: var(--youngo-white);
+    color: var(--youngo-purple);
+    font-weight: 800;
+    cursor: pointer;
+}
+
+.youngo-instructor-list {
+    display: grid;
+    gap: 16px;
+}
+
+.youngo-instructor-card,
+.youngo-review-card {
+    display: grid;
+    grid-template-columns: 96px minmax(0, 1fr);
+    gap: 18px;
+    padding: 18px;
+}
+
+.youngo-instructor-card > img,
+.youngo-review-card > img {
+    width: 96px;
+    height: 96px;
+    border-radius: 20px;
+    object-fit: cover;
+}
+
+.youngo-instructor-card h3,
+.youngo-review-card h3,
+.youngo-review-form h3,
+.youngo-side-card h3,
+.youngo-custom-fields h3 {
+    margin: 0 0 6px;
+    color: var(--youngo-purple);
+    font-size: 20px;
+}
+
+.youngo-instructor-card p,
+.youngo-review-card p,
+.youngo-side-card p {
+    margin: 0 0 10px;
+    color: var(--youngo-muted);
+    line-height: 1.6;
+}
+
+.youngo-instructor-card__actions,
+.youngo-review-card__actions {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 14px;
+}
+
+.youngo-review-form {
+    margin-bottom: 18px;
+    padding: 20px;
+}
+
+.youngo-review-form form,
+.youngo-review-edit form {
+    display: grid;
+    gap: 12px;
+}
+
+.youngo-review-form label {
+    display: grid;
+    gap: 6px;
+    color: var(--youngo-text);
+    font-weight: 800;
+}
+
+.youngo-review-form select,
+.youngo-review-form textarea,
+.youngo-review-edit select,
+.youngo-review-edit textarea {
+    width: 100%;
+    min-height: 46px;
+    padding: 10px 12px;
+    border: 1px solid var(--youngo-border);
+    border-radius: 12px;
+    font: inherit;
+}
+
+.youngo-review-form textarea,
+.youngo-review-edit textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+.youngo-review-card__top {
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+    margin-bottom: 10px;
+}
+
+.youngo-stars {
+    color: #d7cfda;
+    white-space: nowrap;
+}
+
+.youngo-stars .is-filled,
+.youngo-related-card i {
+    color: var(--youngo-warm);
+}
+
+.youngo-review-card__actions a {
+    color: var(--youngo-secondary);
+    font-size: 13px;
+    font-weight: 800;
+    text-decoration: none;
+}
+
+.youngo-review-edit {
+    margin-top: 14px;
+}
+
+.youngo-course-faqs {
+    display: grid;
+    gap: 12px;
+}
+
+.youngo-course-faqs details {
+    border: 1px solid var(--youngo-soft-border);
+    border-radius: 16px;
+    background: #fff;
+}
+
+.youngo-course-faqs summary {
+    padding: 16px;
+    color: var(--youngo-purple);
+    font-weight: 800;
+    cursor: pointer;
+}
+
+.youngo-course-faqs details div {
+    padding: 0 16px 16px;
+    color: var(--youngo-muted);
+    line-height: 1.7;
+}
+
+.youngo-custom-fields {
+    display: grid;
+    gap: 16px;
+}
+
+.youngo-custom-fields article {
+    padding: 18px;
+    box-shadow: none;
+}
+
+.youngo-custom-fields h4 {
+    margin: 12px 0 6px;
+    color: var(--youngo-text);
+}
+
+.youngo-custom-gallery {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 12px;
+}
+
+.youngo-custom-gallery img {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    border-radius: 14px;
+    object-fit: cover;
+}
+
+.youngo-course-side {
+    position: sticky;
+    top: 92px;
+}
+
+.youngo-side-card {
+    padding: 22px;
+}
+
+.youngo-share-row {
+    display: flex;
+    gap: 10px;
+    margin-top: 16px;
+}
+
+.youngo-share-row a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: var(--youngo-purple-soft);
+    color: var(--youngo-purple);
+    text-decoration: none;
+}
+
+.youngo-related-courses {
+    padding: 8px 0 80px;
+}
+
+.youngo-related-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 20px;
+    margin-top: 24px;
+}
+
+.youngo-related-card {
+    overflow: hidden;
+    color: var(--youngo-text);
+    text-decoration: none;
+}
+
+.youngo-related-card > div:first-child {
+    position: relative;
+    aspect-ratio: 4 / 3;
+    background: var(--youngo-purple-soft);
+}
+
+.youngo-related-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.youngo-related-card h3 {
+    min-height: 56px;
+    margin: 16px 16px 8px;
+    color: var(--youngo-purple);
+    font-size: 17px;
+    line-height: 1.35;
+}
+
+.youngo-related-card p,
+.youngo-related-card strong {
+    display: block;
+    margin: 0 16px 12px;
+}
+
+.youngo-related-card p {
+    color: var(--youngo-muted);
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.youngo-related-card strong {
+    color: var(--youngo-purple);
+    font-size: 18px;
+}
+
+.youngo-course-hero .youngo-course-card {
+    padding: 18px;
+    background: linear-gradient(180deg, #ffffff 0%, #fbf8ff 100%);
+}
+
+.youngo-course-hero .youngo-course-media {
+    aspect-ratio: 16 / 11;
+    border: 1px solid rgba(126, 66, 171, 0.14);
+    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.72);
+}
+
+.youngo-course-hero .youngo-course-media::after {
+    position: absolute;
+    inset: auto 0 0;
+    height: 36%;
+    content: "";
+    background: linear-gradient(180deg, rgba(66, 15, 121, 0) 0%, rgba(66, 15, 121, 0.26) 100%);
+    pointer-events: none;
+}
+
+.youngo-course-hero .youngo-course-media > img {
+    transform: scale(1.01);
+}
+
+.youngo-course-hero .youngo-course-media > button {
+    z-index: 2;
+    border: 3px solid rgba(255, 255, 255, 0.82);
+}
+
+.youngo-wishlist-toggle {
+    z-index: 3;
+}
+
+.youngo-course-price {
+    display: grid;
+    gap: 6px;
+    align-items: start;
+    padding: 22px 4px 16px;
+}
+
+.youngo-course-price__label {
+    color: var(--youngo-muted);
+    font-size: 12px;
+    font-weight: 900;
+    letter-spacing: 0;
+    text-transform: uppercase;
+}
+
+.youngo-course-price__value {
+    display: flex;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.youngo-price-label,
+.youngo-course-price__value,
+.youngo-related-card__price,
+.youngo-courses-card__topline strong,
+.youngo-commerce-course-card__media span {
+    direction: ltr;
+    unicode-bidi: isolate;
+}
+
+.youngo-course-price strong {
+    line-height: 1;
+}
+
+.youngo-course-actions__note {
+    margin: 12px 2px 0;
+    color: var(--youngo-muted);
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 1.5;
+}
+
+.youngo-course-facts div {
+    align-items: center;
+    padding: 10px 12px;
+    border-radius: 14px;
+    background: #faf8ff;
+}
+
+.youngo-course-facts strong {
+    color: var(--youngo-purple);
+    font-size: 15px;
+}
+
+.youngo-curriculum-section summary {
+    padding: 20px;
+    background: linear-gradient(135deg, #ffffff 0%, #faf8ff 100%);
+}
+
+.youngo-curriculum-section__title {
+    min-width: 0;
+    line-height: 1.35;
+}
+
+.youngo-curriculum-section__meta {
+    display: inline-flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    gap: 8px;
+}
+
+.youngo-curriculum-section__meta span {
+    display: inline-flex;
+    align-items: center;
+    min-height: 28px;
+    padding: 5px 10px;
+    border-radius: 999px;
+    background: rgba(126, 66, 171, 0.1);
+    color: var(--youngo-purple);
+    font-size: 12px;
+    font-weight: 900;
+}
+
+.youngo-curriculum-section li {
+    padding: 14px 18px;
+    background: #fff;
+}
+
+.youngo-curriculum-section li:hover {
+    background: #fffdf8;
+}
+
+.youngo-curriculum-section li a {
+    min-width: 0;
+}
+
+.youngo-lesson-title {
+    display: inline-flex;
+    align-items: center;
+    min-width: 0;
+    gap: 10px;
+}
+
+.youngo-lesson-title span {
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.youngo-duration-pill,
+.youngo-preview-pill {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 32px;
+    border-radius: 999px;
+    font-size: 12px;
+    font-weight: 900;
+    white-space: nowrap;
+}
+
+.youngo-duration-pill {
+    padding: 6px 10px;
+    background: #f8f4ff;
+    color: var(--youngo-muted);
+}
+
+.youngo-preview-pill {
+    gap: 6px;
+    min-width: 92px;
+}
+
+.youngo-instructor-card {
+    grid-template-columns: 112px minmax(0, 1fr);
+    padding: 22px;
+    background: linear-gradient(135deg, #ffffff 0%, #fbf8ff 100%);
+}
+
+.youngo-instructor-avatar {
+    position: relative;
+    overflow: hidden;
+    border-radius: 24px;
+}
+
+.youngo-instructor-avatar::after {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    border: 1px solid rgba(126, 66, 171, 0.2);
+    border-radius: 24px;
+    content: "";
+}
+
+.youngo-instructor-avatar img,
+.youngo-review-card__avatar img {
+    position: relative;
+    z-index: 1;
+    width: 96px;
+    height: 96px;
+    border-radius: 22px;
+    object-fit: cover;
+    box-shadow: 0 14px 28px rgba(66, 15, 121, 0.12);
+}
+
+.youngo-instructor-card__body,
+.youngo-review-card__content {
+    min-width: 0;
+}
+
+.youngo-instructor-card__top {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 14px;
+    margin-bottom: 8px;
+}
+
+.youngo-instructor-role {
+    font-weight: 800;
+}
+
+.youngo-instructor-badge {
+    display: inline-flex;
+    align-items: center;
+    min-height: 30px;
+    padding: 6px 10px;
+    border-radius: 999px;
+    background: #fff8ef;
+    color: var(--youngo-secondary);
+    font-size: 12px;
+    font-weight: 900;
+    white-space: nowrap;
+}
+
+.youngo-instructor-bio {
+    margin-top: 10px;
+}
+
+.youngo-instructor-trust {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 14px;
+}
+
+.youngo-instructor-trust span {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    min-height: 32px;
+    padding: 6px 10px;
+    border-radius: 999px;
+    background: rgba(126, 66, 171, 0.1);
+    color: var(--youngo-purple);
+    font-size: 12px;
+    font-weight: 900;
+}
+
+.youngo-review-card {
+    grid-template-columns: 72px minmax(0, 1fr);
+    padding: 20px;
+    background: #fff;
+}
+
+.youngo-review-card__avatar img {
+    width: 72px;
+    height: 72px;
+    border-radius: 18px;
+}
+
+.youngo-review-card__body {
+    color: var(--youngo-text);
+    font-weight: 600;
+}
+
+.youngo-review-card__actions {
+    margin-top: 10px;
+}
+
+.youngo-review-action {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    min-height: 30px;
+    padding: 5px 8px;
+    border-radius: 999px;
+    background: rgba(126, 66, 171, 0.08);
+}
+
+.youngo-review-action.is-danger {
+    background: rgba(217, 45, 127, 0.08);
+    color: #9d275f;
+}
+
+.youngo-related-card {
+    display: grid;
+    grid-template-rows: auto 1fr;
+    overflow: hidden;
+    border-radius: 20px;
+    transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
+
+.youngo-related-card:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--youngo-shadow-strong);
+}
+
+.youngo-related-card__media {
+    position: relative;
+    overflow: hidden;
+    aspect-ratio: 16 / 10;
+    background: var(--youngo-purple-soft);
+}
+
+.youngo-related-card__body {
+    display: grid;
+    align-content: start;
+    gap: 10px;
+    padding: 16px;
+}
+
+.youngo-related-card h3,
+.youngo-related-card p,
+.youngo-related-card strong {
+    margin: 0;
+}
+
+.youngo-related-card h3 {
+    min-height: 0;
+    font-size: 17px;
+}
+
+.youngo-related-card__meta {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.youngo-related-card__meta span {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.youngo-related-card__price {
+    align-self: end;
+}
+
+.youngo-empty-note {
+    margin: 0;
+    color: var(--youngo-muted);
+    font-weight: 700;
+}
+
+.youngo-mini-course {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: 10px;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid var(--youngo-soft-border);
+}
+
+.youngo-mini-course a {
+    display: grid;
+    grid-template-columns: 58px minmax(0, 1fr);
+    gap: 10px;
+    align-items: center;
+    color: var(--youngo-text);
+    text-decoration: none;
+}
+
+.youngo-mini-course img {
+    width: 58px;
+    height: 44px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.youngo-mini-course strong,
+.youngo-mini-course small {
+    display: block;
+}
+
+.youngo-mini-course small {
+    color: var(--youngo-muted);
+}
+
+.youngo-mini-course button,
+.youngo-cart-row button {
+    border: 0;
+    background: transparent;
+    color: var(--youngo-purple);
+    cursor: pointer;
+}
+
+.youngo-cart-fragment {
+    display: grid;
+    gap: 12px;
+}
+
+.youngo-cart-row {
+    display: grid;
+    grid-template-columns: 80px minmax(0, 1fr) auto auto;
+    gap: 14px;
+    align-items: center;
+    padding: 12px;
+    border: 1px solid var(--youngo-soft-border);
+    border-radius: 16px;
+}
+
+.youngo-cart-row img {
+    width: 80px;
+    height: 58px;
+    border-radius: 12px;
+    object-fit: cover;
+}
+
+.youngo-cart-row a {
+    color: var(--youngo-purple);
+    font-weight: 800;
+    text-decoration: none;
+}
+
+.youngo-cart-total {
+    display: flex;
+    justify-content: space-between;
+    padding: 16px;
+    border-radius: 16px;
+    background: var(--youngo-purple-soft);
+    color: var(--youngo-purple);
+    font-weight: 800;
+}
+
+.youngo-commerce-hero {
+    padding: 58px 0 34px;
+    background:
+        radial-gradient(circle at top right, rgba(242, 189, 118, 0.22), transparent 32%),
+        linear-gradient(135deg, #faf8ff 0%, #f3f3fc 100%);
+}
+
+.youngo-commerce-hero__grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 280px;
+    gap: 28px;
+    align-items: end;
+}
+
+.youngo-commerce-hero h1 {
+    max-width: 780px;
+    margin: 10px 0 12px;
+    color: var(--youngo-text);
+    font-size: clamp(38px, 5vw, 64px);
+    line-height: 1.02;
+    letter-spacing: 0;
+}
+
+.youngo-commerce-hero p:not(.youngo-eyebrow) {
+    max-width: 700px;
+    margin: 0;
+    color: var(--youngo-muted);
+    font-size: 17px;
+    line-height: 1.75;
+}
+
+.youngo-commerce-summary-card {
+    display: grid;
+    gap: 8px;
+    padding: 22px;
+    border: 1px solid rgba(205, 195, 211, 0.88);
+    border-radius: 22px;
+    background: rgba(255, 255, 255, 0.88);
+    box-shadow: var(--youngo-shadow);
+}
+
+.youngo-commerce-summary-card span,
+.youngo-commerce-summary-card small {
+    color: var(--youngo-muted);
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.youngo-commerce-summary-card strong {
+    color: var(--youngo-purple);
+    font-size: 44px;
+    font-weight: 800;
+    line-height: 1;
+}
+
+.youngo-commerce-page {
+    padding: 44px 0 84px;
+}
+
+.youngo-cart-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 360px;
+    gap: 28px;
+    align-items: start;
+}
+
+.youngo-cart-list,
+.youngo-cart-summary,
+.youngo-commerce-empty {
+    border: 1px solid rgba(205, 195, 211, 0.78);
+    border-radius: 24px;
+    background: var(--youngo-white);
+    box-shadow: var(--youngo-shadow-soft);
+}
+
+.youngo-cart-list {
+    display: grid;
+    gap: 14px;
+    padding: 22px;
+}
+
+.youngo-commerce-toolbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 18px;
+    margin-bottom: 6px;
+}
+
+.youngo-commerce-toolbar h2 {
+    margin: 4px 0 0;
+    color: var(--youngo-text);
+    font-size: 28px;
+    line-height: 1.2;
+}
+
+.youngo-cart-row__body {
+    display: grid;
+    gap: 8px;
+    min-width: 0;
+}
+
+.youngo-cart-row__meta,
+.youngo-commerce-course-card__meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px 14px;
+    color: var(--youngo-muted);
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.youngo-cart-row__meta span,
+.youngo-commerce-course-card__meta span {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.youngo-cart-summary {
+    position: sticky;
+    top: 96px;
+    display: grid;
+    gap: 16px;
+    padding: 22px;
+}
+
+.youngo-cart-summary h3 {
+    margin: 0;
+    color: var(--youngo-text);
+    font-size: 24px;
+}
+
+.youngo-cart-summary__line {
+    display: flex;
+    justify-content: space-between;
+    gap: 14px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid var(--youngo-soft-border);
+    color: var(--youngo-muted);
+    font-weight: 700;
+}
+
+.youngo-cart-summary__line strong {
+    color: var(--youngo-text);
+}
+
+.youngo-commerce-alert {
+    display: grid;
+    gap: 4px;
+    padding: 13px 14px;
+    border: 1px solid rgba(126, 66, 171, 0.22);
+    border-radius: 16px;
+    background: rgba(243, 243, 252, 0.86);
+    color: var(--youngo-muted);
+    font-size: 13px;
+    line-height: 1.55;
+}
+
+.youngo-commerce-alert strong {
+    color: var(--youngo-purple);
+}
+
+.youngo-commerce-alert--success {
+    border-color: rgba(34, 139, 83, 0.28);
+    background: #edf8f1;
+    color: #1f6f43;
+}
+
+.youngo-commerce-alert--danger {
+    border-color: rgba(180, 35, 24, 0.28);
+    background: #fff3f2;
+    color: #9b251c;
+}
+
+.youngo-coupon-form,
+.youngo-checkout-form,
+.youngo-gift-field {
+    display: grid;
+    gap: 10px;
+}
+
+.youngo-coupon-form label,
+.youngo-gift-field label {
+    color: var(--youngo-text);
+    font-size: 13px;
+    font-weight: 800;
+}
+
+.youngo-coupon-form > div {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    overflow: hidden;
+    border: 1px solid var(--youngo-soft-border);
+    border-radius: 14px;
+    background: var(--youngo-white);
+}
+
+.youngo-coupon-form input,
+.youngo-gift-field input {
+    width: 100%;
+    min-height: 44px;
+    border: 1px solid var(--youngo-soft-border);
+    border-radius: 14px;
+    padding: 0 14px;
+    color: var(--youngo-text);
+    font: inherit;
+}
+
+.youngo-coupon-form > div input {
+    border: 0;
+    border-radius: 0;
+}
+
+.youngo-coupon-form button {
+    border: 0;
+    padding: 0 16px;
+    background: var(--youngo-purple);
+    color: var(--youngo-white);
+    font-weight: 800;
+    cursor: pointer;
+}
+
+.youngo-gift-toggle {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--youngo-text);
+    font-size: 14px;
+    font-weight: 800;
+}
+
+.youngo-gift-toggle input {
+    width: 18px;
+    height: 18px;
+    accent-color: var(--youngo-purple);
+}
+
+#check_gift_user_message {
+    min-height: 18px;
+    color: var(--youngo-muted);
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.youngo-commerce-empty {
+    display: grid;
+    justify-items: center;
+    gap: 12px;
+    padding: 48px 28px;
+    text-align: center;
+}
+
+.youngo-commerce-empty__icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 70px;
+    height: 70px;
+    border-radius: 22px;
+    background: var(--youngo-purple-soft);
+    color: var(--youngo-purple);
+    font-size: 28px;
+}
+
+.youngo-commerce-empty h2 {
+    max-width: 520px;
+    margin: 0;
+    color: var(--youngo-text);
+    font-size: 30px;
+}
+
+.youngo-commerce-empty p:not(.youngo-eyebrow) {
+    max-width: 580px;
+    margin: 0;
+    color: var(--youngo-muted);
+    line-height: 1.7;
+}
+
+.youngo-commerce-empty__actions,
+.youngo-commerce-course-card__actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-items: center;
+}
+
+.youngo-wishlist-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.youngo-commerce-course-card {
+    overflow: hidden;
+    border: 1px solid rgba(205, 195, 211, 0.78);
+    border-radius: 22px;
+    background: var(--youngo-white);
+    box-shadow: var(--youngo-shadow-soft);
+}
+
+.youngo-commerce-course-card__media {
+    position: relative;
+    display: block;
+    aspect-ratio: 16 / 10;
+    overflow: hidden;
+    color: var(--youngo-white);
+    text-decoration: none;
+}
+
+.youngo-commerce-course-card__media img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.youngo-commerce-course-card__media span {
+    position: absolute;
+    left: 14px;
+    bottom: 14px;
+    padding: 7px 11px;
+    border-radius: 999px;
+    background: rgba(66, 15, 121, 0.88);
+    color: var(--youngo-white);
+    font-size: 12px;
+    font-weight: 800;
+}
+
+.youngo-commerce-course-card__body {
+    display: grid;
+    gap: 14px;
+    padding: 18px;
+}
+
+.youngo-commerce-course-card__topline {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    align-items: center;
+}
+
+.youngo-commerce-course-card__topline > span {
+    color: var(--youngo-secondary);
+    font-size: 12px;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+.youngo-commerce-course-card h3 {
+    margin: 0;
+    font-size: 20px;
+    line-height: 1.25;
+}
+
+.youngo-commerce-course-card h3 a {
+    color: var(--youngo-text);
+    text-decoration: none;
+}
+
+.youngo-commerce-course-card h3 a:hover {
+    color: var(--youngo-purple);
+}
+
+.youngo-account-hero {
+    padding: 58px 0 34px;
+    background:
+        radial-gradient(circle at top right, rgba(242, 189, 118, 0.22), transparent 32%),
+        linear-gradient(135deg, #faf8ff 0%, #f3f3fc 100%);
+}
+
+.youngo-checkout-hero {
+    position: relative;
+    overflow: hidden;
+    padding: 42px 0 46px;
+    background:
+        radial-gradient(circle at 88% 20%, rgba(185, 61, 152, 0.14), transparent 26%),
+        radial-gradient(circle at 8% 92%, rgba(242, 189, 118, 0.18), transparent 30%),
+        linear-gradient(135deg, #faf8ff 0%, #f1ebff 100%);
+}
+
+.youngo-checkout-hero__content {
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    gap: 32px;
+}
+
+.youngo-checkout-hero h1 {
+    max-width: 760px;
+    margin-bottom: 16px;
+    font-size: clamp(36px, 5vw, 60px);
+}
+
+.youngo-checkout-reference {
+    flex: 0 0 auto;
+    min-width: 220px;
+    padding: 18px 20px;
+    border: 1px solid rgba(90, 45, 145, 0.14);
+    border-radius: 18px;
+    background: rgba(255, 255, 255, 0.72);
+    box-shadow: var(--youngo-shadow-soft);
+}
+
+.youngo-checkout-reference span,
+.youngo-checkout-reference strong {
+    display: block;
+}
+
+.youngo-checkout-reference span {
+    margin-bottom: 7px;
+    color: var(--youngo-muted);
+    font-size: 12px;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+.youngo-checkout-reference strong {
+    color: var(--youngo-purple);
+    font-size: 16px;
+    letter-spacing: 0.03em;
+}
+
+.youngo-checkout-page {
+    background: linear-gradient(180deg, #fff 0%, #faf8ff 100%);
+}
+
+.youngo-checkout-page[dir="rtl"],
+.youngo-checkout-page[dir="rtl"] .youngo-checkout-panel {
+    direction: rtl;
+    text-align: right;
+}
+
+.youngo-checkout-page[dir="rtl"] .youngo-checkout-panel form,
+.youngo-checkout-page[dir="rtl"] .youngo-checkout-notice {
+    text-align: right;
+}
+
+.youngo-checkout-page[dir="rtl"] .youngo-checkout-step span {
+    font-family: Arial, sans-serif;
+}
+
+.youngo-checkout-panel {
+    max-width: 1040px;
+    margin: 0 auto;
+    gap: 26px;
+    border-color: rgba(90, 45, 145, 0.16);
+    box-shadow: var(--youngo-shadow-strong);
+    font-size: 15px;
+    line-height: 1.65;
+}
+
+.youngo-checkout-panel > .youngo-empty-state {
+    margin: 0;
+    padding: 22px;
+    border: 1px solid var(--youngo-soft-border);
+    border-radius: 18px;
+    background: #fcfbff;
+}
+
+.youngo-checkout-notice {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    border-color: rgba(66, 15, 121, 0.16) !important;
+    background: linear-gradient(135deg, #f5efff, #fffaf4) !important;
+}
+
+.youngo-checkout-notice__icon {
+    display: grid;
+    width: 34px;
+    height: 34px;
+    flex: 0 0 34px;
+    place-items: center;
+    border-radius: 50%;
+    background: var(--youngo-purple);
+    color: #fff;
+    font-weight: 900;
+}
+
+.youngo-checkout-notice p {
+    margin: 0 0 4px;
+    color: var(--youngo-text);
+    font-weight: 700;
+}
+
+.youngo-checkout-notice small {
+    color: var(--youngo-muted);
+}
+
+.youngo-checkout-free-success {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    margin-top: 18px;
+    padding: 14px 16px;
+    border: 1px solid rgba(34, 139, 83, 0.24);
+    border-radius: 14px;
+    background: #f0fbf4;
+    color: #1f6f43;
+}
+
+.youngo-checkout-free-success__icon {
+    display: grid;
+    width: 28px;
+    height: 28px;
+    flex: 0 0 28px;
+    place-items: center;
+    border-radius: 50%;
+    background: #2f9e5b;
+    color: #fff;
+    font-weight: 900;
+}
+
+.youngo-checkout-free-success strong,
+.youngo-checkout-free-success p {
+    margin: 0;
+}
+
+.youngo-checkout-free-success p {
+    margin-top: 3px;
+    color: #34734d;
+    font-size: 14px;
+}
+
+.youngo-checkout-step {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.youngo-checkout-step span {
+    display: grid;
+    width: 30px;
+    height: 30px;
+    place-items: center;
+    border-radius: 10px;
+    background: var(--youngo-purple);
+    color: #fff;
+    font-size: 12px;
+    font-weight: 900;
+}
+
+.youngo-checkout-step strong {
+    color: var(--youngo-text);
+    font-size: 17px;
+}
+
+.youngo-checkout-summary {
+    margin-top: 0;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.youngo-checkout-summary div {
+    min-height: 104px;
+    background: #fff;
+}
+
+.youngo-checkout-summary strong {
+    font-size: 22px;
+}
+
+.youngo-checkout-summary div:first-child strong {
+    font-size: 14px;
+    line-height: 1.35;
+    overflow-wrap: anywhere;
+}
+
+.youngo-checkout-panel > .youngo-empty-state:not(.youngo-checkout-notice) > p:first-child strong,
+.youngo-checkout-panel [data-youngo-instapay-checkout-panel] > p:first-child strong {
+    color: var(--youngo-purple);
+    font-size: 18px;
+}
+
+.youngo-checkout-panel form {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: end;
+    gap: 10px;
+    margin-top: 16px;
+}
+
+.youngo-checkout-panel form label {
+    display: block;
+    width: 100%;
+    margin-bottom: -4px;
+    color: var(--youngo-text);
+    font-size: 13px;
+    font-weight: 800;
+}
+
+.youngo-checkout-panel form input[type="text"],
+.youngo-checkout-panel form input[type="file"],
+.youngo-checkout-panel form textarea {
+    min-height: 46px;
+    flex: 1 1 220px;
+    border: 1px solid rgba(90, 45, 145, 0.22);
+    border-radius: 12px;
+    background: #fff;
+    color: var(--youngo-text);
+    font: inherit;
+    padding: 10px 13px;
+}
+
+.youngo-checkout-panel form textarea {
+    flex-basis: 100%;
+    min-height: 88px;
+}
+
+.youngo-checkout-panel form input[type="file"] {
+    padding: 8px;
+}
+
+.youngo-checkout-panel form input:focus,
+.youngo-checkout-panel form textarea:focus {
+    outline: 3px solid rgba(185, 61, 152, 0.14);
+    border-color: var(--youngo-magenta);
+}
+
+.youngo-checkout-panel [data-youngo-instapay-checkout-panel] {
+    border-color: rgba(90, 45, 145, 0.2) !important;
+    background: linear-gradient(145deg, #f8f3ff, #fffaf1) !important;
+}
+
+.youngo-checkout-panel [data-youngo-instapay-checkout-panel]::before {
+    display: block;
+    width: 42px;
+    height: 4px;
+    margin-bottom: 14px;
+    border-radius: 999px;
+    background: var(--youngo-magenta);
+    content: "";
+}
+
+.youngo-checkout-panel [data-youngo-instapay-checkout-panel] form {
+    padding-top: 14px;
+    border-top: 1px solid rgba(90, 45, 145, 0.12);
+}
+
+.youngo-checkout-panel [data-youngo-instapay-checkout-panel] p {
+    margin-bottom: 9px;
+}
+
+.youngo-checkout-panel .youngo-button {
+    min-height: 42px;
+    border-radius: 12px;
+    font-weight: 800;
+}
+
+.youngo-account-hero h1 {
+    max-width: 780px;
+    margin: 10px 0 12px;
+    color: var(--youngo-text);
+    font-size: clamp(38px, 5vw, 64px);
+    line-height: 1.02;
+    letter-spacing: 0;
+}
+
+.youngo-account-hero p:not(.youngo-eyebrow) {
+    max-width: 700px;
+    margin: 0;
+    color: var(--youngo-muted);
+    font-size: 17px;
+    line-height: 1.75;
+}
+
+.youngo-account-page {
+    padding: 44px 0 84px;
+}
+
+.youngo-account-layout {
+    display: grid;
+    grid-template-columns: 300px minmax(0, 1fr);
+    gap: 28px;
+    align-items: start;
+}
+
+.youngo-account-layout--invoice {
+    grid-template-columns: 260px minmax(0, 1fr);
+}
+
+.youngo-account-menu,
+.youngo-account-panel,
+.youngo-invoice-card {
+    border: 1px solid rgba(205, 195, 211, 0.78);
+    border-radius: 24px;
+    background: var(--youngo-white);
+    box-shadow: var(--youngo-shadow-soft);
+}
+
+.youngo-account-menu {
+    position: sticky;
+    top: 96px;
+    overflow: hidden;
+}
+
+.youngo-account-menu__profile {
+    display: grid;
+    gap: 12px;
+    padding: 22px;
+    background: linear-gradient(135deg, rgba(250, 248, 255, 0.96), rgba(255, 247, 232, 0.72));
+}
+
+.youngo-account-menu__profile img {
+    width: 74px;
+    height: 74px;
+    border: 3px solid var(--youngo-white);
+    border-radius: 24px;
+    object-fit: cover;
+    box-shadow: 0 10px 22px rgba(66, 15, 121, 0.12);
+}
+
+.youngo-account-menu__profile span,
+.youngo-account-menu__profile small {
+    color: var(--youngo-muted);
+    font-size: 12px;
+    font-weight: 800;
+}
+
+.youngo-account-menu__profile span {
+    display: block;
+    margin-bottom: 3px;
+    text-transform: uppercase;
+}
+
+.youngo-account-menu__profile strong {
+    display: block;
+    color: var(--youngo-text);
+    font-size: 18px;
+    line-height: 1.25;
+}
+
+.youngo-account-menu__profile small {
+    display: block;
+    margin-top: 4px;
+    word-break: break-word;
+}
+
+.youngo-account-menu__links {
+    display: grid;
+    padding: 10px;
+}
+
+.youngo-account-menu__link {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    min-height: 44px;
+    padding: 10px 12px;
+    border-radius: 14px;
+    color: var(--youngo-muted);
+    font-size: 14px;
+    font-weight: 800;
+    text-decoration: none;
+}
+
+.youngo-account-menu__link:hover,
+.youngo-account-menu__link.is-active {
+    background: var(--youngo-purple-soft);
+    color: var(--youngo-purple);
+}
+
+.youngo-account-menu__link i {
+    width: 18px;
+    text-align: center;
+}
+
+.youngo-account-panel,
+.youngo-invoice-card {
+    display: grid;
+    gap: 22px;
+    padding: 26px;
+}
+
+.youngo-account-panel__header,
+.youngo-purchase-card,
+.youngo-invoice-card__header,
+.youngo-invoice-actions {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 18px;
+}
+
+.youngo-account-panel__header h2,
+.youngo-account-photo-card h2,
+.youngo-invoice-card__header h2 {
+    margin: 0;
+    color: var(--youngo-text);
+    font-size: 28px;
+    line-height: 1.2;
+}
+
+.youngo-account-form {
+    display: grid;
+    gap: 22px;
+}
+
+.youngo-form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+}
+
+.youngo-form-field {
+    display: grid;
+    gap: 8px;
+}
+
+.youngo-form-field--full {
+    grid-column: 1 / -1;
+}
+
+.youngo-form-field label {
+    color: var(--youngo-text);
+    font-size: 13px;
+    font-weight: 800;
+}
+
+.youngo-form-field input,
+.youngo-form-field textarea {
+    width: 100%;
+    min-height: 46px;
+    border: 1px solid var(--youngo-soft-border);
+    border-radius: 14px;
+    background: #fff;
+    color: var(--youngo-text);
+    font: inherit;
+    padding: 11px 14px;
+    outline: none;
+}
+
+.youngo-form-field input:focus,
+.youngo-form-field textarea:focus {
+    border-color: rgba(126, 66, 171, 0.48);
+    box-shadow: 0 0 0 4px rgba(126, 66, 171, 0.1);
+}
+
+.youngo-form-field input[disabled] {
+    background: #f6f4f8;
+    color: var(--youngo-muted);
+}
+
+.youngo-account-form__actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-items: center;
+}
+
+.youngo-account-photo-card {
+    display: grid;
+    grid-template-columns: 128px minmax(0, 1fr);
+    gap: 20px;
+    align-items: center;
+    padding: 20px;
+    border: 1px solid var(--youngo-soft-border);
+    border-radius: 20px;
+    background: #faf8ff;
+}
+
+.youngo-account-photo-card img {
+    width: 128px;
+    height: 128px;
+    border-radius: 28px;
+    object-fit: cover;
+}
+
+.youngo-account-photo-card p:not(.youngo-eyebrow) {
+    margin: 8px 0 0;
+    color: var(--youngo-muted);
+    line-height: 1.7;
+}
+
+.youngo-purchase-list {
+    display: grid;
+    gap: 14px;
+}
+
+.youngo-purchase-card {
+    align-items: stretch;
+    padding: 14px;
+    border: 1px solid var(--youngo-soft-border);
+    border-radius: 20px;
+    background: #fff;
+}
+
+.youngo-purchase-card__media {
+    flex: 0 0 168px;
+    overflow: hidden;
+    border-radius: 16px;
+    background: #f4f0f8;
+}
+
+.youngo-purchase-card__media img {
+    width: 100%;
+    height: 112px;
+    object-fit: cover;
+}
+
+.youngo-purchase-card__body {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto auto;
+    gap: 18px;
+    align-items: center;
+    flex: 1;
+    min-width: 0;
+}
+
+.youngo-purchase-card h3 {
+    margin: 0;
+    font-size: 20px;
+    line-height: 1.28;
+}
+
+.youngo-purchase-card h3 a {
+    color: var(--youngo-text);
+    text-decoration: none;
+}
+
+.youngo-purchase-card__meta {
+    display: grid;
+    gap: 6px;
+    color: var(--youngo-muted);
+    font-size: 13px;
+    font-weight: 800;
+}
+
+.youngo-purchase-card__meta span {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.youngo-purchase-card__meta strong {
+    color: var(--youngo-purple);
+    font-size: 18px;
+}
+
+.youngo-purchase-card__actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: flex-end;
+}
+
+.youngo-invoice-card {
+    gap: 26px;
+}
+
+.youngo-invoice-card__header {
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--youngo-soft-border);
+}
+
+.youngo-invoice-card__header strong {
+    color: var(--youngo-purple);
+    font-size: 34px;
+    line-height: 1;
+}
+
+.youngo-invoice-summary {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr 1fr;
+    gap: 16px;
+}
+
+.youngo-invoice-summary > div,
+.youngo-invoice-totals {
+    display: grid;
+    gap: 6px;
+    padding: 16px;
+    border: 1px solid var(--youngo-soft-border);
+    border-radius: 18px;
+    background: #faf8ff;
+}
+
+.youngo-invoice-summary span,
+.youngo-invoice-summary small,
+.youngo-invoice-totals span {
+    color: var(--youngo-muted);
+    font-size: 13px;
+    font-weight: 800;
+}
+
+.youngo-invoice-summary strong,
+.youngo-invoice-totals strong {
+    color: var(--youngo-text);
+}
+
+.youngo-invoice-table-wrap {
+    overflow-x: auto;
+}
+
+.youngo-invoice-table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 640px;
+}
+
+.youngo-invoice-table th,
+.youngo-invoice-table td {
+    padding: 14px 12px;
+    border-bottom: 1px solid var(--youngo-soft-border);
+    color: var(--youngo-text);
+    text-align: left;
+}
+
+.youngo-invoice-table th {
+    color: var(--youngo-muted);
+    font-size: 12px;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+.youngo-invoice-totals {
+    justify-self: end;
+    min-width: 300px;
+    background: #fff;
+}
+
+.youngo-invoice-totals > div {
+    display: flex;
+    justify-content: space-between;
+    gap: 18px;
+}
+
+.youngo-invoice-totals > div:last-child {
+    padding-top: 12px;
+    border-top: 1px solid var(--youngo-soft-border);
+}
+
+.youngo-icon-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 38px;
+    height: 38px;
+    border: 0;
+    border-radius: 999px;
+    background: rgba(185, 61, 152, 0.1);
+    color: var(--youngo-accent);
+    cursor: pointer;
+}
+
+.youngo-modal {
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+    background: rgba(25, 27, 34, 0.62);
+}
+
+.youngo-modal.is-open {
+    display: flex;
+}
+
+.youngo-modal__dialog {
+    width: min(920px, 100%);
+    max-height: calc(100vh - 48px);
+    overflow: hidden;
+    border-radius: 24px;
+    background: var(--youngo-white);
+    box-shadow: var(--youngo-shadow-strong);
+}
+
+.youngo-modal__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 16px 18px;
+    border-bottom: 1px solid var(--youngo-soft-border);
+}
+
+.youngo-modal__header h3 {
+    margin: 0;
+    color: var(--youngo-purple);
+}
+
+.youngo-modal__header button {
+    width: 36px;
+    height: 36px;
+    border: 0;
+    border-radius: 50%;
+    background: var(--youngo-purple-soft);
+    color: var(--youngo-purple);
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.youngo-modal__body {
+    max-height: calc(100vh - 132px);
+    overflow: auto;
+    padding: 18px;
+}
+
+.youngo-modal-loader {
+    padding: 48px;
+    color: var(--youngo-muted);
+    text-align: center;
+    font-weight: 800;
+}
+
+.youngo-eyebrow {
+    margin: 0 0 12px;
+    color: var(--youngo-secondary);
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: 0;
+    text-transform: uppercase;
+}
+
+.youngo-hero {
+    position: relative;
+    padding: 72px 0 88px;
+    overflow: hidden;
+}
+
+.youngo-hero::before {
+    content: "";
+    position: absolute;
+    z-index: 0;
+    right: -180px;
+    top: -220px;
+    width: 520px;
+    height: 520px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(238, 220, 255, 0.72), rgba(250, 248, 255, 0));
+    pointer-events: none;
+}
+
+.youngo-hero__grid {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(360px, 0.88fr);
+    gap: 56px;
+    align-items: center;
+}
+
+.youngo-hero__content h1 {
+    max-width: 760px;
+    margin: 0 0 22px;
+    color: var(--youngo-purple);
+    font-size: 56px;
+    font-weight: 800;
+    letter-spacing: 0;
+    line-height: 1.06;
+}
+
+.youngo-hero__lead {
+    max-width: 630px;
+    margin: 0 0 32px;
+    color: var(--youngo-muted);
+    font-size: 18px;
+    line-height: 1.75;
+}
+
+.youngo-trust-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 28px;
+}
+
+.youngo-trust-row span {
+    display: inline-flex;
+    align-items: center;
+    min-height: 36px;
+    padding: 8px 14px;
+    border: 1px solid rgba(126, 66, 171, 0.22);
+    border-radius: 999px;
+    background: var(--youngo-white);
+    color: var(--youngo-muted);
+    font-size: 13px;
+    font-weight: 800;
+    box-shadow: 0 8px 22px rgba(90, 45, 145, 0.06);
+}
+
+.youngo-hero__visual {
+    position: relative;
+    min-height: 480px;
+    display: grid;
+    place-items: center;
+    padding: 30px;
+    border: 1px solid rgba(205, 195, 211, 0.7);
+    border-radius: 32px;
+    background: linear-gradient(135deg, #fff7e8 0%, #f3f3fc 45%, #eedcff 100%);
+    box-shadow: var(--youngo-shadow-strong);
+}
+
+.youngo-hero__visual img {
+    width: min(100%, 460px);
+    max-height: 420px;
+    object-fit: contain;
+    filter: drop-shadow(0 18px 26px rgba(66, 15, 121, 0.14));
+}
+
+.youngo-hero-card {
+    position: absolute;
+    display: grid;
+    gap: 2px;
+    min-width: 132px;
+    padding: 14px 16px;
+    border: 1px solid rgba(205, 195, 211, 0.72);
+    border-radius: 18px;
+    background: rgba(255, 255, 255, 0.94);
+    box-shadow: var(--youngo-shadow);
+}
+
+.youngo-hero-card span {
+    color: var(--youngo-muted);
+    font-size: 12px;
+    font-weight: 800;
+}
+
+.youngo-hero-card strong {
+    color: var(--youngo-purple);
+    font-size: 18px;
+    font-weight: 800;
+}
+
+.youngo-hero-card--top {
+    top: 24px;
+    left: 24px;
+}
+
+.youngo-hero-card--bottom {
+    right: 24px;
+    bottom: 24px;
+}
+
+.youngo-section {
+    padding: 82px 0;
+}
+
+.youngo-section--white {
+    background: var(--youngo-white);
+}
+
+.youngo-section--soft {
+    background: var(--youngo-purple-soft);
+}
+
+.youngo-section--trust {
+    padding-top: 92px;
+}
+
+.youngo-section--blog {
+    background: #eeeef6;
+}
+
+.youngo-section__heading {
+    margin-bottom: 38px;
+}
+
+.youngo-section__heading--center {
+    max-width: 760px;
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+}
+
+.youngo-section__heading--split {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 32px;
+}
+
+.youngo-section__heading h2,
+.youngo-about h2,
+.youngo-final-cta h2 {
+    margin: 0 0 14px;
+    color: var(--youngo-purple);
+    font-size: 32px;
+    font-weight: 800;
+    letter-spacing: 0;
+    line-height: 1.18;
+}
+
+.youngo-section__heading p,
+.youngo-about p,
+.youngo-final-cta p {
+    max-width: 720px;
+    margin: 0;
+    color: var(--youngo-muted);
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+.youngo-section__heading--center p {
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.youngo-section__actions {
+    display: flex;
+    justify-content: center;
+    margin-top: 36px;
+}
+
+.youngo-category-grid,
+.youngo-benefit-grid,
+.youngo-blog-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.youngo-category-card {
+    display: grid;
+    place-items: center;
+    min-height: 178px;
+    padding: 26px 18px;
+    border: 1px solid var(--youngo-soft-border);
+    border-radius: 18px;
+    background: var(--youngo-purple-soft);
+    color: var(--youngo-text);
+    text-align: center;
+    text-decoration: none;
+    transition: border-color 160ms ease, box-shadow 160ms ease, transform 160ms ease, background 160ms ease;
+}
+
+.youngo-category-card:hover {
+    border-color: rgba(90, 45, 145, 0.28);
+    background: var(--youngo-white);
+    box-shadow: var(--youngo-shadow);
+    transform: translateY(-3px);
+}
+
+.youngo-icon-badge,
+.youngo-number-badge {
+    display: inline-grid;
+    place-items: center;
+    width: 58px;
+    height: 58px;
+    margin-bottom: 14px;
+    border-radius: 50%;
+    background: var(--youngo-purple);
+    color: var(--youngo-white);
+    font-size: 14px;
+    font-weight: 800;
+}
+
+.youngo-category-card strong {
+    margin-bottom: 6px;
+    color: var(--youngo-text);
+    font-size: 18px;
+}
+
+.youngo-category-card small {
+    color: var(--youngo-muted);
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.youngo-course-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 26px;
+}
+
+.youngo-course-card,
+.youngo-benefit-card,
+.youngo-testimonial-card,
+.youngo-blog-card,
+.youngo-faq-item {
+    border: 1px solid var(--youngo-soft-border);
+    background: var(--youngo-white);
+    box-shadow: var(--youngo-shadow);
+}
+
+.youngo-course-card {
+    display: flex;
+    min-height: 100%;
+    overflow: hidden;
+    flex-direction: column;
+    border-radius: 24px;
+    transition: transform 160ms ease, box-shadow 160ms ease;
+}
+
+.youngo-course-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--youngo-shadow-strong);
+}
+
+.youngo-course-card__media {
+    position: relative;
+    height: 218px;
+    overflow: hidden;
+    background: var(--youngo-purple-tint);
+}
+
+.youngo-course-card__media img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.youngo-course-card__media span {
+    position: absolute;
+    top: 14px;
+    left: 14px;
+    padding: 7px 11px;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.94);
+    color: var(--youngo-purple);
+    font-size: 12px;
+    font-weight: 800;
+}
+
+.youngo-course-card__body {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    padding: 22px;
+}
+
+.youngo-course-card h3,
+.youngo-benefit-card h3,
+.youngo-blog-card h3 {
+    margin: 0 0 10px;
+    color: var(--youngo-text);
+    font-size: 22px;
+    font-weight: 800;
+    line-height: 1.25;
+}
+
+.youngo-course-card p,
+.youngo-benefit-card p,
+.youngo-blog-card p {
+    margin: 0;
+    color: var(--youngo-muted);
+    font-size: 15px;
+    line-height: 1.65;
+}
+
+.youngo-card-meta {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    margin-top: auto;
+    padding-top: 20px;
+    border-top: 1px solid var(--youngo-soft-border);
+}
+
+.youngo-card-meta span,
+.youngo-card-meta a {
+    color: var(--youngo-purple);
+    font-size: 13px;
+    font-weight: 800;
+    text-decoration: none;
+}
+
+.youngo-card-meta a:hover {
+    text-decoration: underline;
+    text-underline-offset: 4px;
+}
+
+.youngo-benefit-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.youngo-benefit-card {
+    min-height: 248px;
+    padding: 30px;
+    border-radius: 24px;
+    text-align: center;
+}
+
+.youngo-benefit-card .youngo-number-badge {
+    background: var(--youngo-purple-tint);
+    color: var(--youngo-purple);
+}
+
+.youngo-about {
+    background: var(--youngo-purple-tint);
+}
+
+.youngo-about__grid {
+    display: grid;
+    grid-template-columns: minmax(320px, 0.78fr) minmax(0, 1fr);
+    gap: 56px;
+    align-items: center;
+}
+
+.youngo-about__visual {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+}
+
+.youngo-about-tile {
+    display: grid;
+    place-items: center;
+    min-height: 160px;
+    border: 1px solid rgba(126, 66, 171, 0.16);
+    border-radius: 24px;
+    background: var(--youngo-white);
+    color: var(--youngo-purple);
+    font-size: 22px;
+    font-weight: 800;
+    box-shadow: var(--youngo-shadow);
+}
+
+.youngo-about-tile--large {
+    min-height: 220px;
+}
+
+.youngo-about-tile--small {
+    margin-top: 30px;
+}
+
+.youngo-about-tile--warm {
+    background: #fff7e8;
+    color: #623f00;
+}
+
+.youngo-about-tile--purple {
+    background: var(--youngo-purple);
+    color: var(--youngo-white);
+}
+
+.youngo-check-list {
+    display: grid;
+    gap: 12px;
+    margin: 24px 0 28px;
+    padding: 0;
+    list-style: none;
+}
+
+.youngo-check-list li {
+    position: relative;
+    padding-left: 30px;
+    color: var(--youngo-text);
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.youngo-check-list li::before {
+    content: "";
+    position: absolute;
+    top: 4px;
+    left: 0;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: var(--youngo-secondary);
+    box-shadow: inset 0 0 0 5px var(--youngo-white);
+}
+
+.youngo-testimonial-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 26px;
+}
+
+.youngo-testimonial-card {
+    padding: 30px;
+    border-radius: 24px;
+}
+
+.youngo-rating {
+    margin-bottom: 18px;
+    color: var(--youngo-secondary);
+    font-size: 13px;
+    font-weight: 800;
+}
+
+.youngo-testimonial-card blockquote {
+    margin: 0 0 24px;
+    color: var(--youngo-text);
+    font-size: 18px;
+    font-style: italic;
+    line-height: 1.65;
+}
+
+.youngo-person {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.youngo-person > span {
+    width: 48px;
+    height: 48px;
+    flex: 0 0 48px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--youngo-purple-tint), var(--youngo-warm));
+}
+
+.youngo-person strong,
+.youngo-person small {
+    display: block;
+}
+
+.youngo-person strong {
+    color: var(--youngo-text);
+    font-size: 15px;
+}
+
+.youngo-person small {
+    margin-top: 2px;
+    color: var(--youngo-muted);
+    font-size: 13px;
+}
+
+.youngo-faq-list {
+    display: grid;
+    gap: 14px;
+}
+
+.youngo-faq-item {
+    border-radius: 18px;
+}
+
+.youngo-faq-item summary {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    min-height: 64px;
+    padding: 20px 22px;
+    cursor: pointer;
+    color: var(--youngo-text);
+    font-size: 16px;
+    font-weight: 800;
+    list-style: none;
+}
+
+.youngo-faq-item summary::-webkit-details-marker {
+    display: none;
+}
+
+.youngo-faq-item p {
+    margin: 0;
+    padding: 0 22px 22px;
+    color: var(--youngo-muted);
+    line-height: 1.65;
+}
+
+.youngo-faq-icon {
+    position: relative;
+    width: 18px;
+    height: 18px;
+    flex: 0 0 18px;
+}
+
+.youngo-faq-icon::before,
+.youngo-faq-icon::after {
+    content: "";
+    position: absolute;
+    top: 8px;
+    left: 2px;
+    width: 14px;
+    height: 2px;
+    border-radius: 2px;
+    background: var(--youngo-secondary);
+}
+
+.youngo-faq-icon::after {
+    transform: rotate(90deg);
+}
+
+.youngo-faq-item[open] .youngo-faq-icon::after {
+    transform: rotate(0deg);
+}
+
+.youngo-blog-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.youngo-blog-card {
+    overflow: hidden;
+    border-radius: 24px;
+}
+
+.youngo-blog-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    background: var(--youngo-purple-soft);
+}
+
+.youngo-blog-card div {
+    padding: 22px;
+}
+
+.youngo-blog-card span {
+    display: block;
+    margin-bottom: 8px;
+    color: var(--youngo-secondary);
+    font-size: 12px;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+.youngo-final-cta {
+    padding-top: 72px;
+}
+
+.youngo-final-cta__panel {
+    position: relative;
+    overflow: hidden;
+    padding: 58px 40px;
+    border-radius: 28px;
+    background: linear-gradient(135deg, var(--youngo-purple) 0%, var(--youngo-purple-brand) 62%, var(--youngo-magenta) 100%);
+    color: var(--youngo-white);
+    text-align: center;
+    box-shadow: var(--youngo-shadow-strong);
+}
+
+.youngo-final-cta__panel::before {
+    content: "";
+    position: absolute;
+    inset: auto -120px -170px auto;
+    width: 360px;
+    height: 360px;
+    border-radius: 50%;
+    background: rgba(242, 189, 118, 0.24);
+}
+
+.youngo-final-cta .youngo-eyebrow,
+.youngo-final-cta h2,
+.youngo-final-cta p,
+.youngo-final-cta .youngo-actions {
+    position: relative;
+}
+
+.youngo-final-cta .youngo-eyebrow,
+.youngo-final-cta h2 {
+    color: var(--youngo-white);
+}
+
+.youngo-final-cta h2 {
+    max-width: 820px;
+    margin-right: auto;
+    margin-left: auto;
+    font-size: 40px;
+}
+
+.youngo-final-cta p {
+    max-width: 680px;
+    margin: 0 auto 28px;
+    color: #f0e6ff;
+}
+
+.youngo-actions--center {
+    justify-content: center;
+}
+
+.youngo-placeholder {
+    padding: 80px 0;
+}
+
+.youngo-placeholder__grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1.4fr) minmax(260px, 0.6fr);
+    gap: 32px;
+    align-items: center;
+}
+
+.youngo-placeholder h1 {
+    max-width: 760px;
+    margin: 0 0 16px;
+    color: var(--youngo-purple);
+    font-size: 48px;
+    line-height: 1.1;
+}
+
+.youngo-placeholder p {
+    max-width: 680px;
+    margin: 0 0 24px;
+    color: var(--youngo-muted);
+    font-size: 18px;
+    line-height: 1.7;
+}
+
+.youngo-placeholder__panel {
+    display: grid;
+    gap: 8px;
+    padding: 28px;
+    border: 1px solid var(--youngo-border);
+    border-radius: 24px;
+    background: var(--youngo-white);
+    box-shadow: var(--youngo-shadow);
+}
+
+.youngo-placeholder__panel span {
+    color: var(--youngo-muted);
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.youngo-placeholder__panel strong {
+    margin-bottom: 8px;
+    color: var(--youngo-purple);
+    font-size: 22px;
+}
+
+.youngo-auth {
+    position: relative;
+    overflow: hidden;
+    padding: 72px 0 88px;
+    background:
+        radial-gradient(circle at 12% 8%, rgba(238, 220, 255, 0.82), rgba(250, 248, 255, 0) 34%),
+        linear-gradient(135deg, var(--youngo-bg), var(--youngo-purple-soft));
+}
+
+.youngo-auth__grid {
+    display: grid;
+    grid-template-columns: minmax(0, 0.92fr) minmax(360px, 0.72fr);
+    gap: 48px;
+    align-items: center;
+}
+
+.youngo-auth__intro h1 {
+    max-width: 720px;
+    margin: 0 0 18px;
+    color: var(--youngo-purple);
+    font-size: 48px;
+    font-weight: 800;
+    line-height: 1.08;
+}
+
+.youngo-auth__intro p {
+    max-width: 620px;
+    margin: 0;
+    color: var(--youngo-muted);
+    font-size: 18px;
+    line-height: 1.75;
+}
+
+.youngo-auth__badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 28px;
+}
+
+.youngo-auth__badges span {
+    display: inline-flex;
+    align-items: center;
+    min-height: 36px;
+    padding: 8px 14px;
+    border: 1px solid rgba(126, 66, 171, 0.2);
+    border-radius: 999px;
+    background: var(--youngo-white);
+    color: var(--youngo-purple);
+    font-size: 13px;
+    font-weight: 800;
+    box-shadow: var(--youngo-shadow);
+}
+
+.youngo-auth-card,
+.youngo-account-disable {
+    width: 100%;
+    padding: 34px;
+    border: 1px solid rgba(205, 195, 211, 0.8);
+    border-radius: 24px;
+    background: rgba(255, 255, 255, 0.96);
+    box-shadow: var(--youngo-shadow-strong);
+}
+
+.youngo-auth-card--center {
+    text-align: center;
+}
+
+.youngo-auth-card h2 {
+    margin: 0 0 8px;
+    color: var(--youngo-purple);
+    font-size: 28px;
+    font-weight: 800;
+}
+
+.youngo-auth-card__copy,
+.youngo-account-disable p {
+    margin: 0 0 22px;
+    color: var(--youngo-muted);
+    font-size: 15px;
+    line-height: 1.65;
+}
+
+.youngo-auth-form,
+.youngo-account-disable {
+    display: grid;
+    gap: 18px;
+}
+
+.youngo-field-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px;
+}
+
+.youngo-field {
+    display: grid;
+    gap: 8px;
+}
+
+.youngo-field label,
+.youngo-auth-checkbox {
+    color: var(--youngo-text);
+    font-size: 14px;
+    font-weight: 800;
+}
+
+.youngo-field input,
+.youngo-field textarea,
+.youngo-field select {
+    width: 100%;
+    min-height: 48px;
+    padding: 12px 14px;
+    border: 1px solid rgba(205, 195, 211, 0.95);
+    border-radius: 12px;
+    background: var(--youngo-white);
+    color: var(--youngo-text);
+    font: inherit;
+    transition: border-color 160ms ease, box-shadow 160ms ease;
+}
+
+.youngo-field textarea {
+    min-height: 104px;
+    resize: vertical;
+}
+
+.youngo-field input:focus,
+.youngo-field textarea:focus,
+.youngo-field select:focus {
+    border-color: var(--youngo-secondary);
+    box-shadow: 0 0 0 4px rgba(126, 66, 171, 0.14);
+    outline: none;
+}
+
+.youngo-field input:disabled {
+    background: var(--youngo-purple-soft);
+    color: var(--youngo-muted);
+}
+
+.youngo-field small {
+    color: var(--youngo-muted);
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+.youngo-auth-checkbox {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.youngo-auth-checkbox input {
+    width: 18px;
+    height: 18px;
+    margin-top: 1px;
+    accent-color: var(--youngo-purple);
+}
+
+.youngo-auth-extra {
+    display: grid;
+    gap: 16px;
+    padding: 18px;
+    border: 1px solid rgba(126, 66, 171, 0.18);
+    border-radius: 18px;
+    background: var(--youngo-purple-soft);
+}
+
+.youngo-auth-extra.is-hidden {
+    display: none;
+}
+
+.youngo-auth-alert {
+    margin-bottom: 16px;
+    padding: 12px 14px;
+    border-radius: 14px;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1.5;
+}
+
+.youngo-auth-alert--success {
+    border: 1px solid rgba(28, 125, 84, 0.25);
+    background: #eaf8f1;
+    color: #145c3d;
+}
+
+.youngo-auth-alert--error {
+    border: 1px solid rgba(180, 35, 24, 0.25);
+    background: #fff0ee;
+    color: #912018;
+}
+
+.youngo-auth-alert--info {
+    border: 1px solid rgba(90, 45, 145, 0.24);
+    background: var(--youngo-purple-soft);
+    color: var(--youngo-purple);
+}
+
+.youngo-auth__small-link,
+.youngo-auth-switch a {
+    color: var(--youngo-secondary);
+    font-size: 14px;
+    font-weight: 800;
+    text-decoration: none;
+}
+
+.youngo-auth__small-link:hover,
+.youngo-auth-switch a:hover {
+    color: var(--youngo-purple);
+    text-decoration: underline;
+    text-underline-offset: 4px;
+}
+
+.youngo-auth__resend {
+    display: inline-flex;
+    width: fit-content;
+    min-height: 32px;
+    align-items: center;
+    gap: 8px;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    cursor: pointer;
+    font: inherit;
+}
+
+.youngo-auth__recaptcha {
+    overflow-x: auto;
+}
+
+.youngo-auth-switch {
+    margin: 22px 0 0;
+    color: var(--youngo-muted);
+    font-size: 14px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.youngo-auth-social {
+    margin-top: 18px;
+    padding-top: 18px;
+    border-top: 1px solid var(--youngo-soft-border);
+    text-align: center;
+}
+
+.youngo-facebook-login {
+    min-height: 45px;
+}
+
+.youngo-auth--stitch {
+    display: flex;
+    align-items: center;
+    min-height: 760px;
+    padding: 64px 0;
+    background:
+        radial-gradient(circle at 18% 14%, rgba(217, 185, 255, 0.46), rgba(250, 248, 255, 0) 34%),
+        radial-gradient(circle at 82% 86%, rgba(242, 189, 118, 0.22), rgba(250, 248, 255, 0) 30%),
+        var(--youngo-bg);
+}
+
+.youngo-auth-shell {
+    display: grid;
+    width: 100%;
+    overflow: hidden;
+    border: 1px solid rgba(205, 195, 211, 0.62);
+    border-radius: 24px;
+    background: var(--youngo-white);
+    box-shadow: 0 24px 68px rgba(66, 15, 121, 0.12);
+}
+
+.youngo-auth-shell--login {
+    min-height: 720px;
+    grid-template-columns: minmax(0, 1.02fr) minmax(420px, 0.98fr);
+}
+
+.youngo-auth-shell--signup {
+    max-width: 1080px;
+    min-height: 720px;
+    grid-template-columns: minmax(0, 0.98fr) minmax(430px, 1.02fr);
+    margin: 0 auto;
+}
+
+.youngo-auth-media,
+.youngo-auth-trust-panel {
+    position: relative;
+    overflow: hidden;
+}
+
+.youngo-auth-media--login {
+    display: flex;
+    align-items: flex-end;
+    min-height: 720px;
+    padding: 40px;
+    background: linear-gradient(160deg, #f7eefc 0%, #efe2ff 44%, #4a147e 100%);
+}
+
+.youngo-auth-media--login::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(66, 15, 121, 0.02) 0%, rgba(66, 15, 121, 0.72) 100%);
+    pointer-events: none;
+}
+
+.youngo-auth-photo {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+    background:
+        linear-gradient(90deg, rgba(255, 255, 255, 0.56) 0 1px, transparent 1px 100%),
+        linear-gradient(180deg, #f8f0ff 0%, #fff6e7 58%, #d7c0ed 100%);
+    background-size: 82px 100%, auto;
+}
+
+.youngo-auth-photo__sun,
+.youngo-auth-photo__board,
+.youngo-auth-photo__table,
+.youngo-auth-photo__learner {
+    position: absolute;
+}
+
+.youngo-auth-photo__sun {
+    top: 54px;
+    right: 72px;
+    width: 92px;
+    height: 92px;
+    border-radius: 50%;
+    background: rgba(242, 189, 118, 0.62);
+    box-shadow: 0 0 72px rgba(242, 189, 118, 0.38);
+}
+
+.youngo-auth-photo__board {
+    top: 96px;
+    left: 72px;
+    width: 270px;
+    height: 138px;
+    border-radius: 18px;
+    background:
+        linear-gradient(90deg, rgba(255, 255, 255, 0.68) 0 16px, transparent 16px 100%),
+        linear-gradient(135deg, #5a2d91, #b93d98);
+    box-shadow: 0 18px 40px rgba(66, 15, 121, 0.18);
+}
+
+.youngo-auth-photo__table {
+    right: -34px;
+    bottom: 128px;
+    left: 40px;
+    height: 136px;
+    border-radius: 999px 0 0 0;
+    background: rgba(255, 255, 255, 0.72);
+    box-shadow: 0 -14px 42px rgba(66, 15, 121, 0.16);
+}
+
+.youngo-auth-photo__learner {
+    bottom: 170px;
+    width: 150px;
+    height: 178px;
+    border-radius: 80px 80px 34px 34px;
+    background: linear-gradient(180deg, #fff2d9 0 38%, #6d34a1 38% 100%);
+    box-shadow: 0 18px 38px rgba(66, 15, 121, 0.2);
+}
+
+.youngo-auth-photo__learner::before {
+    content: "";
+    position: absolute;
+    top: 18px;
+    left: 43px;
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    background: #f7c892;
+}
+
+.youngo-auth-photo__learner--one {
+    left: 78px;
+}
+
+.youngo-auth-photo__learner--two {
+    left: 238px;
+    bottom: 162px;
+    background: linear-gradient(180deg, #ead0b0 0 38%, #b93d98 38% 100%);
+}
+
+.youngo-auth-photo__learner--three {
+    left: 398px;
+    bottom: 150px;
+    background: linear-gradient(180deg, #f2d8b7 0 38%, #f2bd76 38% 100%);
+}
+
+.youngo-auth-quote {
+    position: relative;
+    z-index: 1;
+    width: min(100%, 540px);
+    padding: 30px;
+    border: 1px solid rgba(255, 255, 255, 0.54);
+    border-radius: 18px;
+    background: rgba(255, 255, 255, 0.84);
+    color: var(--youngo-text);
+    box-shadow: 0 18px 46px rgba(66, 15, 121, 0.18);
+    backdrop-filter: blur(14px);
+}
+
+.youngo-auth-quote__mark {
+    display: block;
+    margin-bottom: 12px;
+    color: var(--youngo-purple);
+    font-size: 42px;
+    font-weight: 800;
+    line-height: 0.8;
+}
+
+.youngo-auth-quote p {
+    margin: 0 0 24px;
+    color: var(--youngo-text);
+    font-size: 18px;
+    font-style: italic;
+    line-height: 1.75;
+}
+
+.youngo-auth-person {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.youngo-auth-person > span {
+    display: grid;
+    width: 52px;
+    height: 52px;
+    place-items: center;
+    border-radius: 50%;
+    background: var(--youngo-purple-brand);
+    color: var(--youngo-white);
+    font-size: 14px;
+    font-weight: 800;
+}
+
+.youngo-auth-person strong,
+.youngo-auth-person small {
+    display: block;
+}
+
+.youngo-auth-person strong {
+    color: var(--youngo-text);
+    font-size: 15px;
+    font-weight: 800;
+}
+
+.youngo-auth-person small {
+    margin-top: 3px;
+    color: var(--youngo-muted);
+    font-size: 13px;
+}
+
+.youngo-auth-panel {
+    display: flex;
+    align-items: center;
+    background: var(--youngo-white);
+}
+
+.youngo-auth-panel__inner {
+    width: min(100%, 560px);
+    margin: 0 auto;
+    padding: 54px 64px;
+}
+
+.youngo-auth-brandline {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 52px;
+    color: var(--youngo-purple);
+    font-size: 26px;
+    font-weight: 800;
+    line-height: 1;
+    text-decoration: none;
+}
+
+.youngo-auth-brandline--mobile {
+    display: none;
+}
+
+.youngo-auth-brandmark {
+    display: inline-grid;
+    width: 42px;
+    height: 42px;
+    place-items: center;
+    border-radius: 10px;
+    background: var(--youngo-purple);
+    color: var(--youngo-white);
+    font-size: 12px;
+    font-weight: 800;
+    box-shadow: 0 12px 26px rgba(66, 15, 121, 0.18);
+}
+
+.youngo-auth-heading {
+    margin-bottom: 28px;
+}
+
+.youngo-auth-heading h1 {
+    margin: 0 0 10px;
+    color: var(--youngo-text);
+    font-size: 36px;
+    font-weight: 800;
+    line-height: 1.15;
+}
+
+.youngo-auth-heading p {
+    margin: 0;
+    color: var(--youngo-muted);
+    font-size: 16px;
+    line-height: 1.65;
+}
+
+.youngo-auth--stitch .youngo-auth-form {
+    gap: 18px;
+}
+
+.youngo-auth--stitch .youngo-field {
+    gap: 9px;
+}
+
+.youngo-auth--stitch .youngo-field label {
+    color: var(--youngo-text);
+    font-size: 14px;
+    font-weight: 800;
+}
+
+.youngo-auth--stitch .youngo-field input,
+.youngo-auth--stitch .youngo-field textarea {
+    min-height: 56px;
+    border-color: rgba(126, 66, 171, 0.34);
+    border-radius: 10px;
+    background: #fffdff;
+    font-size: 15px;
+}
+
+.youngo-auth--stitch .youngo-field input::placeholder,
+.youngo-auth--stitch .youngo-field textarea::placeholder {
+    color: rgba(75, 68, 81, 0.62);
+}
+
+.youngo-field--icon {
+    position: relative;
+}
+
+.youngo-field--icon::before {
+    content: attr(data-icon);
+    position: absolute;
+    left: 16px;
+    bottom: 17px;
+    z-index: 1;
+    display: grid;
+    width: 22px;
+    height: 22px;
+    place-items: center;
+    color: rgba(75, 68, 81, 0.74);
+    font-size: 15px;
+    font-weight: 800;
+    pointer-events: none;
+}
+
+.youngo-field--icon > input,
+.youngo-field--icon .youngo-password-control input {
+    padding-left: 48px;
+}
+
+.youngo-password-control {
+    position: relative;
+}
+
+.youngo-password-control input {
+    padding-right: 78px;
+}
+
+.youngo-password-toggle {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    min-width: 48px;
+    min-height: 34px;
+    padding: 0 8px;
+    border: 0;
+    border-radius: 8px;
+    background: transparent;
+    color: var(--youngo-purple);
+    cursor: pointer;
+    font: inherit;
+    font-size: 12px;
+    font-weight: 800;
+    transform: translateY(-50%);
+}
+
+.youngo-password-toggle:hover,
+.youngo-password-toggle:focus {
+    background: var(--youngo-purple-soft);
+    outline: none;
+}
+
+.youngo-auth-form__meta {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    margin-top: -4px;
+}
+
+.youngo-button--auth {
+    width: 100%;
+    min-height: 56px;
+    border-color: var(--youngo-purple-brand);
+    border-radius: 10px;
+    background: var(--youngo-purple-brand);
+    font-size: 15px;
+}
+
+.youngo-button--auth:hover {
+    border-color: var(--youngo-purple);
+    background: var(--youngo-purple);
+}
+
+.youngo-auth-divider {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin: 28px 0 20px;
+    color: var(--youngo-muted);
+    font-size: 14px;
+}
+
+.youngo-auth-divider::before,
+.youngo-auth-divider::after {
+    content: "";
+    height: 1px;
+    flex: 1;
+    background: var(--youngo-border);
+}
+
+.youngo-auth-divider span {
+    white-space: nowrap;
+}
+
+.youngo-auth--stitch .youngo-auth-social {
+    margin: 0;
+    padding: 0;
+    border-top: 0;
+}
+
+.youngo-auth--stitch .youngo-facebook-login {
+    display: flex;
+    justify-content: center;
+    min-height: 44px;
+}
+
+.youngo-auth--stitch .youngo-auth-switch {
+    margin-top: 30px;
+    font-size: 15px;
+}
+
+.youngo-auth-trust-panel {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 34px;
+    padding: 48px;
+    background:
+        radial-gradient(circle at 72% 10%, rgba(217, 185, 255, 0.66), rgba(217, 185, 255, 0) 30%),
+        radial-gradient(circle at 8% 98%, rgba(242, 189, 118, 0.22), rgba(242, 189, 118, 0) 28%),
+        linear-gradient(135deg, #ead8ff 0%, #f7edff 54%, #fdfcff 100%);
+}
+
+.youngo-auth-trust-panel h2 {
+    max-width: 380px;
+    margin: 0 0 32px;
+    color: var(--youngo-text);
+    font-size: 34px;
+    font-weight: 800;
+    line-height: 1.22;
+}
+
+.youngo-auth-trust-list {
+    display: grid;
+    gap: 24px;
+}
+
+.youngo-auth-trust-item {
+    display: grid;
+    grid-template-columns: 46px minmax(0, 1fr);
+    gap: 16px;
+    align-items: start;
+}
+
+.youngo-auth-trust-item > span {
+    display: grid;
+    width: 46px;
+    height: 46px;
+    place-items: center;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.88);
+    color: var(--youngo-purple);
+    font-size: 14px;
+    font-weight: 800;
+    box-shadow: 0 10px 24px rgba(66, 15, 121, 0.1);
+}
+
+.youngo-auth-trust-item strong {
+    display: block;
+    margin-bottom: 6px;
+    color: var(--youngo-text);
+    font-size: 15px;
+    font-weight: 800;
+}
+
+.youngo-auth-trust-item p {
+    margin: 0;
+    color: var(--youngo-muted);
+    font-size: 14px;
+    line-height: 1.55;
+}
+
+.youngo-auth-illustration {
+    position: relative;
+    min-height: 190px;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.72);
+    border-radius: 18px;
+    background:
+        linear-gradient(90deg, rgba(255, 255, 255, 0.76), rgba(255, 255, 255, 0.4)),
+        linear-gradient(135deg, #fff7e8, #d9b9ff);
+    box-shadow: 0 16px 36px rgba(66, 15, 121, 0.1);
+}
+
+.youngo-auth-illustration__screen {
+    position: absolute;
+    top: 30px;
+    left: 28px;
+    display: grid;
+    gap: 4px;
+    width: 190px;
+    padding: 18px;
+    border-radius: 14px;
+    background: rgba(255, 255, 255, 0.86);
+    box-shadow: 0 12px 26px rgba(66, 15, 121, 0.12);
+}
+
+.youngo-auth-illustration__screen span {
+    width: 42px;
+    height: 8px;
+    margin-bottom: 8px;
+    border-radius: 999px;
+    background: var(--youngo-magenta);
+}
+
+.youngo-auth-illustration__screen strong {
+    color: var(--youngo-purple);
+    font-size: 16px;
+    line-height: 1.25;
+}
+
+.youngo-auth-illustration__screen small {
+    color: var(--youngo-muted);
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.youngo-auth-illustration__family {
+    position: absolute;
+    right: 38px;
+    bottom: 0;
+    display: flex;
+    align-items: flex-end;
+    gap: 12px;
+}
+
+.youngo-auth-illustration__family span {
+    display: block;
+    width: 76px;
+    height: 138px;
+    border-radius: 44px 44px 18px 18px;
+    background: linear-gradient(180deg, #f7c892 0 36%, #7e42ab 36% 100%);
+}
+
+.youngo-auth-illustration__family span + span {
+    width: 62px;
+    height: 108px;
+    background: linear-gradient(180deg, #f0cfad 0 38%, #f2bd76 38% 100%);
+}
+
+.youngo-auth-shell--signup .youngo-auth-panel__inner {
+    padding: 46px 60px;
+}
+
+.youngo-auth-shell--signup .youngo-auth-heading h1 {
+    font-size: 34px;
+}
+
+.youngo-account-disable {
+    max-width: 620px;
+    margin: 0 auto;
+    box-shadow: var(--youngo-shadow);
+}
+
+.youngo-error-list {
+    display: grid;
+    gap: 10px;
+    margin: 20px 0 28px;
+    padding-left: 22px;
+    color: var(--youngo-muted);
+    line-height: 1.7;
+}
+
+.youngo-error-code {
+    display: block;
+    margin-bottom: 12px;
+    color: var(--youngo-purple-tint);
+    font-size: 86px;
+    font-weight: 800;
+    line-height: 1;
+    text-shadow: 0 10px 28px rgba(66, 15, 121, 0.14);
+}
+
+.youngo-footer {
+    border-top: 1px solid var(--youngo-border);
+}
+
+.youngo-footer p {
+    margin: 8px 0 0;
+    color: var(--youngo-muted);
+}
+
+.youngo-footer__copy {
+    white-space: nowrap;
+}
+
+@media (max-width: 1040px) {
+    .youngo-container,
+    .youngo-container--narrow {
+        width: min(100% - 48px, 1280px);
+    }
+
+    .youngo-hero__grid,
+    .youngo-about__grid,
+    .youngo-auth__grid {
+        grid-template-columns: 1fr;
+    }
+
+    .youngo-hero__content h1 {
+        font-size: 44px;
+    }
+
+    .youngo-auth__intro h1 {
+        font-size: 42px;
+    }
+
+    .youngo-auth-shell--login,
+    .youngo-auth-shell--signup {
+        grid-template-columns: 1fr;
+    }
+
+    .youngo-auth-media--login {
+        min-height: 420px;
+    }
+
+    .youngo-auth-shell--signup .youngo-auth-panel__inner,
+    .youngo-auth-panel__inner {
+        padding: 42px;
+    }
+
+    .youngo-hero__visual {
+        min-height: 420px;
+    }
+
+    .youngo-category-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .youngo-course-grid,
+    .youngo-benefit-grid,
+    .youngo-blog-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 820px) {
+    .youngo-header__inner,
+    .youngo-footer__inner,
+    .youngo-section__heading--split,
+    .youngo-placeholder__grid {
+        grid-template-columns: 1fr;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .youngo-nav,
+    .youngo-header__actions {
+        width: 100%;
+    }
+
+    .youngo-section__heading--split .youngo-text-link {
+        margin-top: -14px;
+    }
+
+    .youngo-testimonial-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .youngo-auth--stitch {
+        align-items: flex-start;
+        min-height: 0;
+        padding: 36px 0 52px;
+    }
+
+    .youngo-auth-media,
+    .youngo-auth-trust-panel {
+        display: none;
+    }
+
+    .youngo-auth-brandline--mobile {
+        display: inline-flex;
+    }
+
+    .youngo-auth-shell--login,
+    .youngo-auth-shell--signup {
+        min-height: 0;
+    }
+}
+
+@media (max-width: 620px) {
+    .youngo-container,
+    .youngo-container--narrow {
+        width: min(100% - 32px, 1280px);
+    }
+
+    .youngo-hero,
+    .youngo-section {
+        padding: 56px 0;
+    }
+
+    .youngo-hero__grid,
+    .youngo-about__grid {
+        gap: 34px;
+    }
+
+    .youngo-hero__content h1 {
+        font-size: 38px;
+    }
+
+    .youngo-section__heading h2,
+    .youngo-about h2 {
+        font-size: 28px;
+    }
+
+    .youngo-final-cta h2 {
+        font-size: 32px;
+    }
+
+    .youngo-hero__lead {
+        font-size: 16px;
+    }
+
+    .youngo-hero__visual {
+        min-height: 340px;
+        padding: 18px;
+        border-radius: 24px;
+    }
+
+    .youngo-hero-card {
+        position: static;
+        width: 100%;
+        margin-top: 12px;
+    }
+
+    .youngo-category-grid,
+    .youngo-about__visual {
+        grid-template-columns: 1fr;
+    }
+
+    .youngo-course-card__media,
+    .youngo-blog-card img {
+        height: 180px;
+    }
+
+    .youngo-auth {
+        padding: 52px 0 64px;
+    }
+
+    .youngo-auth--stitch {
+        padding: 24px 0 40px;
+    }
+
+    .youngo-auth-shell {
+        border-radius: 20px;
+    }
+
+    .youngo-auth-shell--signup .youngo-auth-panel__inner,
+    .youngo-auth-panel__inner {
+        padding: 30px 22px;
+    }
+
+    .youngo-auth-brandline {
+        margin-bottom: 34px;
+        font-size: 24px;
+    }
+
+    .youngo-auth-heading h1,
+    .youngo-auth-shell--signup .youngo-auth-heading h1 {
+        font-size: 30px;
+    }
+
+    .youngo-auth-form__meta {
+        justify-content: flex-end;
+    }
+
+    .youngo-auth-card,
+    .youngo-account-disable {
+        padding: 24px;
+        border-radius: 20px;
+    }
+
+    .youngo-field-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .youngo-auth__intro h1 {
+        font-size: 36px;
+    }
+
+    .youngo-final-cta__panel {
+        padding: 40px 22px;
+        border-radius: 22px;
+    }
+
+    .youngo-placeholder h1 {
+        font-size: 36px;
+    }
+}
+
+/* Phase 1C.7A public screenshot polish */
+body.youngo-theme :focus-visible {
+    outline: 3px solid rgba(126, 66, 171, 0.32);
+    outline-offset: 4px;
+}
+
+.youngo-header {
+    box-shadow: 0 10px 30px rgba(66, 15, 121, 0.05);
+}
+
+.youngo-header__inner {
+    min-height: 76px;
+}
+
+.youngo-brand img {
+    width: auto;
+    height: 46px;
+    max-width: 174px;
+}
+
+.youngo-nav {
+    padding: 6px;
+    border: 1px solid rgba(205, 195, 211, 0.42);
+    border-radius: 999px;
+    background: rgba(250, 248, 255, 0.74);
+}
+
+.youngo-nav a,
+.youngo-link,
+.youngo-footer a,
+.youngo-text-link {
+    transition: background 180ms ease, color 180ms ease, box-shadow 180ms ease, transform 180ms ease;
+}
+
+.youngo-nav a:hover,
+.youngo-nav a:focus-visible {
+    background: var(--youngo-white);
+    box-shadow: 0 8px 20px rgba(90, 45, 145, 0.08);
+    transform: translateY(-1px);
+}
+
+.youngo-button {
+    box-shadow: 0 12px 28px rgba(66, 15, 121, 0.16);
+}
+
+.youngo-button:hover,
+.youngo-button:focus-visible {
+    box-shadow: 0 18px 36px rgba(66, 15, 121, 0.2);
+}
+
+.youngo-button:active {
+    transform: translateY(0);
+}
+
+.youngo-button--secondary {
+    box-shadow: 0 10px 24px rgba(90, 45, 145, 0.08);
+}
+
+.youngo-text-link::after {
+    content: "";
+    width: 18px;
+    height: 18px;
+    margin-left: 8px;
+    border-radius: 999px;
+    background: linear-gradient(135deg, var(--youngo-purple-tint), rgba(242, 189, 118, 0.62));
+}
+
+.youngo-hero {
+    padding: 92px 0 104px;
+    background:
+        radial-gradient(circle at 9% 18%, rgba(238, 220, 255, 0.68), rgba(250, 248, 255, 0) 32%),
+        linear-gradient(180deg, #ffffff 0%, var(--youngo-bg) 100%);
+}
+
+.youngo-hero__grid {
+    gap: 68px;
+}
+
+.youngo-hero__content h1,
+.youngo-section__heading h2,
+.youngo-about h2,
+.youngo-final-cta h2,
+.youngo-auth-heading h1 {
+    text-wrap: balance;
+}
+
+.youngo-hero__lead,
+.youngo-section__heading p,
+.youngo-about p,
+.youngo-final-cta p,
+.youngo-auth-heading p {
+    text-wrap: pretty;
+}
+
+.youngo-eyebrow {
+    display: inline-flex;
+    width: fit-content;
+    align-items: center;
+    gap: 8px;
+    padding: 7px 12px;
+    border: 1px solid rgba(126, 66, 171, 0.18);
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.72);
+    box-shadow: 0 8px 20px rgba(90, 45, 145, 0.05);
+}
+
+.youngo-eyebrow::before {
+    content: "";
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: var(--youngo-warm);
+}
+
+.youngo-section__heading--center .youngo-eyebrow,
+.youngo-final-cta .youngo-eyebrow {
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.youngo-hero__visual {
+    isolation: isolate;
+    min-height: 510px;
+    padding: 36px;
+}
+
+.youngo-hero__visual::before,
+.youngo-hero__visual::after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+.youngo-hero__visual::before {
+    inset: 26px auto auto 28px;
+    width: 128px;
+    height: 128px;
+    background: rgba(255, 255, 255, 0.54);
+}
+
+.youngo-hero__visual::after {
+    right: 38px;
+    bottom: 38px;
+    width: 188px;
+    height: 188px;
+    background: rgba(185, 61, 152, 0.12);
+}
+
+.youngo-hero-card {
+    backdrop-filter: blur(12px);
+    transition: transform 180ms ease, box-shadow 180ms ease;
+}
+
+.youngo-hero__visual:hover .youngo-hero-card--top {
+    transform: translateY(-4px);
+}
+
+.youngo-hero__visual:hover .youngo-hero-card--bottom {
+    transform: translateY(4px);
+}
+
+.youngo-trust-row span {
+    transition: border-color 180ms ease, box-shadow 180ms ease, transform 180ms ease;
+}
+
+.youngo-trust-row span:hover {
+    border-color: rgba(126, 66, 171, 0.34);
+    box-shadow: 0 12px 26px rgba(90, 45, 145, 0.1);
+    transform: translateY(-2px);
+}
+
+.youngo-section {
+    position: relative;
+}
+
+.youngo-section--white {
+    box-shadow: inset 0 1px rgba(205, 195, 211, 0.28), inset 0 -1px rgba(205, 195, 211, 0.2);
+}
+
+.youngo-category-card,
+.youngo-course-card,
+.youngo-benefit-card,
+.youngo-testimonial-card,
+.youngo-blog-card,
+.youngo-faq-item {
+    transition: border-color 180ms ease, box-shadow 180ms ease, transform 180ms ease, background 180ms ease;
+}
+
+.youngo-category-card:hover,
+.youngo-category-card:focus-visible,
+.youngo-benefit-card:hover,
+.youngo-testimonial-card:hover,
+.youngo-blog-card:hover,
+.youngo-faq-item:hover {
+    border-color: rgba(126, 66, 171, 0.28);
+    box-shadow: 0 20px 48px rgba(66, 15, 121, 0.13);
+    transform: translateY(-4px);
+}
+
+.youngo-course-card:hover {
+    transform: translateY(-5px);
+}
+
+.youngo-course-card__media img,
+.youngo-blog-card img {
+    transition: transform 220ms ease, filter 220ms ease;
+}
+
+.youngo-course-card:hover .youngo-course-card__media img,
+.youngo-blog-card:hover img {
+    filter: saturate(1.08);
+    transform: scale(1.035);
+}
+
+.youngo-icon-badge,
+.youngo-number-badge {
+    box-shadow: 0 12px 26px rgba(66, 15, 121, 0.16);
+}
+
+.youngo-course-card__media span,
+.youngo-rating,
+.youngo-blog-card span,
+.youngo-card-meta span {
+    letter-spacing: 0;
+}
+
+.youngo-card-meta a {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.youngo-card-meta a::after {
+    content: "";
+    width: 7px;
+    height: 7px;
+    border-top: 2px solid currentColor;
+    border-right: 2px solid currentColor;
+    transform: rotate(45deg);
+}
+
+.youngo-about {
+    background:
+        radial-gradient(circle at 82% 22%, rgba(255, 255, 255, 0.58), rgba(238, 220, 255, 0) 30%),
+        var(--youngo-purple-tint);
+}
+
+.youngo-about__visual img {
+    width: 100%;
+    min-height: 360px;
+    object-fit: cover;
+    border: 1px solid rgba(126, 66, 171, 0.18);
+    border-radius: 28px;
+    box-shadow: var(--youngo-shadow-strong);
+}
+
+.youngo-about-tile {
+    transition: transform 180ms ease, box-shadow 180ms ease;
+}
+
+.youngo-about-tile:hover {
+    box-shadow: 0 18px 40px rgba(66, 15, 121, 0.14);
+    transform: translateY(-4px) rotate(-0.5deg);
+}
+
+.youngo-faq-icon::after {
+    transition: transform 180ms ease;
+}
+
+.youngo-faq-item[open] {
+    border-color: rgba(126, 66, 171, 0.28);
+}
+
+.youngo-final-cta__panel {
+    isolation: isolate;
+}
+
+.youngo-final-cta__panel::after {
+    content: "";
+    position: absolute;
+    inset: 18px;
+    z-index: 0;
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    border-radius: 22px;
+    pointer-events: none;
+}
+
+.youngo-footer {
+    background:
+        radial-gradient(circle at 8% 0%, rgba(238, 220, 255, 0.54), rgba(255, 255, 255, 0) 30%),
+        rgba(255, 255, 255, 0.96);
+}
+
+.youngo-footer__inner {
+    align-items: flex-start;
+    padding: 30px 0;
+}
+
+.youngo-footer__brand {
+    max-width: 430px;
+}
+
+.youngo-footer__brand a {
+    display: inline-flex;
+    width: fit-content;
+}
+
+.youngo-footer__brand img {
+    width: auto;
+    height: 48px;
+    max-width: 176px;
+}
+
+.youngo-auth--stitch {
+    background:
+        radial-gradient(circle at 16% 12%, rgba(217, 185, 255, 0.52), rgba(250, 248, 255, 0) 32%),
+        radial-gradient(circle at 86% 86%, rgba(242, 189, 118, 0.26), rgba(250, 248, 255, 0) 31%),
+        linear-gradient(180deg, #ffffff 0%, var(--youngo-bg) 100%);
+}
+
+.youngo-auth-shell {
+    border-radius: 28px;
+    box-shadow: 0 28px 80px rgba(66, 15, 121, 0.15);
+}
+
+.youngo-auth-brandline {
+    margin-bottom: 44px;
+}
+
+.youngo-auth-brandline img {
+    width: auto;
+    height: 54px;
+    max-width: 184px;
+    object-fit: contain;
+}
+
+.youngo-auth-media--login {
+    background: linear-gradient(160deg, #fbf3ff 0%, #efe2ff 42%, #4a147e 100%);
+}
+
+.youngo-auth-photo {
+    background:
+        linear-gradient(90deg, rgba(255, 255, 255, 0.6) 0 1px, transparent 1px 100%),
+        radial-gradient(circle at 72% 20%, rgba(242, 189, 118, 0.34), rgba(255, 246, 231, 0) 26%),
+        linear-gradient(180deg, #fbf1ff 0%, #fff6e7 58%, #d7c0ed 100%);
+    background-size: 82px 100%, auto, auto;
+}
+
+.youngo-auth-quote,
+.youngo-auth-trust-item,
+.youngo-auth-illustration {
+    transition: box-shadow 180ms ease, transform 180ms ease;
+}
+
+.youngo-auth-quote:hover,
+.youngo-auth-trust-item:hover,
+.youngo-auth-illustration:hover {
+    box-shadow: 0 24px 54px rgba(66, 15, 121, 0.16);
+    transform: translateY(-3px);
+}
+
+.youngo-auth-trust-item {
+    padding: 14px;
+    border: 1px solid rgba(255, 255, 255, 0.62);
+    border-radius: 18px;
+    background: rgba(255, 255, 255, 0.54);
+}
+
+.youngo-auth--stitch .youngo-field input,
+.youngo-auth--stitch .youngo-field textarea,
+.youngo-field input,
+.youngo-field textarea,
+.youngo-field select {
+    transition: border-color 180ms ease, box-shadow 180ms ease, background 180ms ease, transform 180ms ease;
+}
+
+.youngo-auth--stitch .youngo-field input:hover,
+.youngo-auth--stitch .youngo-field textarea:hover,
+.youngo-field input:hover,
+.youngo-field textarea:hover,
+.youngo-field select:hover {
+    border-color: rgba(126, 66, 171, 0.52);
+}
+
+.youngo-field input:focus,
+.youngo-field textarea:focus,
+.youngo-field select:focus {
+    background: #ffffff;
+}
+
+.youngo-password-toggle:focus-visible {
+    outline: 3px solid rgba(126, 66, 171, 0.28);
+    outline-offset: 2px;
+}
+
+.youngo-auth-checkbox {
+    padding: 13px 14px;
+    border: 1px solid rgba(126, 66, 171, 0.18);
+    border-radius: 14px;
+    background: rgba(243, 243, 252, 0.7);
+    cursor: pointer;
+    transition: border-color 180ms ease, background 180ms ease, box-shadow 180ms ease;
+}
+
+.youngo-auth-checkbox:hover,
+.youngo-auth-checkbox:focus-within {
+    border-color: rgba(126, 66, 171, 0.38);
+    background: #ffffff;
+    box-shadow: 0 12px 26px rgba(90, 45, 145, 0.08);
+}
+
+.youngo-auth-extra {
+    box-shadow: inset 0 1px rgba(255, 255, 255, 0.74);
+}
+
+.youngo-reveal {
+    opacity: 0;
+    transform: translateY(18px);
+    transition: opacity 420ms ease, transform 420ms ease;
+}
+
+.youngo-reveal.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    body.youngo-theme *,
+    body.youngo-theme *::before,
+    body.youngo-theme *::after {
+        animation-duration: 0.001ms !important;
+        animation-iteration-count: 1 !important;
+        scroll-behavior: auto !important;
+        transition-duration: 0.001ms !important;
+    }
+
+    .youngo-reveal {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+@media (max-width: 1040px) {
+    .youngo-brand img,
+    .youngo-footer__brand img {
+        height: 42px;
+    }
+
+    .youngo-nav {
+        border-radius: 18px;
+    }
+
+    .youngo-hero {
+        padding: 72px 0 86px;
+    }
+
+    .youngo-hero__grid {
+        gap: 46px;
+    }
+}
+
+@media (max-width: 820px) {
+    .youngo-header__inner {
+        min-height: 0;
+        padding: 14px 0;
+    }
+
+    .youngo-nav {
+        justify-content: center;
+        width: 100%;
+    }
+
+    .youngo-header__actions {
+        justify-content: center;
+    }
+
+    .youngo-footer__inner {
+        gap: 20px;
+    }
+
+    .youngo-footer__links {
+        align-items: flex-start;
+    }
+
+    .youngo-auth-brandline img {
+        height: 48px;
+    }
+}
+
+@media (max-width: 620px) {
+    .youngo-brand img,
+    .youngo-footer__brand img {
+        height: 38px;
+    }
+
+    .youngo-nav {
+        gap: 6px;
+        justify-content: flex-start;
+        overflow-x: auto;
+        padding: 5px;
+        width: 100%;
+    }
+
+    .youngo-nav a {
+        flex: 0 0 auto;
+        padding: 8px 9px;
+    }
+
+    .youngo-header__actions {
+        justify-content: flex-start;
+    }
+
+    .youngo-hero {
+        padding: 52px 0 60px;
+    }
+
+    .youngo-eyebrow {
+        padding: 6px 10px;
+        font-size: 12px;
+    }
+
+    .youngo-hero__visual {
+        min-height: 320px;
+    }
+
+    .youngo-final-cta__panel::after {
+        inset: 12px;
+        border-radius: 18px;
+    }
+
+    .youngo-auth-brandline img {
+        height: 44px;
+    }
+
+    .youngo-auth-checkbox {
+        padding: 12px;
+    }
+}
+
+/* Phase 1C.8B homepage creative rebuild */
+.youngo-hero__content {
+    position: relative;
+}
+
+.youngo-hero-stats {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 12px;
+    max-width: 650px;
+    margin-top: 28px;
+}
+
+.youngo-hero-stats div,
+.youngo-about-stats div {
+    padding: 16px;
+    border: 1px solid rgba(126, 66, 171, 0.16);
+    border-radius: 18px;
+    background: rgba(255, 255, 255, 0.82);
+    box-shadow: 0 12px 26px rgba(90, 45, 145, 0.07);
+}
+
+.youngo-hero-stats strong,
+.youngo-about-stats strong {
+    display: block;
+    color: var(--youngo-purple);
+    font-size: 26px;
+    font-weight: 800;
+    line-height: 1;
+}
+
+.youngo-hero-stats span,
+.youngo-about-stats span {
+    display: block;
+    margin-top: 8px;
+    color: var(--youngo-muted);
+    font-size: 12px;
+    font-weight: 800;
+    line-height: 1.35;
+    text-transform: uppercase;
+}
+
+.youngo-category-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+}
+
+.youngo-category-card {
+    position: relative;
+    display: flex;
+    min-height: 100%;
+    overflow: hidden;
+    padding: 0;
+    place-items: stretch;
+    flex-direction: column;
+    border-radius: 24px;
+    background: var(--youngo-white);
+    text-align: left;
+}
+
+.youngo-category-card__media {
+    position: relative;
+    display: block;
+    height: 172px;
+    overflow: hidden;
+    background: var(--youngo-purple-soft);
+}
+
+.youngo-category-card__media img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 220ms ease, filter 220ms ease;
+}
+
+.youngo-category-card:hover .youngo-category-card__media img,
+.youngo-category-card:focus-visible .youngo-category-card__media img {
+    filter: saturate(1.08);
+    transform: scale(1.035);
+}
+
+.youngo-category-card .youngo-icon-badge {
+    position: absolute;
+    right: 16px;
+    bottom: 16px;
+    width: 52px;
+    height: 52px;
+    margin: 0;
+    border: 4px solid rgba(255, 255, 255, 0.88);
+}
+
+.youngo-category-card__body {
+    display: grid;
+    gap: 10px;
+    padding: 22px;
+}
+
+.youngo-category-card strong {
+    margin: 0;
+    color: var(--youngo-text);
+    font-size: 20px;
+    line-height: 1.25;
+}
+
+.youngo-category-card small {
+    min-height: 48px;
+    color: var(--youngo-muted);
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 1.6;
+    text-transform: none;
+}
+
+.youngo-category-card__meta {
+    display: inline-flex;
+    width: fit-content;
+    align-items: center;
+    min-height: 30px;
+    padding: 6px 10px;
+    border-radius: 999px;
+    background: var(--youngo-purple-soft);
+    color: var(--youngo-purple);
+    font-size: 12px;
+    font-weight: 800;
+}
+
+.youngo-course-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.youngo-course-card__media {
+    height: 206px;
+}
+
+.youngo-course-card__category {
+    width: fit-content;
+    margin-bottom: 12px;
+    padding: 6px 10px;
+    border-radius: 999px;
+    background: #fff7e8;
+    color: #6c4600;
+    font-size: 12px;
+    font-weight: 800;
+}
+
+.youngo-course-card__facts {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 18px;
+}
+
+.youngo-course-card__facts span {
+    display: inline-flex;
+    align-items: center;
+    min-height: 30px;
+    padding: 6px 10px;
+    border: 1px solid rgba(126, 66, 171, 0.14);
+    border-radius: 999px;
+    background: var(--youngo-purple-soft);
+    color: var(--youngo-muted);
+    font-size: 12px;
+    font-weight: 800;
+}
+
+.youngo-trust-layout {
+    display: grid;
+    grid-template-columns: minmax(280px, 0.42fr) minmax(0, 1fr);
+    gap: 26px;
+    align-items: stretch;
+}
+
+.youngo-trust-panel {
+    display: flex;
+    min-height: 100%;
+    padding: 32px;
+    flex-direction: column;
+    justify-content: flex-end;
+    border: 1px solid rgba(126, 66, 171, 0.18);
+    border-radius: 28px;
+    background:
+        radial-gradient(circle at 82% 16%, rgba(242, 189, 118, 0.34), rgba(255, 255, 255, 0) 34%),
+        linear-gradient(150deg, #ffffff 0%, #f3f3fc 100%);
+    box-shadow: var(--youngo-shadow);
+}
+
+.youngo-trust-panel__label {
+    width: fit-content;
+    margin-bottom: auto;
+    padding: 7px 11px;
+    border-radius: 999px;
+    background: var(--youngo-purple);
+    color: var(--youngo-white);
+    font-size: 12px;
+    font-weight: 800;
+}
+
+.youngo-trust-panel strong {
+    display: block;
+    margin-top: 80px;
+    color: var(--youngo-purple);
+    font-size: 30px;
+    font-weight: 800;
+    line-height: 1.18;
+}
+
+.youngo-trust-panel p {
+    margin: 16px 0 0;
+    color: var(--youngo-muted);
+    font-size: 15px;
+    line-height: 1.65;
+}
+
+.youngo-benefit-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.youngo-benefit-card {
+    min-height: 220px;
+    padding: 28px;
+    text-align: left;
+}
+
+.youngo-benefit-card .youngo-number-badge {
+    width: fit-content;
+    min-width: 58px;
+    padding: 0 14px;
+    border-radius: 999px;
+}
+
+.youngo-about__visual {
+    position: relative;
+    display: block;
+}
+
+.youngo-about__visual img {
+    min-height: 420px;
+}
+
+.youngo-about-stats {
+    position: absolute;
+    right: 18px;
+    bottom: 18px;
+    display: grid;
+    width: min(320px, calc(100% - 36px));
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+}
+
+.youngo-about-stats div {
+    backdrop-filter: blur(12px);
+}
+
+.youngo-faq {
+    background:
+        radial-gradient(circle at 12% 24%, rgba(238, 220, 255, 0.5), rgba(250, 248, 255, 0) 34%),
+        var(--youngo-white);
+}
+
+.youngo-faq__grid {
+    display: grid;
+    grid-template-columns: minmax(280px, 0.42fr) minmax(0, 1fr);
+    gap: 34px;
+    align-items: start;
+}
+
+.youngo-faq__intro h2 {
+    margin: 0 0 14px;
+    color: var(--youngo-purple);
+    font-size: 32px;
+    font-weight: 800;
+    line-height: 1.18;
+}
+
+.youngo-faq__intro > p {
+    margin: 0;
+    color: var(--youngo-muted);
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+.youngo-faq__support {
+    display: grid;
+    gap: 10px;
+    margin-top: 26px;
+    padding: 22px;
+    border: 1px solid rgba(126, 66, 171, 0.18);
+    border-radius: 22px;
+    background: var(--youngo-purple-soft);
+}
+
+.youngo-faq__support strong {
+    color: var(--youngo-purple);
+    font-size: 18px;
+}
+
+.youngo-faq__support span {
+    color: var(--youngo-muted);
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.youngo-testimonial-card {
+    position: relative;
+    overflow: hidden;
+}
+
+.youngo-testimonial-card::before {
+    content: "";
+    position: absolute;
+    top: -42px;
+    right: -42px;
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    background: rgba(242, 189, 118, 0.22);
+}
+
+.youngo-person > span {
+    display: grid;
+    place-items: center;
+    color: var(--youngo-purple);
+    font-size: 18px;
+    font-weight: 800;
+}
+
+.youngo-final-cta__panel {
+    background:
+        radial-gradient(circle at 18% 18%, rgba(242, 189, 118, 0.24), rgba(255, 255, 255, 0) 30%),
+        linear-gradient(135deg, var(--youngo-purple) 0%, var(--youngo-purple-brand) 58%, var(--youngo-magenta) 100%);
+}
+
+@media (max-width: 1040px) {
+    .youngo-category-grid,
+    .youngo-course-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .youngo-trust-layout,
+    .youngo-faq__grid {
+        grid-template-columns: 1fr;
+    }
+
+    .youngo-trust-panel strong {
+        margin-top: 42px;
+    }
+}
+
+@media (max-width: 720px) {
+    html,
+    body.youngo-theme {
+        width: 100%;
+        max-width: 100%;
+        overflow-x: hidden;
+    }
+
+    .youngo-container,
+    .youngo-container--narrow {
+        width: calc(100% - 32px) !important;
+        max-width: calc(100% - 32px);
+    }
+
+    .youngo-hero__grid,
+    .youngo-hero__content,
+    .youngo-hero__visual,
+    .youngo-section__heading,
+    .youngo-faq__grid,
+    .youngo-trust-layout {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .youngo-header,
+    .youngo-main,
+    .youngo-footer,
+    .youngo-container,
+    .youngo-hero__grid,
+    .youngo-hero__content,
+    .youngo-hero__visual,
+    .youngo-section__heading,
+    .youngo-actions,
+    .youngo-trust-row {
+        max-width: 100%;
+    }
+
+    .youngo-hero__content h1 {
+        max-width: 100%;
+        overflow-wrap: anywhere;
+        word-break: normal;
+        font-size: 34px;
+        line-height: 1.12;
+    }
+
+    .youngo-hero__lead {
+        max-width: 100%;
+        overflow-wrap: anywhere;
+        word-break: normal;
+    }
+
+    .youngo-actions {
+        align-items: stretch;
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+    }
+
+    .youngo-actions .youngo-button {
+        width: 100%;
+        max-width: 100%;
+        flex: 1 1 auto;
+        min-width: 0;
+        overflow-wrap: anywhere;
+    }
+
+    .youngo-trust-row {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    .youngo-trust-row span {
+        width: 100%;
+        min-width: 0;
+        justify-content: center;
+        white-space: normal;
+        text-align: center;
+    }
+
+    .youngo-hero-stats,
+    .youngo-category-grid,
+    .youngo-course-grid,
+    .youngo-benefit-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .youngo-hero-stats {
+        max-width: none;
+    }
+
+    .youngo-category-card__media,
+    .youngo-course-card__media {
+        height: 190px;
+    }
+
+    .youngo-hero__visual {
+        overflow: hidden;
+    }
+
+    .youngo-hero__visual img {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .youngo-about-stats {
+        position: static;
+        width: 100%;
+        margin-top: 12px;
+    }
+
+    .youngo-about__visual img {
+        min-height: 280px;
+    }
+}
+
+/* Phase 1C.8B-3 final visual and media pass */
+.youngo-header {
+    border-bottom-color: rgba(205, 195, 211, 0.56);
+    background: rgba(255, 255, 255, 0.98);
+    box-shadow: 0 16px 44px rgba(66, 15, 121, 0.08);
+    transition: transform 220ms ease, box-shadow 180ms ease, background 180ms ease;
+    will-change: transform;
+}
+
+.youngo-header__inner {
+    min-height: 88px;
+}
+
+.youngo-brand {
+    padding: 6px 0;
+}
+
+.youngo-brand img {
+    height: 54px;
+    max-width: 204px;
+}
+
+.youngo-nav {
+    gap: 4px;
+    padding: 8px;
+    border-color: rgba(126, 66, 171, 0.18);
+    background: rgba(250, 248, 255, 0.92);
+    box-shadow: inset 0 1px rgba(255, 255, 255, 0.8), 0 10px 28px rgba(66, 15, 121, 0.06);
+}
+
+.youngo-nav a {
+    padding: 10px 16px;
+    color: #33273e;
+    font-size: 15px;
+}
+
+.youngo-nav__mobile-language {
+    display: none;
+}
+
+.youngo-link {
+    color: #33273e;
+    font-size: 15px;
+}
+
+.youngo-header__actions .youngo-button--small {
+    min-height: 44px;
+    padding: 10px 18px;
+}
+
+.youngo-menu-toggle {
+    display: none;
+    width: 44px;
+    height: 44px;
+    flex: 0 0 44px;
+    border: 1px solid rgba(126, 66, 171, 0.2);
+    border-radius: 12px;
+    color: #420f79;
+    background: #fffaf1;
+    cursor: pointer;
+}
+
+.youngo-mobile-account-link {
+    display: none;
+}
+
+.youngo-menu-toggle:focus-visible,
+.youngo-nav a:focus-visible,
+.youngo-link:focus-visible {
+    outline: 3px solid rgba(185, 61, 152, 0.35);
+    outline-offset: 3px;
+}
+
+.youngo-hero {
+    padding-top: 104px;
+}
+
+.youngo-hero__grid {
+    grid-template-columns: minmax(0, 0.98fr) minmax(420px, 0.9fr);
+}
+
+.youngo-hero__content h1 {
+    font-size: 60px;
+    line-height: 1.04;
+}
+
+.youngo-hero__lead {
+    color: #3f354a;
+    font-size: 19px;
+}
+
+.youngo-hero__visual {
+    min-height: 540px;
+    padding: 28px;
+    border-color: rgba(126, 66, 171, 0.18);
+    background:
+        radial-gradient(circle at 86% 16%, rgba(242, 189, 118, 0.28), transparent 30%),
+        linear-gradient(145deg, #fffaf1 0%, #f7efff 56%, #ead7ff 100%);
+}
+
+.youngo-hero__visual img {
+    width: min(100%, 520px);
+    max-height: 480px;
+    filter: drop-shadow(0 24px 34px rgba(66, 15, 121, 0.16));
+}
+
+.youngo-hero-card {
+    min-width: 156px;
+    padding: 16px 18px;
+    border-color: rgba(126, 66, 171, 0.2);
+}
+
+.youngo-hero-card strong {
+    font-size: 20px;
+}
+
+.youngo-trust-row {
+    gap: 12px;
+}
+
+.youngo-trust-row span {
+    min-height: 40px;
+    padding: 9px 16px;
+    color: #33273e;
+    font-size: 14px;
+}
+
+.youngo-hero-stats {
+    gap: 14px;
+}
+
+.youngo-hero-stats div {
+    padding: 18px;
+    border-color: rgba(126, 66, 171, 0.2);
+}
+
+.youngo-hero-stats strong {
+    font-size: 30px;
+}
+
+.youngo-category-grid {
+    gap: 26px;
+}
+
+.youngo-category-card {
+    border-color: rgba(126, 66, 171, 0.14);
+    box-shadow: 0 14px 36px rgba(66, 15, 121, 0.08);
+}
+
+.youngo-category-card__media {
+    height: 190px;
+    background: #faf8ff;
+}
+
+.youngo-category-card__body {
+    padding: 24px;
+}
+
+.youngo-category-card strong {
+    font-size: 21px;
+}
+
+.youngo-category-card small {
+    color: #3f354a;
+}
+
+.youngo-category-card__meta {
+    background: #fff7e8;
+    color: #5f3d00;
+}
+
+.youngo-category-card .youngo-icon-badge {
+    width: 56px;
+    height: 56px;
+    background: linear-gradient(135deg, var(--youngo-purple), var(--youngo-magenta));
+}
+
+.youngo-course-grid {
+    gap: 28px;
+}
+
+.youngo-course-card {
+    border-radius: 26px;
+    border-color: rgba(126, 66, 171, 0.14);
+    box-shadow: 0 16px 42px rgba(66, 15, 121, 0.09);
+}
+
+.youngo-course-card--linked {
+    position: relative;
+}
+
+.youngo-course-card__link-overlay {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    border-radius: inherit;
+    color: inherit;
+    text-decoration: none;
+}
+
+.youngo-course-card__link-overlay:focus-visible {
+    outline: 3px solid rgba(126, 66, 171, 0.42);
+    outline-offset: 4px;
+}
+
+.youngo-course-card--linked .youngo-card-meta a {
+    position: relative;
+    z-index: 2;
+}
+
+.youngo-course-card__media {
+    height: 228px;
+    background: linear-gradient(135deg, #fff7e8, #f3f3fc);
+}
+
+.youngo-course-card__media span {
+    top: 16px;
+    left: 16px;
+    padding: 8px 12px;
+    border: 1px solid rgba(126, 66, 171, 0.16);
+    color: #33273e;
+}
+
+.youngo-course-card__body {
+    padding: 24px;
+}
+
+.youngo-course-card__category {
+    margin-bottom: 14px;
+    background: rgba(126, 66, 171, 0.1);
+    color: var(--youngo-purple);
+}
+
+.youngo-course-card h3 {
+    font-size: 23px;
+    line-height: 1.2;
+}
+
+.youngo-course-card p {
+    color: #3f354a;
+    font-size: 15.5px;
+}
+
+.youngo-course-card__facts {
+    margin-top: 20px;
+}
+
+.youngo-course-card__facts span {
+    background: #faf8ff;
+    color: #33273e;
+}
+
+.youngo-card-meta {
+    margin-top: 20px;
+}
+
+.youngo-card-meta span {
+    color: #5f3d00;
+}
+
+.youngo-trust-layout {
+    gap: 30px;
+}
+
+.youngo-trust-panel {
+    border-color: rgba(126, 66, 171, 0.18);
+    background:
+        radial-gradient(circle at 74% 14%, rgba(242, 189, 118, 0.42), transparent 34%),
+        radial-gradient(circle at 12% 78%, rgba(185, 61, 152, 0.1), transparent 30%),
+        linear-gradient(150deg, #ffffff 0%, #f6efff 100%);
+}
+
+.youngo-benefit-card {
+    border-color: rgba(126, 66, 171, 0.14);
+    box-shadow: 0 14px 34px rgba(66, 15, 121, 0.08);
+}
+
+.youngo-benefit-card h3 {
+    font-size: 21px;
+}
+
+.youngo-benefit-card p {
+    color: #3f354a;
+}
+
+.youngo-about {
+    background:
+        radial-gradient(circle at 84% 18%, rgba(242, 189, 118, 0.22), transparent 30%),
+        radial-gradient(circle at 8% 76%, rgba(185, 61, 152, 0.09), transparent 34%),
+        #f3f3fc;
+}
+
+.youngo-about__visual img {
+    min-height: 450px;
+    border-color: rgba(126, 66, 171, 0.2);
+    object-position: center;
+}
+
+.youngo-about-stats div {
+    border-color: rgba(126, 66, 171, 0.18);
+    background: rgba(255, 255, 255, 0.9);
+}
+
+.youngo-check-list li {
+    font-size: 16px;
+}
+
+.youngo-faq__support {
+    padding: 26px;
+    border-color: rgba(126, 66, 171, 0.2);
+    background:
+        radial-gradient(circle at 88% 16%, rgba(242, 189, 118, 0.35), transparent 34%),
+        #f3f3fc;
+    box-shadow: 0 14px 34px rgba(66, 15, 121, 0.08);
+}
+
+.youngo-faq__support strong {
+    font-size: 20px;
+}
+
+.youngo-faq-item {
+    border-color: rgba(126, 66, 171, 0.14);
+}
+
+.youngo-faq-item summary {
+    min-height: 72px;
+    padding: 22px 24px;
+    font-size: 17px;
+}
+
+.youngo-faq-item[open] {
+    background: linear-gradient(180deg, #ffffff 0%, #faf8ff 100%);
+    box-shadow: 0 18px 42px rgba(66, 15, 121, 0.11);
+}
+
+.youngo-faq-item[open] summary {
+    color: var(--youngo-purple);
+}
+
+.youngo-section--blog {
+    background:
+        linear-gradient(180deg, #ffffff 0%, #f3f3fc 100%);
+}
+
+.youngo-blog-page-heading {
+    margin-bottom: 26px;
+}
+
+.youngo-blog-editorial {
+    display: grid;
+    grid-template-columns: minmax(0, 1.45fr) minmax(280px, .55fr);
+    gap: 24px;
+    align-items: stretch;
+    margin-bottom: 26px;
+}
+
+.youngo-blog-featured-card,
+.youngo-blog-side-panel,
+.youngo-blog-magazine-card {
+    border: 1px solid var(--youngo-soft-border);
+    border-radius: 22px;
+    background: var(--youngo-white);
+    box-shadow: 0 14px 34px rgba(66, 15, 121, 0.08);
+}
+
+.youngo-blog-featured-card {
+    display: grid;
+    grid-template-columns: minmax(240px, .82fr) minmax(0, 1fr);
+    min-height: 330px;
+    overflow: hidden;
+}
+
+.youngo-blog-featured-card img,
+.youngo-blog-magazine-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: saturate(.82) contrast(.98);
+}
+
+.youngo-blog-featured-card div,
+.youngo-blog-magazine-card div {
+    display: flex;
+    min-width: 0;
+    flex-direction: column;
+    padding: 28px;
+}
+
+.youngo-blog-featured-card span,
+.youngo-blog-magazine-card span,
+.youngo-blog-side-panel > span {
+    width: max-content;
+    max-width: 100%;
+    margin-bottom: 14px;
+    padding: 7px 11px;
+    border-radius: 999px;
+    background: #faf8ff;
+    color: var(--youngo-purple);
+    font-size: 12px;
+    font-weight: 900;
+}
+
+.youngo-blog-featured-card h3,
+.youngo-blog-magazine-card h3 {
+    margin: 0 0 12px;
+    color: var(--youngo-purple);
+    font-weight: 900;
+    line-height: 1.18;
+}
+
+.youngo-blog-featured-card h3 {
+    font-size: 34px;
+}
+
+.youngo-blog-featured-card p,
+.youngo-blog-magazine-card p,
+.youngo-blog-side-panel strong {
+    margin: 0;
+    color: #3f354a;
+    line-height: 1.7;
+}
+
+.youngo-blog-featured-card small,
+.youngo-blog-magazine-card small {
+    margin-top: auto;
+    padding-top: 18px;
+    color: var(--youngo-muted);
+    font-size: 13px;
+    font-weight: 900;
+}
+
+.youngo-blog-side-panel {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 28px;
+    background:
+        linear-gradient(180deg, rgba(255, 255, 255, 0.94), rgba(250, 248, 255, 0.96));
+}
+
+.youngo-blog-side-panel strong {
+    display: block;
+    margin-bottom: 22px;
+    color: var(--youngo-text);
+    font-size: 23px;
+    font-weight: 900;
+}
+
+.youngo-blog-side-panel div {
+    display: grid;
+    gap: 10px;
+}
+
+.youngo-blog-side-panel p {
+    margin: 0;
+    padding: 12px 14px;
+    border-radius: 14px;
+    background: var(--youngo-white);
+    color: var(--youngo-muted);
+    font-size: 14px;
+    font-weight: 900;
+    box-shadow: 0 8px 20px rgba(66, 15, 121, 0.06);
+}
+
+.youngo-blog-magazine-grid {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 18px;
+}
+
+.youngo-blog-magazine-card {
+    display: flex;
+    min-height: 100%;
+    overflow: hidden;
+    flex-direction: column;
+}
+
+.youngo-blog-magazine-card img {
+    height: 168px;
+}
+
+.youngo-blog-magazine-card div {
+    flex: 1;
+    padding: 20px;
+}
+
+.youngo-blog-magazine-card h3 {
+    font-size: 19px;
+}
+
+.youngo-blog-magazine-card p {
+    color: var(--youngo-muted);
+    font-size: 14px;
+}
+
+@media (max-width: 1100px) {
+    .youngo-blog-editorial {
+        grid-template-columns: 1fr;
+    }
+
+    .youngo-blog-magazine-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 760px) {
+    .youngo-blog-featured-card {
+        grid-template-columns: 1fr;
+    }
+
+    .youngo-blog-featured-card img {
+        min-height: 220px;
+    }
+
+    .youngo-blog-featured-card h3 {
+        font-size: 26px;
+    }
+
+    .youngo-blog-magazine-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.youngo-blog-grid {
+    gap: 18px;
+}
+
+.youngo-blog-card {
+    display: grid;
+    grid-template-columns: 128px minmax(0, 1fr);
+    min-height: 170px;
+    border-radius: 22px;
+    box-shadow: 0 12px 30px rgba(66, 15, 121, 0.07);
+}
+
+.youngo-blog-card img {
+    width: 100%;
+    height: 100%;
+    min-height: 170px;
+    filter: saturate(.72) contrast(.96);
+}
+
+.youngo-blog-card div {
+    padding: 20px;
+}
+
+.youngo-blog-card h3 {
+    font-size: 19px;
+}
+
+.youngo-blog-card p {
+    color: #3f354a;
+    font-size: 14.5px;
+}
+
+.youngo-final-cta__panel {
+    padding: 66px 42px;
+    border: 1px solid rgba(255, 255, 255, 0.16);
+    background:
+        radial-gradient(circle at 18% 18%, rgba(242, 189, 118, 0.28), transparent 28%),
+        radial-gradient(circle at 86% 76%, rgba(255, 255, 255, 0.14), transparent 34%),
+        linear-gradient(135deg, #420f79 0%, #5a2d91 58%, #b93d98 100%);
+}
+
+.youngo-final-cta h2 {
+    font-size: 42px;
+}
+
+.youngo-final-cta .youngo-button--light {
+    box-shadow: 0 18px 42px rgba(0, 0, 0, 0.12);
+}
+
+@media (max-width: 1040px) {
+    .youngo-header__inner {
+        min-height: 78px;
+    }
+
+    .youngo-brand img {
+        height: 48px;
+    }
+
+    .youngo-hero__grid {
+        grid-template-columns: 1fr;
+    }
+
+    .youngo-hero__content h1 {
+        font-size: 48px;
+    }
+}
+
+@media (max-width: 720px) {
+    .youngo-header__inner {
+        gap: 10px;
+        position: relative;
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    .youngo-brand img {
+        width: 128px;
+        max-width: 128px;
+        height: auto;
+    }
+
+    .youngo-brand {
+        order: 1;
+    }
+
+    .youngo-menu-toggle {
+        display: inline-grid;
+        place-items: center;
+        order: 2;
+        margin-inline-start: auto;
+        margin: 0;
+        margin-inline-start: auto;
+        visibility: visible !important;
+        opacity: 1 !important;
+    }
+
+    .youngo-nav {
+        display: none;
+        order: 4;
+        width: 100%;
+        padding: 8px;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 2px;
+        border-radius: 16px;
+        box-shadow: 0 18px 38px rgba(66, 15, 121, 0.12);
+    }
+
+    .youngo-header.is-menu-open .youngo-nav {
+        display: flex;
+    }
+
+    .youngo-nav a {
+        width: 100%;
+        padding: 12px 14px;
+        border-radius: 10px;
+        font-size: 14px;
+    }
+
+    .youngo-nav a:hover,
+    .youngo-nav a:focus-visible {
+        background: rgba(126, 66, 171, 0.08);
+    }
+
+    .youngo-nav__mobile-language {
+        display: flex;
+        gap: 8px;
+        padding: 10px 6px 4px;
+        border-top: 1px solid rgba(126, 66, 171, 0.12);
+    }
+
+    .youngo-nav__mobile-language a {
+        width: auto;
+        flex: 1;
+        text-align: center;
+        background: rgba(126, 66, 171, 0.06);
+    }
+
+    .youngo-header__actions {
+        order: 3;
+        direction: rtl;
+        margin-inline-start: 0;
+        gap: 8px;
+    }
+
+    .youngo-header__actions .youngo-language-switcher,
+    .youngo-header__actions .youngo-link,
+    .youngo-header__actions .youngo-button--small {
+        display: none;
+    }
+
+    .youngo-header__actions:has(.youngo-header-icon-link) .youngo-header-icon-link {
+        display: inline-flex;
+    }
+
+    .youngo-header__actions:not(:has(.youngo-header-icon-link)) > .youngo-link {
+        display: inline-flex !important;
+        width: auto !important;
+        flex: 0 0 auto;
+        min-height: 38px;
+        padding: 8px 12px;
+        border: 1px solid rgba(126, 66, 171, 0.2);
+        border-radius: 999px;
+        color: #420f79;
+        background: #fffaf1;
+        text-decoration: none;
+        white-space: nowrap;
+    }
+
+    .youngo-language-switcher {
+        min-height: 38px;
+    }
+
+    .youngo-hero {
+        padding-top: 58px;
+    }
+
+    .youngo-hero__content h1 {
+        font-size: 36px;
+    }
+
+    .youngo-hero__visual {
+        min-height: 0;
+        padding: 18px;
+    }
+
+    .youngo-hero-card {
+        min-width: 0;
+    }
+
+    .youngo-category-card__media,
+    .youngo-course-card__media {
+        height: 210px;
+    }
+
+    .youngo-blog-card {
+        grid-template-columns: 1fr;
+    }
+
+    .youngo-blog-card img {
+        height: 132px;
+        min-height: 132px;
+    }
+
+    .youngo-final-cta h2 {
+        font-size: 31px;
+    }
+}
+
+/* Phase 1C.8B-4 final micro-tuning */
+.youngo-header__inner {
+    min-height: 94px;
+    padding: 18px 0;
+}
+
+.youngo-brand img {
+    height: 58px;
+    max-width: 218px;
+}
+
+.youngo-nav {
+    padding: 9px;
+    border-color: rgba(126, 66, 171, 0.22);
+}
+
+.youngo-nav a {
+    min-height: 40px;
+    padding: 11px 18px;
+    font-size: 15.5px;
+    line-height: 1.1;
+}
+
+.youngo-header__actions {
+    gap: 18px;
+}
+
+.youngo-link {
+    font-size: 15.5px;
+}
+
+.youngo-header__actions .youngo-button--small {
+    min-height: 46px;
+    padding: 11px 20px;
+}
+
+.youngo-header.is-hidden {
+    transform: translateY(-112%);
+}
+
+.youngo-header.is-hidden:focus-within {
+    transform: translateY(0);
+}
+
+.youngo-header.is-scrolled {
+    box-shadow: 0 18px 48px rgba(66, 15, 121, 0.11);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .youngo-header {
+        transition: none;
+    }
+}
+
+.youngo-hero__content h1 {
+    margin-bottom: 24px;
+    line-height: 1.055;
+}
+
+.youngo-hero__visual {
+    border-color: rgba(126, 66, 171, 0.24);
+    box-shadow: 0 30px 74px rgba(66, 15, 121, 0.17);
+}
+
+.youngo-course-card__media span,
+.youngo-course-card__category,
+.youngo-course-card__facts span,
+.youngo-card-meta span,
+.youngo-card-meta a {
+    font-size: 13px;
+    line-height: 1.2;
+}
+
+.youngo-course-card__media span {
+    font-weight: 900;
+}
+
+.youngo-course-card__category {
+    padding: 7px 11px;
+    font-weight: 900;
+}
+
+.youngo-course-card h3 {
+    margin-bottom: 12px;
+    font-size: 24px;
+}
+
+.youngo-course-card p {
+    font-size: 16px;
+    line-height: 1.62;
+}
+
+.youngo-course-card__facts span {
+    min-height: 34px;
+    padding: 7px 12px;
+    font-weight: 800;
+}
+
+.youngo-card-meta {
+    padding-top: 22px;
+}
+
+.youngo-card-meta span,
+.youngo-card-meta a {
+    font-weight: 900;
+}
+
+.youngo-section--blog {
+    padding: 64px 0;
+    background:
+        linear-gradient(180deg, #ffffff 0%, #faf8ff 100%);
+}
+
+.youngo-section--blog .youngo-section__heading {
+    margin-bottom: 28px;
+}
+
+.youngo-section--blog .youngo-section__heading h2 {
+    font-size: 29px;
+}
+
+.youngo-section--blog .youngo-section__heading p {
+    max-width: 560px;
+    font-size: 15px;
+}
+
+.youngo-blog-card {
+    min-height: 148px;
+    grid-template-columns: 112px minmax(0, 1fr);
+    border-color: rgba(126, 66, 171, 0.1);
+    background: rgba(255, 255, 255, 0.86);
+    box-shadow: 0 8px 24px rgba(66, 15, 121, 0.055);
+}
+
+.youngo-blog-card img {
+    min-height: 148px;
+    opacity: .82;
+    filter: saturate(.62) contrast(.94);
+}
+
+.youngo-blog-card div {
+    padding: 18px 20px;
+}
+
+.youngo-blog-card span {
+    margin-bottom: 7px;
+    color: #6f4a83;
+    font-size: 11px;
+}
+
+.youngo-blog-card h3 {
+    margin-bottom: 8px;
+    font-size: 18px;
+}
+
+.youngo-blog-card p {
+    font-size: 14px;
+    line-height: 1.55;
+}
+
+.youngo-footer {
+    border-top-color: rgba(126, 66, 171, 0.16);
+    background:
+        radial-gradient(circle at 8% 0%, rgba(238, 220, 255, 0.66), transparent 30%),
+        linear-gradient(180deg, #ffffff 0%, #faf8ff 100%);
+}
+
+.youngo-footer__inner {
+    align-items: center;
+    padding: 38px 0;
+}
+
+.youngo-footer__brand {
+    max-width: 500px;
+}
+
+.youngo-footer__brand img {
+    height: 56px;
+    max-width: 210px;
+}
+
+.youngo-footer p {
+    max-width: 440px;
+    color: #3f354a;
+    font-size: 15px;
+    line-height: 1.65;
+}
+
+.youngo-footer__links {
+    gap: 10px;
+    padding: 6px;
+    border: 1px solid rgba(126, 66, 171, 0.14);
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.74);
+}
+
+.youngo-footer a {
+    padding: 9px 12px;
+    border-radius: 999px;
+    color: #33273e;
+    font-size: 14px;
+}
+
+.youngo-footer a:hover,
+.youngo-footer a:focus-visible {
+    background: #ffffff;
+}
+
+.youngo-footer__copy {
+    color: #5a2d66;
+    font-size: 14px;
+    font-weight: 800;
+}
+
+@media (max-width: 1040px) {
+    .youngo-header__inner {
+        min-height: 84px;
+    }
+
+    .youngo-brand img,
+    .youngo-footer__brand img {
+        height: 50px;
+    }
+
+    .youngo-course-card h3 {
+        font-size: 22px;
+    }
+}
+
+@media (max-width: 720px) {
+    .youngo-header__inner {
+        min-height: 0;
+        padding: 18px 0 16px;
+    }
+
+    .youngo-brand img {
+        height: 48px;
+    }
+
+    .youngo-nav a {
+        min-height: 38px;
+        padding: 9px 12px;
+        font-size: 14px;
+    }
+
+    .youngo-header__actions .youngo-button--small {
+        min-height: 44px;
+    }
+
+    .youngo-course-card h3 {
+        font-size: 22px;
+    }
+
+    .youngo-course-card p {
+        font-size: 15.5px;
+    }
+
+    .youngo-section--blog {
+        padding: 52px 0;
+    }
+
+    .youngo-blog-card {
+        grid-template-columns: 1fr;
+    }
+
+    .youngo-blog-card img {
+        height: 118px;
+        min-height: 118px;
+    }
+
+    .youngo-footer__inner {
+        align-items: flex-start;
+        padding: 32px 0;
+    }
+
+    .youngo-footer__links {
+        border-radius: 18px;
+        flex-wrap: wrap;
+    }
+
+    .youngo-footer__copy {
+        white-space: normal;
+    }
+}
+
+/* Phase 1C.9 auth creative rebuild */
+.youngo-logo-fallback {
+    display: none;
+    align-items: center;
+    min-height: 42px;
+    color: var(--youngo-purple);
+    font-size: 22px;
+    font-weight: 900;
+    letter-spacing: 0;
+    line-height: 1.1;
+}
+
+.youngo-brand .youngo-logo-fallback,
+.youngo-footer__brand .youngo-logo-fallback {
+    min-height: 50px;
+}
+
+.youngo-footer__brand a {
+    align-items: center;
+}
+
+.youngo-auth--doorway {
+    min-height: auto;
+    padding: 58px 0 74px;
+    background:
+        radial-gradient(circle at 10% 8%, rgba(242, 189, 118, 0.22), transparent 28%),
+        radial-gradient(circle at 86% 16%, rgba(238, 220, 255, 0.78), transparent 33%),
+        linear-gradient(180deg, #ffffff 0%, #faf8ff 46%, #f3f3fc 100%);
+}
+
+.youngo-auth-layout {
+    display: grid;
+    min-height: 720px;
+    overflow: hidden;
+    border: 1px solid rgba(126, 66, 171, 0.16);
+    border-radius: 32px;
+    background: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 34px 90px rgba(66, 15, 121, 0.14);
+}
+
+.youngo-auth-layout--login {
+    grid-template-columns: minmax(0, 1.08fr) minmax(430px, 0.92fr);
+}
+
+.youngo-auth-layout--signup {
+    grid-template-columns: minmax(0, 0.98fr) minmax(470px, 1.02fr);
+}
+
+.youngo-auth-story {
+    position: relative;
+    display: flex;
+    overflow: hidden;
+    min-height: 720px;
+    padding: 42px;
+    flex-direction: column;
+    justify-content: space-between;
+    background:
+        radial-gradient(circle at 12% 16%, rgba(242, 189, 118, 0.3), transparent 28%),
+        radial-gradient(circle at 86% 4%, rgba(255, 255, 255, 0.72), transparent 30%),
+        linear-gradient(145deg, #fff7e8 0%, #f7edff 48%, #e6ccff 100%);
+}
+
+.youngo-auth-story--signup {
+    background:
+        radial-gradient(circle at 18% 12%, rgba(242, 189, 118, 0.28), transparent 28%),
+        radial-gradient(circle at 92% 90%, rgba(185, 61, 152, 0.12), transparent 34%),
+        linear-gradient(145deg, #ffffff 0%, #f3f3fc 46%, #ead7ff 100%);
+}
+
+.youngo-auth-story::before {
+    content: "";
+    position: absolute;
+    inset: 22px;
+    z-index: 0;
+    border: 1px solid rgba(255, 255, 255, 0.72);
+    border-radius: 28px;
+    pointer-events: none;
+}
+
+.youngo-auth-story > * {
+    position: relative;
+    z-index: 1;
+}
+
+.youngo-auth-brandline--story,
+.youngo-auth-brandline--mobile {
+    width: fit-content;
+    margin-bottom: 0;
+}
+
+.youngo-auth-brandline img {
+    width: auto;
+    height: 54px;
+    max-width: 190px;
+    object-fit: contain;
+}
+
+.youngo-auth-story__copy {
+    max-width: 520px;
+    margin-top: 30px;
+}
+
+.youngo-auth-kicker {
+    display: inline-flex;
+    align-items: center;
+    width: fit-content;
+    min-height: 34px;
+    margin-bottom: 14px;
+    padding: 7px 12px;
+    border: 1px solid rgba(126, 66, 171, 0.18);
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.72);
+    color: var(--youngo-purple);
+    font-size: 12px;
+    font-weight: 900;
+    line-height: 1.1;
+    text-transform: uppercase;
+}
+
+.youngo-auth-story__copy h2 {
+    max-width: 540px;
+    margin: 0 0 16px;
+    color: #261334;
+    font-size: 42px;
+    font-weight: 900;
+    letter-spacing: 0;
+    line-height: 1.08;
+}
+
+.youngo-auth-story__copy p {
+    max-width: 520px;
+    margin: 0;
+    color: #3f354a;
+    font-size: 17px;
+    line-height: 1.72;
+}
+
+.youngo-auth-world {
+    position: relative;
+    display: grid;
+    min-height: 330px;
+    place-items: center;
+    margin: 28px 0;
+}
+
+.youngo-auth-world img {
+    width: min(100%, 560px);
+    border-radius: 28px;
+    filter: drop-shadow(0 22px 28px rgba(66, 15, 121, 0.14));
+}
+
+.youngo-auth-world__card {
+    position: absolute;
+    display: grid;
+    gap: 4px;
+    max-width: 214px;
+    padding: 15px 17px;
+    border: 1px solid rgba(126, 66, 171, 0.16);
+    border-radius: 18px;
+    background: rgba(255, 255, 255, 0.92);
+    box-shadow: 0 18px 44px rgba(66, 15, 121, 0.14);
+    backdrop-filter: blur(12px);
+}
+
+.youngo-auth-world__card span {
+    color: var(--youngo-magenta);
+    font-size: 12px;
+    font-weight: 900;
+    text-transform: uppercase;
+}
+
+.youngo-auth-world__card strong {
+    color: var(--youngo-purple);
+    font-size: 15px;
+    font-weight: 900;
+    line-height: 1.28;
+}
+
+.youngo-auth-world__card--top {
+    top: 10px;
+    left: 12px;
+}
+
+.youngo-auth-world__card--bottom {
+    right: 6px;
+    bottom: 16px;
+}
+
+.youngo-auth-proof,
+.youngo-auth-trust-strip {
+    display: grid;
+    gap: 12px;
+}
+
+.youngo-auth-proof {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.youngo-auth-proof div,
+.youngo-auth-trust-strip div {
+    min-width: 0;
+    padding: 17px;
+    border: 1px solid rgba(126, 66, 171, 0.16);
+    border-radius: 18px;
+    background: rgba(255, 255, 255, 0.72);
+    box-shadow: 0 12px 30px rgba(66, 15, 121, 0.07);
+}
+
+.youngo-auth-proof strong,
+.youngo-auth-proof span,
+.youngo-auth-trust-strip strong,
+.youngo-auth-trust-strip p {
+    display: block;
+}
+
+.youngo-auth-proof strong {
+    margin-bottom: 4px;
+    color: var(--youngo-purple);
+    font-size: 16px;
+    font-weight: 900;
+}
+
+.youngo-auth-proof span,
+.youngo-auth-trust-strip p {
+    color: #4b4451;
+    font-size: 13px;
+    line-height: 1.45;
+}
+
+.youngo-auth-trust-strip {
+    grid-template-columns: 1fr;
+}
+
+.youngo-auth-trust-strip div {
+    display: grid;
+    grid-template-columns: 42px minmax(0, 1fr);
+    column-gap: 14px;
+    align-items: start;
+}
+
+.youngo-auth-trust-strip span {
+    display: grid;
+    width: 42px;
+    height: 42px;
+    place-items: center;
+    grid-row: span 2;
+    border-radius: 14px;
+    background: var(--youngo-purple);
+    color: #fff;
+    font-size: 12px;
+    font-weight: 900;
+}
+
+.youngo-auth-trust-strip strong {
+    color: var(--youngo-text);
+    font-size: 15px;
+    font-weight: 900;
+}
+
+.youngo-auth-trust-strip p {
+    margin: 5px 0 0;
+}
+
+.youngo-auth-form-panel {
+    display: flex;
+    align-items: center;
+    background:
+        radial-gradient(circle at 86% 8%, rgba(238, 220, 255, 0.45), transparent 30%),
+        #ffffff;
+}
+
+.youngo-auth-form-panel .youngo-auth-panel__inner {
+    width: min(100%, 560px);
+    padding: 52px 58px;
+}
+
+.youngo-auth-layout--signup .youngo-auth-form-panel .youngo-auth-panel__inner {
+    width: min(100%, 620px);
+    padding: 42px 54px;
+}
+
+.youngo-auth--doorway .youngo-auth-heading {
+    margin-bottom: 26px;
+}
+
+.youngo-auth--doorway .youngo-auth-heading h1 {
+    margin-bottom: 10px;
+    color: var(--youngo-purple);
+    font-size: 38px;
+    font-weight: 900;
+}
+
+.youngo-auth--doorway .youngo-auth-heading p {
+    max-width: 460px;
+    color: #3f354a;
+    font-size: 16px;
+}
+
+.youngo-auth--doorway .youngo-auth-form {
+    gap: 17px;
+}
+
+.youngo-auth--doorway .youngo-field label,
+.youngo-auth--doorway .youngo-auth-checkbox {
+    font-size: 14px;
+    font-weight: 900;
+}
+
+.youngo-auth--doorway .youngo-field input,
+.youngo-auth--doorway .youngo-field textarea {
+    min-height: 56px;
+    border: 1px solid rgba(126, 66, 171, 0.28);
+    border-radius: 14px;
+    background: #fff;
+    color: var(--youngo-text);
+    box-shadow: 0 8px 22px rgba(66, 15, 121, 0.045);
+}
+
+.youngo-auth--doorway .youngo-field textarea {
+    min-height: 116px;
+}
+
+.youngo-auth--doorway .youngo-field input:focus,
+.youngo-auth--doorway .youngo-field textarea:focus {
+    border-color: var(--youngo-secondary);
+    box-shadow: 0 0 0 4px rgba(126, 66, 171, 0.13);
+}
+
+.youngo-auth--doorway .youngo-button--auth {
+    min-height: 58px;
+    border-radius: 14px;
+    background:
+        linear-gradient(135deg, var(--youngo-purple) 0%, var(--youngo-purple-brand) 58%, var(--youngo-magenta) 100%);
+    box-shadow: 0 18px 34px rgba(66, 15, 121, 0.18);
+}
+
+.youngo-auth--doorway .youngo-button--auth:hover {
+    background:
+        linear-gradient(135deg, var(--youngo-purple-brand) 0%, var(--youngo-purple) 100%);
+}
+
+.youngo-auth--doorway .youngo-auth-switch {
+    margin-top: 28px;
+    color: #3f354a;
+    font-size: 15px;
+}
+
+.youngo-auth--doorway .youngo-auth-alert {
+    border-radius: 16px;
+}
+
+.youngo-auth--doorway .youngo-auth-extra {
+    padding: 18px;
+    border: 1px solid rgba(126, 66, 171, 0.16);
+    border-radius: 18px;
+    background: #faf8ff;
+}
+
+.youngo-auth--doorway .youngo-auth-checkbox {
+    border-radius: 16px;
+    background: #f8f4ff;
+}
+
+.youngo-footer__brand p {
+    max-width: 430px;
+}
+
+.youngo-courses-hero {
+    padding: 48px 0 58px;
+    background:
+        radial-gradient(circle at 88% 12%, rgba(242, 189, 118, 0.22), transparent 26%),
+        linear-gradient(135deg, #faf8ff 0%, #f3f3fc 56%, #ffffff 100%);
+}
+
+.youngo-courses-hero__grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 220px;
+    gap: 32px;
+    align-items: end;
+}
+
+.youngo-courses-hero h1 {
+    max-width: 780px;
+    margin: 0 0 16px;
+    color: var(--youngo-purple);
+    font-size: 48px;
+    font-weight: 800;
+    line-height: 1.08;
+    letter-spacing: 0;
+}
+
+.youngo-courses-hero p:not(.youngo-eyebrow) {
+    max-width: 720px;
+    margin: 0;
+    color: var(--youngo-muted);
+    font-size: 18px;
+    line-height: 1.7;
+}
+
+.youngo-courses-hero__stats {
+    display: grid;
+    gap: 6px;
+    padding: 22px;
+    border: 1px solid rgba(205, 195, 211, 0.72);
+    border-radius: 24px;
+    background: rgba(255, 255, 255, 0.86);
+    box-shadow: var(--youngo-shadow);
+}
+
+.youngo-courses-hero__stats strong {
+    color: var(--youngo-purple);
+    font-size: 42px;
+    line-height: 1;
+}
+
+.youngo-courses-hero__stats span {
+    color: var(--youngo-muted);
+    font-size: 13px;
+    font-weight: 900;
+}
+
+.youngo-courses-page {
+    padding: 56px 0 84px;
+    background: #fff;
+}
+
+.youngo-subscriptions-page {
+    padding: 58px 0 86px;
+    background: #fff;
+}
+
+.youngo-subscriptions-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 22px;
+}
+
+.youngo-subscription-card {
+    display: grid;
+    gap: 22px;
+    min-height: 100%;
+    padding: 26px;
+    border: 1px solid rgba(205, 195, 211, 0.76);
+    border-radius: 24px;
+    background: linear-gradient(180deg, #ffffff 0%, #fbf8ff 100%);
+    box-shadow: var(--youngo-shadow);
+}
+
+.youngo-subscription-card.is-featured {
+    border-color: rgba(126, 66, 171, 0.32);
+    box-shadow: var(--youngo-shadow-strong);
+}
+
+.youngo-subscription-card__header {
+    display: grid;
+    gap: 18px;
+}
+
+.youngo-subscription-card__header h2 {
+    margin: 10px 0 0;
+    color: var(--youngo-purple);
+    font-size: 28px;
+    line-height: 1.15;
+}
+
+.youngo-subscription-card__header strong {
+    color: var(--youngo-text);
+    direction: ltr;
+    font-size: 34px;
+    line-height: 1;
+    unicode-bidi: isolate;
+}
+
+.youngo-subscription-card__badge {
+    display: inline-flex;
+    align-items: center;
+    min-height: 30px;
+    padding: 6px 10px;
+    border-radius: 999px;
+    background: rgba(242, 189, 118, 0.28);
+    color: #7a4e07;
+    font-size: 12px;
+    font-weight: 900;
+    text-transform: uppercase;
+}
+
+.youngo-subscription-card__badge.is-muted {
+    background: var(--youngo-purple-soft);
+    color: var(--youngo-purple);
+}
+
+.youngo-subscription-card__meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.youngo-subscription-card__meta span {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    min-height: 36px;
+    padding: 8px 11px;
+    border-radius: 999px;
+    background: #fff;
+    color: var(--youngo-muted);
+    font-size: 13px;
+    font-weight: 800;
+    box-shadow: inset 0 0 0 1px var(--youngo-soft-border);
+}
+
+.youngo-subscription-card__meta i {
+    color: var(--youngo-magenta);
+}
+
+.youngo-subscription-card p {
+    margin: 0;
+    color: var(--youngo-muted);
+    line-height: 1.7;
+}
+
+.youngo-subscription-card__actions {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: auto;
+}
+
+.youngo-subscription-card__actions > span {
+    display: inline-flex;
+    align-items: center;
+    min-height: 34px;
+    padding: 7px 10px;
+    border-radius: 999px;
+    background: #fff8ef;
+    color: #7a4e07;
+    font-size: 12px;
+    font-weight: 900;
+}
+
+.youngo-subscriptions-empty {
+    max-width: 720px;
+}
+
+.youngo-courses-layout {
+    display: grid;
+    grid-template-columns: 300px minmax(0, 1fr);
+    gap: 28px;
+    align-items: start;
+}
+
+.youngo-courses-filter,
+.youngo-courses-toolbar,
+.youngo-courses-card,
+.youngo-courses-empty {
+    border: 1px solid rgba(205, 195, 211, 0.76);
+    border-radius: 24px;
+    background: var(--youngo-white);
+    box-shadow: var(--youngo-shadow);
+}
+
+.youngo-courses-filter {
+    position: sticky;
+    top: 92px;
+    display: grid;
+    gap: 16px;
+    padding: 20px;
+}
+
+.youngo-courses-filter__header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 12px;
+}
+
+.youngo-courses-filter__header h2 {
+    margin: 0;
+    color: var(--youngo-purple);
+    font-size: 22px;
+    line-height: 1.2;
+}
+
+.youngo-courses-filter__header a,
+.youngo-courses-clear {
+    color: var(--youngo-secondary);
+    font-size: 13px;
+    font-weight: 900;
+    text-decoration: none;
+}
+
+.youngo-courses-filter__header a:hover,
+.youngo-courses-clear:hover {
+    color: var(--youngo-purple);
+    text-decoration: underline;
+    text-underline-offset: 4px;
+}
+
+.youngo-courses-search {
+    display: grid;
+    gap: 8px;
+    color: var(--youngo-text);
+    font-size: 13px;
+    font-weight: 900;
+}
+
+.youngo-courses-search > span:last-child {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 44px;
+    overflow: hidden;
+    border: 1px solid var(--youngo-border);
+    border-radius: 14px;
+    background: #fff;
+}
+
+.youngo-courses-search input {
+    min-width: 0;
+    min-height: 46px;
+    border: 0;
+    padding: 0 14px;
+    color: var(--youngo-text);
+    font: inherit;
+    outline: 0;
+}
+
+.youngo-courses-search button {
+    border: 0;
+    background: var(--youngo-purple);
+    color: #fff;
+    cursor: pointer;
+}
+
+.youngo-filter-group {
+    border: 1px solid var(--youngo-soft-border);
+    border-radius: 18px;
+    background: #fff;
+    overflow: hidden;
+}
+
+.youngo-filter-group summary {
+    padding: 14px 16px;
+    color: var(--youngo-purple);
+    font-weight: 900;
+    cursor: pointer;
+}
+
+.youngo-filter-options {
+    display: grid;
+    gap: 6px;
+    max-height: none;
+    overflow: visible;
+    padding: 0 10px 12px;
+}
+
+.youngo-filter-options.is-scrollable {
+    max-height: 360px;
+    overflow-y: auto;
+    overscroll-behavior: contain;
+}
+
+.youngo-filter-options label {
+    display: grid;
+    grid-template-columns: 18px minmax(0, 1fr) auto;
+    gap: 9px;
+    align-items: center;
+    min-height: 38px;
+    padding: 8px 9px;
+    border-radius: 12px;
+    color: var(--youngo-muted);
+    font-size: 13px;
+    font-weight: 800;
+    cursor: pointer;
+}
+
+.youngo-filter-options label:hover,
+.youngo-filter-options label.is-active {
+    background: #faf8ff;
+    color: var(--youngo-purple);
+}
+
+.youngo-filter-options label.is-child {
+    padding-left: 24px;
+}
+
+.youngo-filter-options input {
+    accent-color: var(--youngo-purple);
+}
+
+.youngo-filter-options small {
+    color: var(--youngo-secondary);
+    font-weight: 900;
+}
+
+.youngo-filter-stars {
+    display: inline-flex;
+    gap: 2px;
+    color: #d7cfda;
+}
+
+.youngo-filter-stars .is-filled {
+    color: var(--youngo-warm);
+}
+
+.youngo-courses-filter__apply {
+    width: 100%;
+}
+
+.youngo-courses-results {
+    display: grid;
+    gap: 20px;
+    min-width: 0;
+}
+
+.youngo-courses-toolbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 18px;
+    padding: 18px 20px;
+}
+
+.youngo-courses-toolbar h2 {
+    margin: 0 0 6px;
+    color: var(--youngo-purple);
+    font-size: 22px;
+    line-height: 1.25;
+}
+
+.youngo-courses-toolbar__actions {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    gap: 12px;
+}
+
+.youngo-view-toggle {
+    display: inline-flex;
+    gap: 6px;
+    padding: 5px;
+    border: 1px solid var(--youngo-soft-border);
+    border-radius: 14px;
+    background: #faf8ff;
+}
+
+.youngo-view-toggle button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border: 0;
+    border-radius: 10px;
+    background: transparent;
+    color: var(--youngo-muted);
+    cursor: pointer;
+}
+
+.youngo-view-toggle button.is-active {
+    background: var(--youngo-purple);
+    color: #fff;
+}
+
+.youngo-sort-select {
+    display: grid;
+    gap: 6px;
+    color: var(--youngo-muted);
+    font-size: 12px;
+    font-weight: 900;
+}
+
+.youngo-sort-select select {
+    min-height: 42px;
+    min-width: 190px;
+    border: 1px solid var(--youngo-border);
+    border-radius: 12px;
+    background: #fff;
+    color: var(--youngo-text);
+    font: inherit;
+    font-weight: 800;
+    padding: 0 12px;
+}
+
+.youngo-courses-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.youngo-courses-card {
+    display: grid;
+    overflow: hidden;
+    min-width: 0;
+    transition: transform 180ms ease, box-shadow 180ms ease;
+}
+
+.youngo-courses-card:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--youngo-shadow-strong);
+}
+
+.youngo-courses-card__media {
+    position: relative;
+    overflow: hidden;
+    aspect-ratio: 16 / 10;
+    background: linear-gradient(135deg, #fff8ef, #f3f3fc);
+}
+
+.youngo-courses-card__media a,
+.youngo-courses-card__media img {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.youngo-courses-card__media img {
+    object-fit: cover;
+    transition: transform 220ms ease, filter 220ms ease;
+}
+
+.youngo-courses-card:hover .youngo-courses-card__media img {
+    filter: saturate(1.06);
+    transform: scale(1.035);
+}
+
+.youngo-courses-card__level {
+    position: absolute;
+    left: 14px;
+    top: 14px;
+    display: inline-flex;
+    align-items: center;
+    min-height: 32px;
+    padding: 7px 11px;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.92);
+    color: var(--youngo-purple);
+    font-size: 12px;
+    font-weight: 900;
+    box-shadow: var(--youngo-shadow);
+}
+
+.youngo-courses-card__body {
+    display: grid;
+    gap: 11px;
+    padding: 18px;
+}
+
+.youngo-courses-card__topline,
+.youngo-courses-card__facts,
+.youngo-courses-card__footer {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 9px;
+}
+
+.youngo-courses-card__topline {
+    justify-content: space-between;
+}
+
+.youngo-courses-card__topline span,
+.youngo-courses-card__facts span {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    min-height: 30px;
+    padding: 6px 9px;
+    border-radius: 999px;
+    background: #faf8ff;
+    color: var(--youngo-muted);
+    font-size: 12px;
+    font-weight: 900;
+}
+
+.youngo-courses-card__topline strong {
+    color: var(--youngo-purple);
+    font-size: 18px;
+    line-height: 1;
+}
+
+.youngo-courses-card h3 {
+    margin: 0;
+    color: var(--youngo-purple);
+    font-size: 20px;
+    line-height: 1.25;
+}
+
+.youngo-courses-card h3 a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.youngo-courses-card h3 a:hover {
+    color: var(--youngo-secondary);
+}
+
+.youngo-courses-card__access {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 7px;
+    align-items: center;
+}
+
+.youngo-courses-card__access span,
+.youngo-courses-card__access strong {
+    display: inline-flex;
+    align-items: center;
+    min-height: 28px;
+    padding: 5px 9px;
+    border-radius: 999px;
+    font-size: 11px;
+    font-weight: 900;
+}
+
+.youngo-courses-card__access span {
+    background: rgba(22, 120, 79, 0.12);
+    color: #16784f;
+    text-transform: uppercase;
+}
+
+.youngo-courses-card__access strong {
+    border: 1px solid rgba(126, 66, 171, 0.18);
+    background: #ffffff;
+    color: var(--youngo-purple);
+}
+
+.youngo-courses-card__access.is-locked span {
+    background: rgba(165, 59, 59, 0.12);
+    color: #a53b3b;
+}
+
+.youngo-courses-card__access.is-warning span {
+    background: rgba(242, 189, 118, 0.28);
+    color: #7a4e07;
+}
+
+.youngo-courses-card p {
+    margin: 0;
+    color: var(--youngo-muted);
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.youngo-courses-card__facts i {
+    color: var(--youngo-warm);
+}
+
+.youngo-courses-card__footer {
+    justify-content: space-between;
+    padding-top: 4px;
+}
+
+.youngo-courses-card__footer > span {
+    color: var(--youngo-muted);
+    font-size: 13px;
+    font-weight: 900;
+}
+
+.youngo-button--subscription {
+    background: linear-gradient(135deg, #4d127d 0%, var(--youngo-purple) 58%, #8d2b97 100%);
+    box-shadow: 0 9px 20px rgba(78, 18, 125, 0.22);
+}
+
+.youngo-button--subscription:hover {
+    background: linear-gradient(135deg, #39105d 0%, #671a87 58%, #7a207f 100%);
+    box-shadow: 0 12px 24px rgba(78, 18, 125, 0.28);
+}
+
+.youngo-courses-card__subscription-note {
+    display: flex;
+    gap: 8px;
+    align-items: flex-start;
+    padding: 10px 12px;
+    border: 1px solid rgba(126, 66, 171, 0.18);
+    border-radius: 14px;
+    background: linear-gradient(135deg, rgba(126, 66, 171, 0.09), rgba(242, 189, 118, 0.16));
+    color: #4d256c;
+    font-size: 12px;
+    font-weight: 800;
+    line-height: 1.55;
+}
+
+.youngo-courses-card__subscription-note i,
+.youngo-course-actions__subscription-copy i {
+    margin-top: 3px;
+    color: var(--youngo-secondary);
+}
+
+.youngo-course-actions__subscription-copy {
+    display: flex;
+    gap: 8px;
+    align-items: flex-start;
+    margin: 10px 0 0;
+    color: var(--youngo-muted);
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 1.6;
+}
+
+.youngo-courses-grid.is-list {
+    grid-template-columns: 1fr;
+}
+
+.youngo-courses-grid.is-list .youngo-courses-card {
+    grid-template-columns: 280px minmax(0, 1fr);
+}
+
+.youngo-courses-grid.is-list .youngo-courses-card__media {
+    aspect-ratio: auto;
+    min-height: 100%;
+}
+
+.youngo-pagination {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 8px;
+}
+
+.youngo-pagination a,
+.youngo-pagination strong,
+.youngo-pagination span {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 40px;
+    min-height: 40px;
+    padding: 8px 12px;
+    border: 1px solid var(--youngo-soft-border);
+    border-radius: 12px;
+    background: #fff;
+    color: var(--youngo-purple);
+    font-weight: 900;
+    text-decoration: none;
+}
+
+.youngo-pagination strong,
+.youngo-pagination .active,
+.youngo-pagination a:hover {
+    background: var(--youngo-purple);
+    color: #fff;
+}
+
+.youngo-courses-empty {
+    display: grid;
+    justify-items: center;
+    gap: 12px;
+    padding: 56px 24px;
+    text-align: center;
+}
+
+.youngo-courses-empty__icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background: #faf8ff;
+    color: var(--youngo-purple);
+    font-size: 28px;
+}
+
+.youngo-courses-empty h2 {
+    margin: 0;
+    color: var(--youngo-purple);
+    font-size: 28px;
+}
+
+.youngo-courses-empty p {
+    max-width: 440px;
+    margin: 0;
+    color: var(--youngo-muted);
+    line-height: 1.7;
+}
+
+@media (max-width: 1120px) {
+    .youngo-course-hero__grid,
+    .youngo-course-body__grid {
+        grid-template-columns: 1fr;
+    }
+
+    .youngo-course-card,
+    .youngo-course-side {
+        position: static;
+    }
+
+    .youngo-related-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .youngo-courses-layout {
+        grid-template-columns: 260px minmax(0, 1fr);
+        gap: 20px;
+    }
+
+    .youngo-courses-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .youngo-subscriptions-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .youngo-courses-grid.is-list .youngo-courses-card {
+        grid-template-columns: 220px minmax(0, 1fr);
+    }
+
+    .youngo-auth-layout--login,
+    .youngo-auth-layout--signup {
+        grid-template-columns: 1fr;
+    }
+
+    .youngo-auth-story {
+        min-height: 0;
+    }
+
+    .youngo-auth-world {
+        min-height: 300px;
+    }
+
+    .youngo-auth-form-panel .youngo-auth-panel__inner,
+    .youngo-auth-layout--signup .youngo-auth-form-panel .youngo-auth-panel__inner {
+        width: min(100%, 720px);
+        padding: 44px;
+    }
+}
+
+@media (max-width: 820px) {
+    .youngo-course-hero {
+        padding: 32px 0 48px;
+    }
+
+    .youngo-course-hero__content h1 {
+        font-size: 36px;
+    }
+
+    .youngo-course-hero__lead {
+        font-size: 16px;
+    }
+
+    .youngo-course-body {
+        padding: 40px 0 48px;
+    }
+
+    .youngo-course-section {
+        padding: 22px;
+        border-radius: 20px;
+    }
+
+    .youngo-check-grid,
+    .youngo-related-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .youngo-courses-hero {
+        padding: 36px 0 46px;
+    }
+
+    .youngo-courses-hero__grid,
+    .youngo-courses-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .youngo-courses-hero h1 {
+        font-size: 36px;
+    }
+
+    .youngo-courses-hero p:not(.youngo-eyebrow) {
+        font-size: 16px;
+    }
+
+    .youngo-courses-filter {
+        position: static;
+    }
+
+    .youngo-courses-toolbar {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .youngo-courses-toolbar__actions {
+        justify-content: flex-start;
+        width: 100%;
+    }
+
+    .youngo-sort-select,
+    .youngo-sort-select select {
+        width: 100%;
+    }
+
+    .youngo-course-section__heading h2,
+    .youngo-section__heading h2 {
+        font-size: 24px;
+    }
+
+    .youngo-auth--doorway {
+        padding: 26px 0 46px;
+    }
+
+    .youngo-auth-layout {
+        min-height: 0;
+        border-radius: 24px;
+    }
+
+    .youngo-auth-story {
+        display: none;
+    }
+
+    .youngo-auth-brandline--mobile {
+        display: inline-flex;
+        margin-bottom: 32px;
+    }
+}
+
+@media (max-width: 620px) {
+    .youngo-course-hero__grid {
+        gap: 28px;
+    }
+
+    .youngo-course-hero__content h1 {
+        font-size: 31px;
+    }
+
+    .youngo-courses-hero h1 {
+        font-size: 31px;
+    }
+
+    .youngo-courses-page {
+        padding: 36px 0 54px;
+    }
+
+    .youngo-courses-grid,
+    .youngo-courses-grid.is-list {
+        grid-template-columns: 1fr;
+    }
+
+    .youngo-subscriptions-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .youngo-subscription-card {
+        border-radius: 20px;
+    }
+
+    .youngo-subscription-card__header h2 {
+        font-size: 24px;
+    }
+
+    .youngo-subscription-card__header strong {
+        font-size: 30px;
+    }
+
+    .youngo-subscription-card__actions,
+    .youngo-subscription-card__actions .youngo-button {
+        width: 100%;
+    }
+
+    .youngo-courses-grid.is-list .youngo-courses-card {
+        grid-template-columns: 1fr;
+    }
+
+    .youngo-courses-grid.is-list .youngo-courses-card__media {
+        aspect-ratio: 16 / 10;
+    }
+
+    .youngo-courses-filter,
+    .youngo-courses-toolbar,
+    .youngo-courses-card,
+    .youngo-courses-empty {
+        border-radius: 20px;
+    }
+
+    .youngo-courses-card__footer {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .youngo-courses-card__footer .youngo-button {
+        width: 100%;
+    }
+
+    .youngo-course-meta,
+    .youngo-course-chips {
+        align-items: stretch;
+        flex-direction: column;
+    }
+
+    .youngo-course-meta > span,
+    .youngo-course-instructor-chip,
+    .youngo-course-chips span {
+        width: 100%;
+        justify-content: flex-start;
+    }
+
+    .youngo-course-card {
+        border-radius: 20px;
+    }
+
+    .youngo-course-price strong {
+        font-size: 28px;
+    }
+
+    .youngo-curriculum-section summary,
+    .youngo-curriculum-section li,
+    .youngo-review-card__top {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .youngo-curriculum-section li {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    .youngo-curriculum-section li a {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .youngo-curriculum-section__meta {
+        justify-content: flex-start;
+        width: 100%;
+    }
+
+    .youngo-lesson-title {
+        align-items: flex-start;
+    }
+
+    .youngo-duration-pill {
+        align-self: flex-start;
+    }
+
+    .youngo-instructor-card,
+    .youngo-review-card {
+        grid-template-columns: 1fr;
+    }
+
+    .youngo-instructor-card__top,
+    .youngo-instructor-trust {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .youngo-instructor-card > img,
+    .youngo-review-card > img {
+        width: 84px;
+        height: 84px;
+    }
+
+    .youngo-instructor-avatar img,
+    .youngo-review-card__avatar img {
+        width: 84px;
+        height: 84px;
+    }
+
+    .youngo-related-card__media {
+        aspect-ratio: 16 / 9;
+    }
+
+    .youngo-custom-gallery {
+        grid-template-columns: 1fr;
+    }
+
+    .youngo-cart-row {
+        grid-template-columns: 64px minmax(0, 1fr) auto;
+    }
+
+    .youngo-cart-row strong {
+        grid-column: 2 / -1;
+    }
+
+    .youngo-modal {
+        padding: 12px;
+    }
+
+    .youngo-modal__dialog {
+        border-radius: 18px;
+    }
+
+    .youngo-auth--doorway {
+        padding: 18px 0 34px;
+    }
+
+    .youngo-auth-layout {
+        border-radius: 22px;
+    }
+
+    .youngo-auth-form-panel .youngo-auth-panel__inner,
+    .youngo-auth-layout--signup .youngo-auth-form-panel .youngo-auth-panel__inner {
+        padding: 28px 20px;
+    }
+
+    .youngo-auth-brandline img {
+        height: 46px;
+        max-width: 168px;
+    }
+
+    .youngo-auth--doorway .youngo-auth-heading h1 {
+        font-size: 31px;
+        line-height: 1.12;
+    }
+
+    .youngo-auth--doorway .youngo-auth-heading p {
+        font-size: 15px;
+    }
+
+    .youngo-auth--doorway .youngo-field input,
+    .youngo-auth--doorway .youngo-field textarea {
+        min-height: 54px;
+    }
+
+    .youngo-auth-form__meta {
+        justify-content: flex-end;
+    }
+
+    .youngo-auth-divider span {
+        white-space: normal;
+        text-align: center;
+    }
+}
+
+@media (max-width: 1120px) {
+    .youngo-commerce-hero__grid,
+    .youngo-cart-layout,
+    .youngo-account-layout,
+    .youngo-account-layout--invoice {
+        grid-template-columns: 1fr;
+    }
+
+    .youngo-commerce-summary-card,
+    .youngo-cart-summary,
+    .youngo-account-menu {
+        position: static;
+    }
+
+    .youngo-wishlist-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 820px) {
+    .youngo-commerce-hero,
+    .youngo-account-hero {
+        padding: 38px 0 26px;
+    }
+
+    .youngo-commerce-hero h1,
+    .youngo-account-hero h1 {
+        font-size: 38px;
+    }
+
+    .youngo-commerce-toolbar,
+    .youngo-account-panel__header,
+    .youngo-invoice-card__header,
+    .youngo-invoice-actions {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .youngo-commerce-toolbar .youngo-button,
+    .youngo-account-panel__header .youngo-button,
+    .youngo-invoice-actions .youngo-button {
+        width: 100%;
+    }
+
+    .youngo-cart-list,
+    .youngo-cart-summary,
+    .youngo-commerce-empty,
+    .youngo-account-menu,
+    .youngo-account-panel,
+    .youngo-invoice-card {
+        border-radius: 20px;
+    }
+
+    .youngo-wishlist-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .youngo-form-grid,
+    .youngo-account-photo-card,
+    .youngo-invoice-summary {
+        grid-template-columns: 1fr;
+    }
+
+    .youngo-purchase-card,
+    .youngo-purchase-card__body {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    .youngo-purchase-card__media {
+        flex-basis: auto;
+    }
+
+    .youngo-purchase-card__media img {
+        height: auto;
+        aspect-ratio: 16 / 9;
+    }
+
+    .youngo-purchase-card__actions {
+        justify-content: flex-start;
+    }
+}
+
+@media (max-width: 620px) {
+    .youngo-header-icon-link {
+        width: 36px;
+        height: 36px;
+    }
+
+    .youngo-commerce-page,
+    .youngo-account-page {
+        padding: 28px 0 58px;
+    }
+
+    .youngo-cart-list,
+    .youngo-cart-summary,
+    .youngo-account-panel,
+    .youngo-invoice-card {
+        padding: 16px;
+    }
+
+    .youngo-cart-row {
+        grid-template-columns: 72px minmax(0, 1fr) auto;
+        gap: 12px;
+    }
+
+    .youngo-cart-row img {
+        width: 72px;
+        height: 56px;
+    }
+
+    .youngo-cart-row strong {
+        grid-column: 2 / 3;
+    }
+
+    .youngo-cart-row button {
+        grid-column: 3;
+        grid-row: 1 / span 2;
+    }
+
+    .youngo-coupon-form > div {
+        grid-template-columns: 1fr;
+    }
+
+    .youngo-coupon-form button {
+        min-height: 42px;
+    }
+
+    .youngo-commerce-course-card__actions .youngo-button,
+    .youngo-commerce-course-card__actions button,
+    .youngo-commerce-empty__actions .youngo-button,
+    .youngo-checkout-form .youngo-button,
+    .youngo-account-form__actions .youngo-button,
+    .youngo-purchase-card__actions .youngo-button {
+        width: 100%;
+    }
+
+    .youngo-account-menu__profile {
+        grid-template-columns: 58px minmax(0, 1fr);
+        align-items: center;
+    }
+
+    .youngo-account-menu__profile img {
+        width: 58px;
+        height: 58px;
+        border-radius: 18px;
+    }
+
+    .youngo-account-photo-card img {
+        width: 96px;
+        height: 96px;
+        border-radius: 22px;
+    }
+
+    .youngo-invoice-card__header strong {
+        font-size: 28px;
+    }
+
+    .youngo-invoice-totals {
+        justify-self: stretch;
+        min-width: 0;
+    }
+}
+
+/* DEMO.FIX.3 mobile screenshot polish */
+.youngo-header,
+.youngo-main,
+.youngo-footer,
+.youngo-container,
+.youngo-container--narrow {
+    box-sizing: border-box;
+}
+
+.youngo-main img,
+.youngo-header img,
+.youngo-footer img {
+    max-width: 100%;
+}
+
+.youngo-contact-panel {
+    display: grid;
+    gap: 18px;
+    align-self: start;
+    padding: 30px;
+    border: 1px solid rgba(126, 66, 171, 0.16);
+    border-radius: 24px;
+    background:
+        radial-gradient(circle at 12% 12%, rgba(242, 189, 118, 0.16), transparent 30%),
+        linear-gradient(135deg, #ffffff 0%, #faf8ff 100%);
+    box-shadow: 0 18px 42px rgba(66, 15, 121, 0.08);
+}
+
+.youngo-contact-panel strong {
+    color: var(--youngo-purple);
+    font-size: 28px;
+    line-height: 1.18;
+}
+
+.youngo-contact-panel p {
+    margin: 0;
+    color: var(--youngo-muted);
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+.youngo-contact-panel__note {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    min-width: 0;
+    padding: 13px 15px;
+    border: 1px solid rgba(126, 66, 171, 0.14);
+    border-radius: 16px;
+    background: rgba(255, 255, 255, 0.78);
+    color: var(--youngo-purple);
+    font-weight: 800;
+}
+
+.youngo-contact-panel__note span {
+    min-width: 0;
+    overflow-wrap: anywhere;
+}
+
+.youngo-reveal {
+    opacity: 1;
+    transform: none;
+}
+
+.youngo-blog-card {
+    grid-template-columns: 1fr;
+}
+
+.youngo-blog-card img {
+    width: 100%;
+    height: 190px;
+    min-height: 190px;
+    object-fit: cover;
+    object-position: center;
+    opacity: 1;
+    filter: none;
+}
+
+@media (max-width: 720px) {
+    .youngo-container,
+    .youngo-container--narrow {
+        width: min(100% - 32px, 1280px);
+    }
+
+    .youngo-header__inner {
+        display: grid;
+        grid-template-columns: 1fr;
+        justify-items: stretch;
+        gap: 12px;
+        padding: 14px 0 16px;
+    }
+
+    .youngo-brand {
+        justify-self: center;
+    }
+
+    .youngo-brand img {
+        height: 42px;
+        max-width: 168px;
+    }
+
+    .youngo-nav {
+        justify-content: center;
+        gap: 6px;
+        width: 100%;
+        padding: 6px;
+        border-radius: 18px;
+    }
+
+    .youngo-nav a {
+        flex: 1 1 calc(50% - 6px);
+        min-width: 0;
+        min-height: 36px;
+        padding: 8px 6px;
+        font-size: 13px;
+        text-align: center;
+    }
+
+    .youngo-header__actions {
+        justify-content: center;
+        gap: 8px;
+        width: 100%;
+    }
+
+    .youngo-language-switcher {
+        flex: 0 1 auto;
+        min-width: 0;
+    }
+
+    .youngo-link {
+        min-height: 38px;
+        display: inline-flex;
+        align-items: center;
+        padding: 8px 6px;
+        font-size: 13px;
+    }
+
+    .youngo-header__actions .youngo-button--small {
+        min-height: 40px;
+        padding: 9px 14px;
+        font-size: 13px;
+    }
+
+    .youngo-hero,
+    .youngo-final-cta__panel,
+    .youngo-testimonial-card,
+    .youngo-placeholder__grid,
+    .youngo-courses-hero__grid,
+    .youngo-auth-layout,
+    .youngo-auth-form-panel,
+    .youngo-auth-panel__inner {
+        min-width: 0;
+        max-width: 100%;
+    }
+
+    .youngo-hero::before {
+        display: none;
+    }
+
+    .youngo-final-cta__panel::before,
+    .youngo-final-cta__panel::after,
+    .youngo-testimonial-card::before {
+        display: none;
+    }
+
+    .youngo-hero h1,
+    .youngo-courses-hero h1,
+    .youngo-course-hero h1,
+    .youngo-auth-heading h1,
+    .youngo-blog-card h3,
+    .youngo-placeholder__panel strong,
+    .youngo-contact-panel strong,
+    .youngo-course-access-status strong,
+    .youngo-course-actions .youngo-button,
+    .youngo-course-actions__note,
+    .youngo-card-meta span,
+    .youngo-card-meta a {
+        overflow-wrap: anywhere;
+    }
+
+    .youngo-hero-card,
+    .youngo-contact-panel,
+    .youngo-placeholder__panel,
+    .youngo-course-card,
+    .youngo-course-section,
+    .youngo-auth-form-panel .youngo-auth-panel__inner,
+    .youngo-auth-layout--signup .youngo-auth-form-panel .youngo-auth-panel__inner {
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+
+    .youngo-blog-card img {
+        opacity: 1;
+        filter: none;
+        object-fit: cover;
+    }
+}
+
+@media (max-width: 420px) {
+    .youngo-container,
+    .youngo-container--narrow {
+        width: calc(100% - 28px);
+    }
+
+    .youngo-nav a {
+        font-size: 12.5px;
+    }
+
+    .youngo-header__actions {
+        flex-wrap: wrap;
+    }
+
+    .youngo-button,
+    .youngo-course-actions .youngo-button {
+        width: 100%;
+    }
+
+    .youngo-header__actions .youngo-button--small {
+        width: auto;
+    }
+
+    .youngo-contact-panel {
+        padding: 22px;
+        border-radius: 20px;
+    }
+}
+
+@media (max-width: 760px) {
+    .youngo-checkout-hero {
+        padding: 30px 0 34px;
+    }
+
+    .youngo-checkout-hero__content {
+        align-items: stretch;
+        flex-direction: column;
+        gap: 22px;
+    }
+
+    .youngo-checkout-reference {
+        min-width: 0;
+    }
+
+    .youngo-checkout-panel {
+        padding: 18px;
+        border-radius: 20px;
+    }
+
+    .youngo-checkout-panel .youngo-account-panel__header {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .youngo-checkout-panel .youngo-account-panel__header .youngo-button {
+        width: 100%;
+    }
+
+    .youngo-checkout-summary {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .youngo-checkout-summary div {
+        min-height: 96px;
+        padding: 15px;
+    }
+
+    .youngo-checkout-summary span {
+        font-size: 11px;
+    }
+
+    .youngo-checkout-summary strong {
+        font-size: 19px;
+    }
+
+    .youngo-checkout-panel > .youngo-empty-state:not(.youngo-checkout-notice) {
+        padding: 18px 16px;
+    }
+
+    .youngo-checkout-panel form input[type="text"],
+    .youngo-checkout-panel form input[type="file"],
+    .youngo-checkout-panel form textarea,
+    .youngo-checkout-panel form .youngo-button {
+        width: 100%;
+        flex-basis: 100%;
+    }
+}
+
+@media (max-width: 420px) {
+    .youngo-checkout-summary {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Mobile header: keep the first impression focused on three controls. */
+@media (max-width: 720px) {
+    .youngo-header__inner {
+        position: relative;
+        display: flex;
+        min-height: 78px;
+        padding: 12px 56px;
+        justify-content: center;
+        gap: 0;
+    }
+
+    .youngo-brand {
+        order: 2;
+        justify-self: auto;
+        margin: 0 auto;
+    }
+
+    .youngo-brand img {
+        width: 128px;
+        height: auto;
+        max-width: 128px;
+    }
+
+    .youngo-menu-toggle {
+        position: absolute;
+        left: 0;
+        top: 50%;
+        display: inline-grid;
+        order: 1;
+        margin: 0;
+        transform: translateY(-50%);
+    }
+
+    .youngo-mobile-account-link {
+        position: fixed;
+        top: 18px;
+        right: 16px;
+        z-index: 2;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 38px;
+        max-width: 112px;
+        padding: 8px 12px;
+        overflow: hidden;
+        border: 1px solid rgba(126, 66, 171, 0.2);
+        border-radius: 999px;
+        background: #fffaf1;
+        color: #420f79;
+        font-size: 12px;
+        font-weight: 700;
+        text-decoration: none;
+        white-space: nowrap;
+        transform: none;
+    }
+
+    .youngo-header__actions {
+        position: fixed;
+        right: 16px !important;
+        top: 18px;
+        top: 50%;
+        order: 3;
+        display: flex !important;
+        width: max-content !important;
+        max-width: 120px;
+        margin: 0;
+        direction: ltr;
+        justify-content: flex-end;
+        overflow: visible;
+        transform: none;
+        z-index: 2;
+    }
+
+    .youngo-header__actions .youngo-language-switcher,
+    .youngo-header__actions .youngo-link,
+    .youngo-header__actions .youngo-button--small {
+        display: none;
+    }
+
+    .youngo-header__actions:has(.youngo-header-icon-link) .youngo-header-icon-link,
+    .youngo-header__actions:not(:has(.youngo-header-icon-link)) > .youngo-link {
+        display: inline-flex;
+    }
+
+    .youngo-nav {
+        order: 4;
+        flex: 0 0 100%;
+        width: 100%;
+    }
+
+    .youngo-nav__mobile-language {
+        display: flex;
+        width: 100%;
+        gap: 8px;
+        padding: 10px 6px 4px;
+        border-top: 1px solid rgba(126, 66, 171, 0.12);
+    }
+}

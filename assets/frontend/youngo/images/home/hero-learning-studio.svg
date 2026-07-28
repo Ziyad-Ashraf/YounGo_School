@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1040 780" role="img" aria-labelledby="title desc">
+  <title id="title">Child learning with creative YounGo projects</title>
+  <desc id="desc">A warm premium illustration of a child using a tablet beside books, project cards, and creative learning materials.</desc>
+  <defs>
+    <linearGradient id="heroBg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#fff7e8"/>
+      <stop offset=".46" stop-color="#f7f0ff"/>
+      <stop offset="1" stop-color="#ead7ff"/>
+    </linearGradient>
+    <linearGradient id="deepPurple" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#7e42ab"/>
+      <stop offset="1" stop-color="#420f79"/>
+    </linearGradient>
+    <linearGradient id="screen" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset="1" stop-color="#f3f3fc"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="22" stdDeviation="24" flood-color="#420f79" flood-opacity=".18"/>
+    </filter>
+  </defs>
+  <rect width="1040" height="780" rx="62" fill="url(#heroBg)"/>
+  <circle cx="862" cy="130" r="106" fill="#f2bd76" opacity=".44"/>
+  <circle cx="150" cy="145" r="118" fill="#fff" opacity=".7"/>
+  <circle cx="890" cy="592" r="160" fill="#b93d98" opacity=".12"/>
+  <path d="M98 620c122-64 270-62 406-26 140 37 266 32 438-54v94c-168 86-307 96-458 55-144-39-263-32-386 31z" fill="#420f79" opacity=".08"/>
+  <rect x="118" y="468" width="800" height="82" rx="36" fill="#420f79" opacity=".13"/>
+  <rect x="172" y="214" width="288" height="260" rx="38" fill="#fff" stroke="#cdc3d3" stroke-width="4" filter="url(#shadow)"/>
+  <rect x="206" y="252" width="220" height="42" rx="18" fill="#420f79"/>
+  <rect x="206" y="318" width="106" height="18" rx="9" fill="#f2bd76"/>
+  <rect x="330" y="318" width="74" height="18" rx="9" fill="#b93d98" opacity=".85"/>
+  <path d="M245 401l-45-36 45-36M386 329l45 36-45 36" fill="none" stroke="#7e42ab" stroke-width="22" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M298 414l55-104" stroke="#f2bd76" stroke-width="20" stroke-linecap="round"/>
+  <rect x="536" y="152" width="318" height="430" rx="52" fill="url(#screen)" stroke="#cdc3d3" stroke-width="4" filter="url(#shadow)"/>
+  <rect x="574" y="194" width="242" height="264" rx="38" fill="#fff"/>
+  <circle cx="696" cy="288" r="76" fill="#f2bd76"/>
+  <path d="M616 402c38-62 122-70 164-4 15 24 22 52 22 84H594c0-31 7-58 22-80z" fill="url(#deepPurple)"/>
+  <path d="M650 280c15-18 34-24 55-18M735 262c22-2 39 7 52 25" fill="none" stroke="#7a4a16" stroke-width="9" stroke-linecap="round"/>
+  <circle cx="664" cy="314" r="10" fill="#191b22"/>
+  <circle cx="728" cy="314" r="10" fill="#191b22"/>
+  <path d="M670 354c20 17 48 17 68 0" fill="none" stroke="#191b22" stroke-width="8" stroke-linecap="round"/>
+  <rect x="628" y="496" width="136" height="18" rx="9" fill="#b93d98" opacity=".72"/>
+  <rect x="596" y="526" width="200" height="28" rx="14" fill="#f3f3fc"/>
+  <rect x="120" y="546" width="204" height="104" rx="30" fill="#fff" stroke="#cdc3d3" stroke-width="4" filter="url(#shadow)"/>
+  <rect x="154" y="578" width="104" height="20" rx="10" fill="#420f79"/>
+  <rect x="154" y="612" width="132" height="14" rx="7" fill="#7e42ab" opacity=".65"/>
+  <circle cx="314" cy="556" r="34" fill="#f2bd76"/>
+  <rect x="766" y="502" width="176" height="124" rx="30" fill="#fff" stroke="#cdc3d3" stroke-width="4" filter="url(#shadow)"/>
+  <path d="M812 564h90M857 519v90" stroke="#7e42ab" stroke-width="16" stroke-linecap="round"/>
+  <path d="M166 170l28-48 28 48z" fill="#b93d98" opacity=".7"/>
+  <path d="M832 250c30 12 58 12 84 0" fill="none" stroke="#f2bd76" stroke-width="14" stroke-linecap="round"/>
+  <circle cx="500" cy="174" r="18" fill="#b93d98" opacity=".65"/>
+  <circle cx="502" cy="634" r="24" fill="#7e42ab" opacity=".45"/>
+</svg>

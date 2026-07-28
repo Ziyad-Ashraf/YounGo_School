@@ -1,0 +1,10 @@
+# Optional hotlink-protection template for deployed lesson videos.
+# This file is not active unless it is copied or renamed to .htaccess.
+# Before enabling, replace example.com with the deployed client domain.
+
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    # RewriteCond %{HTTP_REFERER} !^$
+    # RewriteCond %{HTTP_REFERER} !^https?://([^/]+\.)?example\.com(/|$) [NC]
+    # RewriteRule \.(gif|jpe?g|png|webp|mp4|mp3)$ - [F,L]
+</IfModule>

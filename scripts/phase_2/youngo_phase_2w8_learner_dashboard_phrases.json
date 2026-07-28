@@ -1,0 +1,14 @@
+{
+    "access_to_the_blog_section_denied": {"english": "Access to the blog section denied", "arabic": "تم رفض الوصول إلى قسم المدونة"},
+    "blog_added_successfully": {"english": "Blog added successfully", "arabic": "تمت إضافة المدونة بنجاح"},
+    "blog_status_has_been_updated": {"english": "Blog status has been updated", "arabic": "تم تحديث حالة المدونة"},
+    "blog_updated_successfully": {"english": "Blog updated successfully", "arabic": "تم تحديث المدونة بنجاح"},
+    "meeting_not_scheduled_yet": {"english": "Meeting not scheduled yet", "arabic": "لم تتم جدولة الاجتماع بعد"},
+    "payment_settings_has_been_updated": {"english": "Payment settings has been updated", "arabic": "تم تحديث إعدادات الدفع"},
+    "please_purchase_this_course_first": {"english": "Please purchase this course first", "arabic": "يرجى شراء هذا الكورس أولاً"},
+    "you_do_not_have_right_to_access_this_lesson": {"english": "You do not have right to access this lesson", "arabic": "ليس لديك صلاحية الوصول إلى هذا الدرس"},
+    "you_do_not_have_right_to_access_this_quiz_question": {"english": "You do not have right to access this quiz question", "arabic": "ليس لديك صلاحية الوصول إلى سؤال الاختبار هذا"},
+    "you_do_not_have_right_to_access_this_quize": {"english": "You do not have right to access this quize", "arabic": "ليس لديك صلاحية الوصول إلى هذا الاختبار"},
+    "you_do_not_have_right_to_access_this_section": {"english": "You do not have right to access this section", "arabic": "ليس لديك صلاحية الوصول إلى هذا القسم"},
+    "user_not_found": {"english": "User not found", "arabic": "المستخدم غير موجود"}
+}

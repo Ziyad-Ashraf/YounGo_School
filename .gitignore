@@ -1,0 +1,70 @@
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/*
+.vscode/mcp.json
+
+# Local tooling / agent traces
+.claude/
+.playwright/
+.playwright-cli/
+.playwright-mcp/
+
+# Logs / cache
+*.log
+application/cache/*
+!application/cache/index.html
+application/logs/*
+!application/logs/index.html
+test-results/
+docs/qa/screenshots/
+
+# Environment / secrets
+.env
+*.env
+application/config/database.local.php
+application/config/youngo_paymob.local.php
+application/config/youngo_security.local.php
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+
+# Backups / archives
+backups/
+release_packages/
+*.sql
+*.zip
+*.tar
+*.gz
+*.rar
+*.7z
+*.bak
+*.backup
+
+# Intentional source-controlled schema/migration artifacts
+!database/**/*.sql
+!scripts/**/*.sql
+
+# Runtime uploads are excluded except safe guard/placeholders needed to keep
+# writable upload directories protected in fresh checkouts.
+uploads/**
+!uploads/
+!uploads/**/
+!uploads/**/.htaccess
+!uploads/**/index.html
+!uploads/**/htaccess_domain_wise
+
+# Node dependencies if added later
+node_modules/
+
+# Build output if frontend is added later
+dist/
+build/
+.next/
+.nuxt/
+
+#Database configuration file
+application/config/database.php
+application/config/config.php

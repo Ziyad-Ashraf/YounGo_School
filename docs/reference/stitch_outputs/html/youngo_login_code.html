@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Login - YounGo</title>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Tailwind Config from Guidelines -->
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-tertiary-fixed-variant": "#633f00",
+                        "tertiary-fixed": "#ffddb3",
+                        "primary-fixed": "#eedcff",
+                        "on-primary": "#ffffff",
+                        "inverse-on-surface": "#f0f0f9",
+                        "tertiary-container": "#623f00",
+                        "on-error-container": "#93000a",
+                        "surface": "#faf8ff",
+                        "primary": "#420f79",
+                        "on-secondary-fixed-variant": "#642791",
+                        "surface-container-high": "#e7e7f0",
+                        "secondary-fixed": "#f3daff",
+                        "secondary": "#7e42ab",
+                        "surface-variant": "#e2e2eb",
+                        "outline-variant": "#cdc3d3",
+                        "primary-fixed-dim": "#d9b9ff",
+                        "on-secondary-container": "#5a1b87",
+                        "on-secondary-fixed": "#2e004d",
+                        "tertiary-fixed-dim": "#f2bd76",
+                        "background": "#faf8ff",
+                        "error": "#ba1a1a",
+                        "on-primary-fixed-variant": "#5b2e92",
+                        "on-surface": "#191b22",
+                        "inverse-surface": "#2e3037",
+                        "secondary-fixed-dim": "#e2b6ff",
+                        "on-tertiary": "#ffffff",
+                        "inverse-primary": "#d9b9ff",
+                        "tertiary": "#442b00",
+                        "on-tertiary-container": "#deac66",
+                        "on-primary-container": "#cba1ff",
+                        "on-error": "#ffffff",
+                        "outline": "#7c7482",
+                        "primary-container": "#5a2d91",
+                        "surface-bright": "#faf8ff",
+                        "error-container": "#ffdad6",
+                        "on-surface-variant": "#4b4451",
+                        "on-background": "#191b22",
+                        "on-primary-fixed": "#2a0054",
+                        "surface-container-low": "#f3f3fc",
+                        "surface-dim": "#d9d9e2",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-tint": "#7448ac",
+                        "surface-container": "#ededf6",
+                        "secondary-container": "#cd8efc",
+                        "on-secondary": "#ffffff",
+                        "surface-container-highest": "#e2e2eb",
+                        "on-tertiary-fixed": "#291800"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "stack-sm": "8px",
+                        "margin-mobile": "20px",
+                        "stack-lg": "32px",
+                        "gutter": "24px",
+                        "unit": "8px",
+                        "margin-desktop": "40px",
+                        "stack-md": "16px",
+                        "container-max": "1280px"
+                    },
+                    "fontFamily": {
+                        "body-md": ["Plus Jakarta Sans"],
+                        "label-sm": ["Plus Jakarta Sans"],
+                        "headline-lg": ["Plus Jakarta Sans"],
+                        "body-lg": ["Plus Jakarta Sans"],
+                        "label-md": ["Plus Jakarta Sans"],
+                        "headline-md": ["Plus Jakarta Sans"],
+                        "headline-lg-mobile": ["Plus Jakarta Sans"],
+                        "display-lg": ["Plus Jakarta Sans"]
+                    },
+                    "fontSize": {
+                        "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "label-sm": ["12px", {"lineHeight": "1.4", "letterSpacing": "0.02em", "fontWeight": "600"}],
+                        "headline-lg": ["32px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                        "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "label-md": ["14px", {"lineHeight": "1.4", "letterSpacing": "0.01em", "fontWeight": "600"}],
+                        "headline-md": ["24px", {"lineHeight": "1.3", "fontWeight": "700"}],
+                        "headline-lg-mobile": ["28px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                        "display-lg": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "800"}]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.5);
+        }
+    </style>
+</head>
+<body class="bg-background min-h-screen flex items-center justify-center p-4 md:p-8 font-body-md text-on-surface">
+<!-- Main Container -->
+<div class="w-full max-w-container-max mx-auto bg-surface-container-lowest rounded-2xl shadow-[0_8px_30px_rgb(90,45,145,0.08)] overflow-hidden flex flex-col md:flex-row min-h-[800px]">
+<!-- Left Side: Image & Quote (Hidden on mobile) -->
+<div class="hidden md:flex md:w-1/2 relative bg-surface-container">
+<img class="absolute inset-0 w-full h-full object-cover" data-alt="A high-quality, bright, and modern photograph of diverse young children happily engaged in an interactive learning activity together. The setting is a well-lit, contemporary classroom with warm sunlight streaming through large windows. The mood is joyful, collaborative, and inspiring, emphasizing a premium educational environment. The overall color palette features soft neutrals with subtle hints of vibrant purple and magenta to match a modern corporate educational brand aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDOynpFm_FFK3DZ_TZlEUcBVQB9NE-V1xFGi8gKhgPQ9M6f6uY2OGiSWI1to30OqdCB5SDPQWUo27JxoXOsgTTgWZE040Oatf1YMYxy9nJ-tIhVbEl-vOCMpdU_mN9aQv7xuqX-cSnWFPDHqdpt4UD12ZutLnwupFCtZlh_RflMZR0NypcDf7xJYI011xat-OYc7bX2HsLQoBjHjK-GkvgU2vd7afxB6n3dfOpz_VNKp8YXBf_zXYq0DgtxWoxZ3A_yluYJDDyZG-A"/>
+<!-- Overlay Gradient -->
+<div class="absolute inset-0 bg-gradient-to-t from-primary/80 via-primary/30 to-transparent"></div>
+<!-- Quote Overlay -->
+<div class="relative z-10 flex flex-col justify-end p-margin-desktop h-full w-full">
+<div class="glass-panel p-stack-lg rounded-xl shadow-lg transform transition-transform hover:-translate-y-1 duration-300">
+<span class="material-symbols-outlined text-primary text-4xl mb-4" style="font-variation-settings: 'FILL' 1;">format_quote</span>
+<p class="font-body-lg text-body-lg text-on-surface mb-6 italic">
+                        "YounGo has completely transformed how my children learn. The interactive courses and engaging mentors have sparked a curiosity I've never seen before. It's truly a premium experience."
+                    </p>
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-primary-container flex items-center justify-center text-on-primary-container font-label-md text-label-md uppercase">
+                            SJ
+                        </div>
+<div>
+<p class="font-label-md text-label-md text-on-surface font-bold">Sarah Jenkins</p>
+<p class="font-label-sm text-label-sm text-on-surface-variant font-normal">Parent of two</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Right Side: Login Form -->
+<div class="w-full md:w-1/2 flex flex-col justify-center px-margin-mobile py-12 md:px-16 lg:px-24 bg-surface-container-lowest">
+<!-- Logo -->
+<div class="mb-12 flex items-center gap-3">
+<div class="w-10 h-10 rounded-lg bg-primary flex items-center justify-center text-on-primary">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">school</span>
+</div>
+<span class="font-display-lg text-headline-md text-primary tracking-tight">YounGo</span>
+</div>
+<!-- Header -->
+<div class="mb-8">
+<h1 class="font-headline-lg text-headline-lg text-on-surface mb-2">Welcome back</h1>
+<p class="font-body-md text-body-md text-on-surface-variant">Please enter your details to sign in.</p>
+</div>
+<!-- Form -->
+<form action="#" class="space-y-6" method="POST">
+<!-- Email Input -->
+<div>
+<label class="block font-label-md text-label-md text-on-surface mb-2" for="email">Email address</label>
+<div class="relative">
+<div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
+<span class="material-symbols-outlined text-outline">mail</span>
+</div>
+<input class="block w-full pl-11 pr-4 py-3 bg-surface-container-lowest border border-outline-variant rounded-lg text-on-surface placeholder-outline focus:ring-2 focus:ring-primary focus:border-primary transition-all font-body-md text-body-md" id="email" name="email" placeholder="Enter your email" type="email"/>
+</div>
+</div>
+<!-- Password Input -->
+<div>
+<label class="block font-label-md text-label-md text-on-surface mb-2" for="password">Password</label>
+<div class="relative">
+<div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
+<span class="material-symbols-outlined text-outline">lock</span>
+</div>
+<input class="block w-full pl-11 pr-12 py-3 bg-surface-container-lowest border border-outline-variant rounded-lg text-on-surface placeholder-outline focus:ring-2 focus:ring-primary focus:border-primary transition-all font-body-md text-body-md" id="password" name="password" placeholder="••••••••" type="password"/>
+<div class="absolute inset-y-0 right-0 pr-4 flex items-center">
+<button class="text-outline hover:text-primary transition-colors focus:outline-none" type="button">
+<span class="material-symbols-outlined">visibility</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Remember Me & Forgot Password -->
+<div class="flex items-center justify-between">
+<div class="flex items-center">
+<input class="h-4 w-4 text-primary focus:ring-primary border-outline-variant rounded cursor-pointer" id="remember-me" name="remember-me" type="checkbox"/>
+<label class="ml-2 block font-body-md text-body-md text-on-surface-variant cursor-pointer" for="remember-me">
+                            Remember me
+                        </label>
+</div>
+<div class="text-sm">
+<a class="font-label-md text-label-md text-primary hover:text-secondary transition-colors font-semibold" href="#">
+                            Forgot password?
+                        </a>
+</div>
+</div>
+<!-- Submit Button -->
+<div>
+<button class="w-full flex justify-center items-center py-3 px-4 border border-transparent rounded-lg shadow-sm font-label-md text-label-md text-on-primary bg-primary-container hover:bg-primary focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary transition-colors duration-200" type="submit">
+                        Sign In
+                    </button>
+</div>
+</form>
+<!-- Divider -->
+<div class="mt-8">
+<div class="relative">
+<div class="absolute inset-0 flex items-center">
+<div class="w-full border-t border-outline-variant"></div>
+</div>
+<div class="relative flex justify-center text-sm">
+<span class="px-2 bg-surface-container-lowest font-body-md text-body-md text-on-surface-variant">
+                            Or continue with
+                        </span>
+</div>
+</div>
+</div>
+<!-- Social Login -->
+<div class="mt-8 grid grid-cols-2 gap-4">
+<button class="w-full flex items-center justify-center px-4 py-2 border border-outline-variant rounded-lg shadow-sm bg-surface-container-lowest font-label-md text-label-md text-on-surface hover:bg-surface-variant transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary" type="button">
+<img alt="Google logo" class="h-5 w-5 mr-2" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCrAIMoDQmq7_wFbCps5aToCh_crCHZIjD-rPBCr2QCya8SKj7jdo9XEqV4WL5RXgtLkVxZRpc09iZ10iwxblPXhMrH6Up1xmz7aTVMq4iqweI-NqNrt1c6N-odv1g7-tK3Y6RYAT9r-_1JTTUg62W8zeQiLsR1P8pOF8h1gUiAvEoSIJaia4W3yFC7S734m3I3-dIkce4KGGgj-hJoRS2aTK9noBXILaFL06nrbF8SjvmPTWSKdBZJREzDQvdRoEX3p3ACWinlBwE"/>
+                    Google
+                </button>
+<button class="w-full flex items-center justify-center px-4 py-2 border border-outline-variant rounded-lg shadow-sm bg-surface-container-lowest font-label-md text-label-md text-on-surface hover:bg-surface-variant transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary" type="button">
+<img alt="Apple logo" class="h-5 w-5 mr-2" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAptHc7Wzho43O935-c4S_yVYXLEmqNnpvNQJSGlRJ3Hle9u8n5Wmmckciz9k-cACXaYrN4vD2ZN9joMsxJLZkBDRvcAAvyHTobItYNEwJU4sWY14kfgckVOaPoHzlX47ijpIkntrAf27XNmtRNtxnd61VJE_kImABJO_ZtIeMkC50rbwj-f4pMnpUIUZlhyW7Cz5_8MsFUJsSgjX9h7Wuds849qm6Ai4F6xwm31p6o4R7l4hIsQEw0K63dY9TgfVPlHjjShv_jefk"/>
+                    Apple
+                </button>
+</div>
+<!-- Sign Up Link -->
+<div class="mt-10 text-center">
+<p class="font-body-md text-body-md text-on-surface-variant">
+                    Don't have an account? 
+                    <a class="font-label-md text-label-md text-primary hover:text-secondary font-semibold transition-colors" href="#">Sign up</a>
+</p>
+</div>
+</div>
+</div>
+</body></html>
