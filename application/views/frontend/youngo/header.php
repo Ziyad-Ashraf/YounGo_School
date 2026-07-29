@@ -13,6 +13,7 @@ $youngo_header_wishlist_url = function_exists('youngo_frontend_wishlist_url') ? 
 $youngo_header_login_url = function_exists('youngo_frontend_login_url') ? youngo_frontend_login_url($youngo_header_language) : site_url('login');
 $youngo_header_sign_up_url = function_exists('youngo_frontend_sign_up_url') ? youngo_frontend_sign_up_url($youngo_header_language) : site_url('sign_up');
 $youngo_header_my_courses_url = function_exists('youngo_frontend_my_courses_url') ? youngo_frontend_my_courses_url($youngo_header_language) : site_url('home/my_courses');
+$youngo_header_profile_url = site_url('home/profile/user_profile');
 $youngo_header_english_url = function_exists('youngo_frontend_language_switch_url') ? youngo_frontend_language_switch_url('english') : site_url('home');
 $youngo_header_arabic_url = function_exists('youngo_frontend_language_switch_url') ? youngo_frontend_language_switch_url('arabic') : site_url('');
 
@@ -40,8 +41,8 @@ if ($this->session->userdata('user_login') == true && ($youngo_header_user_id = 
         </button>
 
         <?php if ($this->session->userdata('user_login') == true): ?>
-            <a class="youngo-mobile-account-link" href="<?php echo htmlspecialchars($youngo_header_wishlist_url, ENT_QUOTES, 'UTF-8'); ?>" aria-label="<?php echo youngo_frontend_phrase_e('my_wishlist', 'My wishlist', $youngo_header_language); ?>">
-                <i class="fa-regular fa-heart" aria-hidden="true"></i>
+            <a class="youngo-mobile-account-link youngo-profile-link" href="<?php echo htmlspecialchars($youngo_header_profile_url, ENT_QUOTES, 'UTF-8'); ?>" aria-label="<?php echo youngo_frontend_phrase_e('my_profile', 'My Profile', $youngo_header_language); ?>" title="<?php echo youngo_frontend_phrase_e('my_profile', 'My Profile', $youngo_header_language); ?>">
+                <i class="fa-regular fa-user" aria-hidden="true"></i>
             </a>
         <?php else: ?>
             <a class="youngo-mobile-account-link" href="<?php echo htmlspecialchars($youngo_header_login_url, ENT_QUOTES, 'UTF-8'); ?>"><?php echo youngo_frontend_phrase_e('login', 'Login', $youngo_header_language); ?></a>
@@ -57,6 +58,33 @@ if ($this->session->userdata('user_login') == true && ($youngo_header_user_id = 
                 <a href="<?php echo htmlspecialchars($youngo_header_english_url, ENT_QUOTES, 'UTF-8'); ?>" lang="en">EN</a>
                 <a href="<?php echo htmlspecialchars($youngo_header_arabic_url, ENT_QUOTES, 'UTF-8'); ?>" lang="ar" dir="rtl">العربية</a>
             </div>
+            <div class="youngo-nav__mobile-account">
+                <?php if ($this->session->userdata('user_login') == true): ?>
+                    <a href="<?php echo htmlspecialchars($youngo_header_profile_url, ENT_QUOTES, 'UTF-8'); ?>">
+                        <i class="fa-regular fa-user" aria-hidden="true"></i>
+                        <span><?php echo youngo_frontend_phrase_e('my_profile', 'My Profile', $youngo_header_language); ?></span>
+                    </a>
+                    <a href="<?php echo htmlspecialchars($youngo_header_my_courses_url, ENT_QUOTES, 'UTF-8'); ?>">
+                        <i class="fa-solid fa-graduation-cap" aria-hidden="true"></i>
+                        <span><?php echo youngo_frontend_phrase_e('my_courses', 'My courses', $youngo_header_language); ?></span>
+                    </a>
+                    <a href="<?php echo htmlspecialchars($youngo_header_wishlist_url, ENT_QUOTES, 'UTF-8'); ?>">
+                        <i class="fa-regular fa-heart" aria-hidden="true"></i>
+                        <span><?php echo youngo_frontend_phrase_e('my_wishlist', 'My wishlist', $youngo_header_language); ?></span>
+                    </a>
+                <?php else: ?>
+                    <a href="<?php echo htmlspecialchars($youngo_header_login_url, ENT_QUOTES, 'UTF-8'); ?>">
+                        <i class="fa-regular fa-user" aria-hidden="true"></i>
+                        <span><?php echo youngo_frontend_phrase_e('login', 'Login', $youngo_header_language); ?></span>
+                    </a>
+                    <?php if (get_settings('public_signup') == 'enable'): ?>
+                        <a href="<?php echo htmlspecialchars($youngo_header_sign_up_url, ENT_QUOTES, 'UTF-8'); ?>">
+                            <i class="fa-solid fa-user-plus" aria-hidden="true"></i>
+                            <span><?php echo youngo_frontend_phrase_e('sign_up', 'Sign up', $youngo_header_language); ?></span>
+                        </a>
+                    <?php endif; ?>
+                <?php endif; ?>
+            </div>
         </nav>
 
         <div class="youngo-header__actions">
@@ -69,6 +97,9 @@ if ($this->session->userdata('user_login') == true && ($youngo_header_user_id = 
                 <a class="youngo-header-icon-link" href="<?php echo htmlspecialchars($youngo_header_wishlist_url, ENT_QUOTES, 'UTF-8'); ?>" aria-label="<?php echo youngo_frontend_phrase_e('my_wishlist', 'My wishlist', $youngo_header_language); ?>">
                     <i class="fa-regular fa-heart"></i>
                     <span id="wishlistItemsCounter"><?php echo count($youngo_header_wishlist_items); ?></span>
+                </a>
+                <a class="youngo-header-icon-link youngo-profile-link" href="<?php echo htmlspecialchars($youngo_header_profile_url, ENT_QUOTES, 'UTF-8'); ?>" aria-label="<?php echo youngo_frontend_phrase_e('my_profile', 'My Profile', $youngo_header_language); ?>" title="<?php echo youngo_frontend_phrase_e('my_profile', 'My Profile', $youngo_header_language); ?>">
+                    <i class="fa-regular fa-user" aria-hidden="true"></i>
                 </a>
                 <a class="youngo-link" href="<?php echo htmlspecialchars($youngo_header_my_courses_url, ENT_QUOTES, 'UTF-8'); ?>"><?php echo youngo_frontend_phrase_e('my_courses', 'My courses', $youngo_header_language); ?></a>
             <?php else: ?>

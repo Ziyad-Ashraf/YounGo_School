@@ -89,8 +89,31 @@ body[data-layout="detached"] .content-page {
    the rest of the page has flipped to RTL, producing a torn/overlapping
    seam between the drawer and the main content. */
 @media (max-width: 767.98px) {
+    .topnav-navbar .topnav-logo {
+        margin-left: 8px;
+        margin-right: 0;
+    }
+
+    .navbar-custom .topbar-right-menu {
+        margin-left: 0;
+        margin-right: auto;
+    }
+
+    .navbar-custom .dropdown-menu.dropdown-lg.show {
+        left: 8px !important;
+        right: auto !important;
+        max-width: calc(100vw - 16px);
+    }
+
     body[data-layout="detached"].sidebar-enable .left-side-menu {
         left: auto;
         right: 0;
+    }
+}
+
+@media (max-width: 390px) {
+    .topnav-navbar .topnav-logo {
+        margin-left: 4px;
+        margin-right: 0;
     }
 }

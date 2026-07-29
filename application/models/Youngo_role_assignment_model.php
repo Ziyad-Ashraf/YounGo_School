@@ -13,6 +13,9 @@ class Youngo_role_assignment_model extends CI_Model
         'instructor' => 'instructor',
     );
     protected $managed_legacy_permissions = array(
+        'admin',
+        'admins',
+        'settings',
         'category',
         'course',
         'user',
@@ -27,6 +30,9 @@ class Youngo_role_assignment_model extends CI_Model
         'contact',
     );
     protected $admin_legacy_permissions = array(
+        'admin',
+        'admins',
+        'settings',
         'category',
         'course',
         'user',

@@ -217,8 +217,9 @@
                             if($contact_info){
                                 $contact_info = json_decode($contact_info, true);
                             }else{
-                                $contact_info = ['email' => '', 'phone' => '', 'address' => '', 'office_hours' => ''];
+                                $contact_info = [];
                             }
+                            $contact_info = is_array($contact_info) ? array_merge(['email' => '', 'phone' => '', 'whatsapp_number' => '', 'address' => '', 'office_hours' => ''], $contact_info) : ['email' => '', 'phone' => '', 'whatsapp_number' => '', 'address' => '', 'office_hours' => ''];
                         ?>
                         <form action="<?php echo site_url('admin/frontend_settings/contact_info'); ?>" method="post" enctype="multipart/form-data">
                             <div class="row">
@@ -230,6 +231,10 @@
                                     <div class="mb-3">
                                         <label><?php echo get_phrase('Phone Number') ?></label>
                                         <textarea name="phone" rows="2" class="form-control"><?php echo $contact_info['phone']; ?></textarea>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label><?php echo get_phrase('WhatsApp Number') ?></label>
+                                        <textarea name="whatsapp_number" rows="2" class="form-control"><?php echo $contact_info['whatsapp_number']; ?></textarea>
                                     </div>
                                     <div class="mb-3">
                                         <label><?php echo get_phrase('Address') ?></label>

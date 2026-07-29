@@ -21,18 +21,14 @@ if (!function_exists('youngo_contact_first_line')) {
 $youngo_contact_language = function_exists('youngo_frontend_active_language') ? youngo_frontend_active_language() : 'english';
 $youngo_contact_home_url = function_exists('youngo_frontend_home_url') ? youngo_frontend_home_url($youngo_contact_language) : site_url('home');
 $youngo_contact_courses_url = function_exists('youngo_frontend_courses_url') ? youngo_frontend_courses_url($youngo_contact_language) : site_url('home/courses');
-$youngo_contact_raw = json_decode(get_frontend_settings('contact_info'), true);
-$youngo_contact_info = is_array($youngo_contact_raw) ? $youngo_contact_raw : array();
+$youngo_contact_info = function_exists('youngo_contact_info') ? youngo_contact_info() : array();
 
 $youngo_contact_email = !empty($youngo_contact_info['email']) ? $youngo_contact_info['email'] : get_settings('system_email');
 $youngo_contact_phone = !empty($youngo_contact_info['phone']) ? $youngo_contact_info['phone'] : get_settings('phone');
+$youngo_contact_whatsapp = !empty($youngo_contact_info['whatsapp_number']) ? $youngo_contact_info['whatsapp_number'] : '';
+$youngo_contact_whatsapp_url = function_exists('youngo_whatsapp_url') ? youngo_whatsapp_url($youngo_contact_whatsapp) : '';
 $youngo_contact_address = !empty($youngo_contact_info['address']) ? $youngo_contact_info['address'] : get_settings('address');
 $youngo_contact_hours = !empty($youngo_contact_info['office_hours']) ? $youngo_contact_info['office_hours'] : '10:00 AM - 6:00 PM';
-if ($youngo_contact_language === 'arabic') {
-    $youngo_contact_phone = '+20 100 123 4567';
-    $youngo_contact_address = 'مدينة السادس من أكتوبر، الجيزة، مصر';
-    $youngo_contact_hours = 'من السبت إلى الخميس، من 9 صباحًا حتى 5 مساءً بتوقيت مصر';
-}
 $youngo_contact_email_line = youngo_contact_first_line($youngo_contact_email);
 $youngo_contact_mailto = $youngo_contact_email_line !== '' ? 'mailto:' . str_replace(array("\r", "\n"), '', $youngo_contact_email_line) : '#';
 $youngo_contact_socials = array(
@@ -42,10 +38,11 @@ $youngo_contact_socials = array(
 );
 
 $youngo_contact_cards = array(
-    array('key' => 'email', 'icon' => 'fa-regular fa-envelope', 'value' => $youngo_contact_email),
-    array('key' => 'phone', 'icon' => 'fa-solid fa-phone', 'value' => $youngo_contact_phone),
-    array('key' => 'address', 'icon' => 'fa-solid fa-location-dot', 'value' => $youngo_contact_address),
-    array('key' => 'working_hours', 'icon' => 'fa-regular fa-clock', 'value' => $youngo_contact_hours),
+    array('key' => 'email', 'label' => 'Email', 'icon' => 'fa-regular fa-envelope', 'value' => $youngo_contact_email, 'url' => $youngo_contact_mailto),
+    array('key' => 'phone', 'label' => 'Phone', 'icon' => 'fa-solid fa-phone', 'value' => $youngo_contact_phone, 'url' => ''),
+    array('key' => 'whatsapp', 'label' => 'WhatsApp', 'icon' => 'fa-brands fa-whatsapp', 'value' => $youngo_contact_whatsapp, 'url' => $youngo_contact_whatsapp_url),
+    array('key' => 'address', 'label' => 'Address', 'icon' => 'fa-solid fa-location-dot', 'value' => $youngo_contact_address, 'url' => ''),
+    array('key' => 'working_hours', 'label' => 'Working hours', 'icon' => 'fa-regular fa-clock', 'value' => $youngo_contact_hours, 'url' => ''),
 );
 ?>
 
@@ -85,8 +82,12 @@ $youngo_contact_cards = array(
                     <?php foreach ($youngo_contact_cards as $card): ?>
                         <?php if (trim((string) $card['value']) === '') continue; ?>
                         <article class="youngo-placeholder__panel">
-                            <span><i class="<?php echo youngo_contact_e($card['icon']); ?>"></i> <?php echo youngo_contact_e(youngo_frontend_phrase($card['key'], $youngo_contact_language)); ?></span>
-                            <strong><?php echo nl2br(youngo_contact_e($card['value'])); ?></strong>
+                            <span><i class="<?php echo youngo_contact_e($card['icon']); ?>"></i> <?php echo youngo_contact_e(youngo_frontend_phrase($card['key'], $card['label'], $youngo_contact_language)); ?></span>
+                            <?php if (!empty($card['url'])): ?>
+                                <strong><a class="youngo-contact-link" href="<?php echo youngo_contact_e($card['url']); ?>"<?php echo $card['key'] === 'whatsapp' ? ' target="_blank" rel="noopener"' : ''; ?>><?php echo nl2br(youngo_contact_e($card['value'])); ?></a></strong>
+                            <?php else: ?>
+                                <strong><?php echo nl2br(youngo_contact_e($card['value'])); ?></strong>
+                            <?php endif; ?>
                         </article>
                     <?php endforeach; ?>
                 </div>

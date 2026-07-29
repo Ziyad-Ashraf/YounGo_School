@@ -7435,10 +7435,41 @@ body.youngo-theme :focus-visible {
 
 .youngo-subscription-card__actions {
     display: flex;
+    flex-direction: column;
     align-items: center;
-    flex-wrap: wrap;
     gap: 12px;
     margin-top: auto;
+}
+
+.youngo-subscription-card__actions .youngo-button {
+    width: 100%;
+    flex: 0 0 auto;
+    gap: 9px;
+    padding-inline: 16px;
+    text-align: center;
+}
+
+.youngo-subscription-card__actions .youngo-button i {
+    flex: 0 0 auto;
+    font-size: 14px;
+    line-height: 1;
+}
+
+.youngo-subscription-card__actions .youngo-button span {
+    min-width: 0;
+    overflow-wrap: anywhere;
+}
+
+html[dir="rtl"] .youngo-subscription-card,
+.youngo-dir-rtl .youngo-subscription-card {
+    text-align: right;
+}
+
+html[dir="rtl"] .youngo-subscription-card__meta,
+.youngo-dir-rtl .youngo-subscription-card__meta,
+html[dir="rtl"] .youngo-subscription-card__actions,
+.youngo-dir-rtl .youngo-subscription-card__actions {
+    justify-content: flex-start;
 }
 
 .youngo-subscription-card__actions > span {
@@ -8890,5 +8921,537 @@ body.youngo-theme :focus-visible {
         gap: 8px;
         padding: 10px 6px 4px;
         border-top: 1px solid rgba(126, 66, 171, 0.12);
+    }
+}
+
+/* FRONTEND.QUICK.CLIENT.FIXES.2 */
+.youngo-contact-link {
+    color: inherit;
+    text-decoration: none;
+    overflow-wrap: anywhere;
+}
+
+.youngo-contact-link:hover,
+.youngo-contact-link:focus {
+    color: var(--youngo-purple);
+    text-decoration: underline;
+}
+
+.youngo-profile-link i {
+    font-size: 14px;
+    line-height: 1;
+}
+
+.youngo-mobile-account-link.youngo-profile-link {
+    width: 40px;
+    height: 40px;
+    min-width: 40px;
+    min-height: 40px;
+    max-width: 40px;
+    padding: 0;
+    border-color: rgba(205, 195, 211, 0.82);
+    background: var(--youngo-white);
+    color: var(--youngo-purple);
+    transition: background 160ms ease, border-color 160ms ease, transform 160ms ease;
+}
+
+.youngo-mobile-account-link.youngo-profile-link:hover,
+.youngo-mobile-account-link.youngo-profile-link:focus {
+    border-color: rgba(126, 66, 171, 0.45);
+    background: var(--youngo-purple-soft);
+    color: var(--youngo-purple);
+    transform: translateY(-1px);
+}
+
+@media (max-width: 720px) {
+    .youngo-header__actions .youngo-profile-link {
+        display: none !important;
+    }
+}
+
+@media (max-width: 620px) {
+    .youngo-mobile-account-link.youngo-profile-link {
+        width: 36px;
+        height: 36px;
+        min-width: 36px;
+        min-height: 36px;
+        max-width: 36px;
+    }
+}
+
+.youngo-auth-remember {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    color: var(--youngo-muted);
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.youngo-auth-remember input {
+    width: 16px;
+    height: 16px;
+    accent-color: var(--youngo-purple);
+}
+
+.youngo-whatsapp-float {
+    position: fixed;
+    right: 24px;
+    left: auto;
+    bottom: 24px;
+    z-index: 1000;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 58px;
+    height: 58px;
+    min-width: 58px;
+    min-height: 58px;
+    padding: 0;
+    border: 2px solid rgba(255, 255, 255, 0.92);
+    border-radius: 999px;
+    background: #25d366;
+    color: #ffffff;
+    box-shadow: 0 14px 34px rgba(37, 211, 102, 0.28), 0 10px 28px rgba(66, 15, 121, 0.14);
+    font-size: 15px;
+    font-weight: 800;
+    line-height: 1;
+    text-decoration: none;
+    transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
+
+html[dir="rtl"] .youngo-whatsapp-float,
+.youngo-dir-rtl .youngo-whatsapp-float {
+    right: auto;
+    left: 24px;
+}
+
+.youngo-whatsapp-float i {
+    font-size: 27px;
+}
+
+.youngo-whatsapp-float:hover,
+.youngo-whatsapp-float:focus {
+    color: #ffffff;
+    text-decoration: none;
+    transform: translateY(-2px);
+    box-shadow: 0 18px 42px rgba(37, 211, 102, 0.32), 0 12px 32px rgba(66, 15, 121, 0.16);
+}
+
+.youngo-has-whatsapp-float .youngo-main {
+    padding-bottom: 76px;
+}
+
+.youngo-theme {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+.youngo-theme *,
+.youngo-theme *::before,
+.youngo-theme *::after {
+    box-sizing: border-box;
+}
+
+.youngo-theme img,
+.youngo-theme video,
+.youngo-theme iframe,
+.youngo-theme table {
+    max-width: 100%;
+}
+
+.youngo-course-section,
+.youngo-course-card,
+.youngo-courses-card,
+.youngo-subscription-card,
+.youngo-checkout-panel,
+.youngo-commerce-summary-card,
+.youngo-cart-summary,
+.youngo-account-panel,
+.youngo-placeholder__panel,
+.youngo-contact-panel {
+    min-width: 0;
+}
+
+.youngo-course-actions,
+.youngo-section__actions,
+.youngo-subscription-card__actions,
+.youngo-commerce-course-card__actions,
+.youngo-commerce-empty__actions,
+.youngo-account-form__actions,
+.youngo-purchase-card__actions,
+.youngo-checkout-panel form {
+    flex-wrap: wrap;
+}
+
+.youngo-button {
+    min-width: 0;
+    white-space: normal;
+}
+
+@media (max-width: 720px) {
+    .youngo-has-whatsapp-float .youngo-main {
+        padding-bottom: 104px;
+    }
+
+    .youngo-whatsapp-float {
+        right: 14px;
+        left: auto;
+        bottom: max(18px, env(safe-area-inset-bottom));
+        width: 54px;
+        height: 54px;
+        min-width: 54px;
+        min-height: 54px;
+        padding: 0;
+    }
+
+    html[dir="rtl"] .youngo-whatsapp-float,
+    .youngo-dir-rtl .youngo-whatsapp-float {
+        right: auto;
+        left: 14px;
+    }
+
+    .youngo-courses-hero__stats,
+    .youngo-commerce-summary-card,
+    .youngo-checkout-reference,
+    .youngo-courses-filter,
+    .youngo-courses-toolbar,
+    .youngo-course-card,
+    .youngo-course-section,
+    .youngo-subscription-card,
+    .youngo-checkout-panel,
+    .youngo-contact-panel,
+    .youngo-placeholder__panel {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .youngo-placeholder__grid,
+    .youngo-blog-grid,
+    .youngo-field-grid,
+    .youngo-course-actions,
+    .youngo-subscription-card__actions,
+    .youngo-commerce-course-card__actions,
+    .youngo-commerce-empty__actions,
+    .youngo-account-form__actions,
+    .youngo-purchase-card__actions {
+        grid-template-columns: 1fr !important;
+    }
+
+    .youngo-course-actions .youngo-button,
+    .youngo-subscription-card__actions .youngo-button,
+    .youngo-commerce-course-card__actions .youngo-button,
+    .youngo-commerce-empty__actions .youngo-button,
+    .youngo-account-form__actions .youngo-button,
+    .youngo-purchase-card__actions .youngo-button,
+    .youngo-checkout-panel .youngo-button {
+        width: 100%;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .youngo-courses-toolbar__actions {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 8px;
+    }
+
+    .youngo-courses-toolbar__actions > * {
+        min-width: 0;
+    }
+}
+
+@media (max-width: 420px) {
+    .youngo-whatsapp-float {
+        right: 12px;
+        left: auto;
+        width: 50px;
+        height: 50px;
+        min-width: 50px;
+        min-height: 50px;
+    }
+
+    html[dir="rtl"] .youngo-whatsapp-float,
+    .youngo-dir-rtl .youngo-whatsapp-float {
+        right: auto;
+        left: 12px;
+    }
+
+    .youngo-courses-toolbar__actions {
+        grid-template-columns: 1fr;
+    }
+
+    .youngo-cart-row {
+        grid-template-columns: 64px minmax(0, 1fr);
+    }
+
+    .youngo-cart-row button {
+        grid-column: 1 / -1;
+        grid-row: auto;
+        width: 100%;
+    }
+}
+
+/* FRONTEND.MOBILE.HEADER.MENU.POLISH.1 */
+.youngo-nav__mobile-account {
+    display: none;
+}
+
+@media (max-width: 720px) {
+    .youngo-header {
+        z-index: 1200;
+    }
+
+    .youngo-header.is-hidden.is-menu-open {
+        transform: translateY(0);
+    }
+
+    .youngo-header__inner {
+        position: relative;
+        display: grid !important;
+        grid-template-columns: 46px minmax(0, 1fr) auto;
+        align-items: center;
+        justify-items: stretch;
+        direction: ltr;
+        min-height: 66px;
+        padding: 10px 0;
+        gap: 8px;
+    }
+
+    .youngo-brand {
+        grid-column: 2;
+        grid-row: 1;
+        order: initial;
+        justify-self: center;
+        min-width: 0;
+        padding: 0;
+    }
+
+    .youngo-brand img {
+        width: auto;
+        height: 40px;
+        max-width: min(148px, 42vw);
+    }
+
+    .youngo-menu-toggle {
+        position: static !important;
+        grid-column: 1;
+        grid-row: 1;
+        order: initial;
+        display: inline-grid !important;
+        place-items: center;
+        justify-self: start;
+        width: 42px;
+        height: 42px;
+        flex: 0 0 42px;
+        margin: 0 !important;
+        transform: none !important;
+        z-index: 3;
+    }
+
+    .youngo-mobile-account-link {
+        position: static !important;
+        grid-column: 3;
+        grid-row: 1;
+        order: initial;
+        justify-self: end;
+        display: inline-flex !important;
+        align-items: center;
+        justify-content: center;
+        min-width: 0;
+        min-height: 38px;
+        max-width: 104px;
+        padding: 8px 11px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        z-index: 3;
+    }
+
+    .youngo-mobile-account-link.youngo-profile-link {
+        width: 42px;
+        height: 42px;
+        min-width: 42px;
+        min-height: 42px;
+        max-width: 42px;
+        padding: 0;
+    }
+
+    .youngo-header.is-menu-open .youngo-mobile-account-link {
+        visibility: hidden;
+        pointer-events: none;
+    }
+
+    .youngo-header__actions {
+        display: none !important;
+    }
+
+    .youngo-nav {
+        position: absolute;
+        inset-inline: 0;
+        top: calc(100% + 8px);
+        order: initial;
+        display: none !important;
+        width: 100%;
+        max-height: calc(100vh - 92px);
+        padding: 10px;
+        overflow-y: auto;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 6px;
+        border: 1px solid rgba(126, 66, 171, 0.16);
+        border-radius: 20px;
+        background: rgba(255, 255, 255, 0.98);
+        box-shadow: 0 24px 56px rgba(66, 15, 121, 0.18);
+        z-index: 2;
+    }
+
+    .youngo-header.is-menu-open .youngo-nav {
+        display: flex !important;
+    }
+
+    .youngo-nav a {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        width: 100%;
+        min-height: 44px;
+        padding: 11px 13px;
+        border-radius: 13px;
+        font-size: 14px;
+        line-height: 1.25;
+        text-align: start;
+        white-space: normal;
+    }
+
+    .youngo-nav__mobile-language,
+    .youngo-nav__mobile-account {
+        display: grid;
+        width: 100%;
+        gap: 8px;
+        padding: 10px 0 0;
+        border-top: 1px solid rgba(126, 66, 171, 0.12);
+    }
+
+    .youngo-nav__mobile-language {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .youngo-nav__mobile-account {
+        grid-template-columns: 1fr;
+    }
+
+    .youngo-nav__mobile-language a,
+    .youngo-nav__mobile-account a {
+        justify-content: center;
+        gap: 9px;
+        min-width: 0;
+        background: rgba(126, 66, 171, 0.06);
+        color: var(--youngo-purple);
+        font-weight: 800;
+    }
+
+    .youngo-nav__mobile-account a {
+        justify-content: flex-start;
+    }
+
+    .youngo-nav__mobile-account i {
+        flex: 0 0 auto;
+        width: 18px;
+        text-align: center;
+    }
+
+    .youngo-nav__mobile-account span {
+        min-width: 0;
+        overflow-wrap: anywhere;
+    }
+
+    html[dir="rtl"] .youngo-header__inner,
+    .youngo-dir-rtl .youngo-header__inner {
+        grid-template-columns: auto minmax(0, 1fr) 46px;
+    }
+
+    html[dir="rtl"] .youngo-menu-toggle,
+    .youngo-dir-rtl .youngo-menu-toggle {
+        grid-column: 3;
+        justify-self: end;
+    }
+
+    html[dir="rtl"] .youngo-mobile-account-link,
+    .youngo-dir-rtl .youngo-mobile-account-link {
+        grid-column: 1;
+        justify-self: start;
+        direction: rtl;
+    }
+
+    html[dir="rtl"] .youngo-nav,
+    .youngo-dir-rtl .youngo-nav {
+        direction: rtl;
+        text-align: right;
+    }
+
+    html[dir="rtl"] .youngo-nav a,
+    .youngo-dir-rtl .youngo-nav a,
+    html[dir="rtl"] .youngo-nav__mobile-account a,
+    .youngo-dir-rtl .youngo-nav__mobile-account a {
+        justify-content: flex-start;
+        text-align: right;
+    }
+
+    .youngo-hero,
+    .youngo-courses-hero {
+        padding-top: 42px;
+    }
+
+    .youngo-whatsapp-float {
+        right: 14px;
+        left: auto;
+        bottom: max(72px, calc(env(safe-area-inset-bottom) + 58px));
+        width: 50px;
+        height: 50px;
+        min-width: 50px;
+        min-height: 50px;
+        z-index: 900;
+    }
+
+    .youngo-whatsapp-float i {
+        font-size: 24px;
+    }
+
+    html[dir="rtl"] .youngo-whatsapp-float,
+    .youngo-dir-rtl .youngo-whatsapp-float {
+        right: auto;
+        left: 14px;
+    }
+}
+
+@media (max-width: 380px) {
+    .youngo-header__inner {
+        grid-template-columns: 42px minmax(0, 1fr) auto;
+        min-height: 62px;
+    }
+
+    .youngo-brand img {
+        height: 36px;
+        max-width: min(132px, 40vw);
+    }
+
+    .youngo-menu-toggle,
+    .youngo-mobile-account-link.youngo-profile-link {
+        width: 40px;
+        height: 40px;
+        min-width: 40px;
+        min-height: 40px;
+    }
+
+    .youngo-mobile-account-link {
+        max-width: 94px;
+        padding-inline: 10px;
+        font-size: 12px;
+    }
+
+    html[dir="rtl"] .youngo-header__inner,
+    .youngo-dir-rtl .youngo-header__inner {
+        grid-template-columns: auto minmax(0, 1fr) 42px;
     }
 }

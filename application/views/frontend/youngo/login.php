@@ -74,15 +74,15 @@ $youngo_login_sign_up_url = function_exists('youngo_frontend_sign_up_url') ? you
                     <?php endforeach; ?>
 
                     <div class="youngo-auth-heading">
-                        <span class="youngo-auth-kicker"><?php echo youngo_frontend_phrase_e('welcome_back'); ?></span>
-                        <h1><?php echo youngo_frontend_phrase_e('log_in_to_youngo'); ?></h1>
-                        <p><?php echo youngo_frontend_phrase_e('continue_a_safe,_joyful_learning_journey_built_for_curious_kids_and_confident_parents.'); ?></p>
+                        <span class="youngo-auth-kicker"><?php echo youngo_frontend_phrase_e('login', 'Login', $youngo_login_language); ?></span>
+                        <h1><?php echo youngo_frontend_phrase_e('login_to_your_account', 'Login to your account', $youngo_login_language); ?></h1>
+                        <p><?php echo youngo_frontend_phrase_e('continue_a_safe,_joyful_learning_journey_built_for_curious_kids_and_confident_parents.', 'Continue a safe, joyful learning journey built for curious kids and confident parents.', $youngo_login_language); ?></p>
                     </div>
 
                     <form class="youngo-auth-form" action="<?php echo site_url('login/validate_login'); ?>" method="post" id="login-form">
                         <div class="youngo-field youngo-field--icon" data-icon="@">
-                            <label for="email"><?php echo youngo_frontend_phrase_e('email_address'); ?></label>
-                            <input id="email" type="email" name="email" placeholder="<?php echo youngo_frontend_phrase_e('enter_your_email'); ?>" autocomplete="email">
+                            <label for="email"><?php echo youngo_frontend_phrase_e('email_or_phone_number', 'Email or phone number'); ?></label>
+                            <input id="email" type="text" name="email" placeholder="<?php echo youngo_frontend_phrase_e('enter_your_email_or_phone_number', 'Enter your email or phone number'); ?>" autocomplete="username">
                         </div>
 
                         <div class="youngo-field youngo-field--icon youngo-field--password" data-icon="*">
@@ -96,7 +96,10 @@ $youngo_login_sign_up_url = function_exists('youngo_frontend_sign_up_url') ? you
                         </div>
 
                         <div class="youngo-auth-form__meta">
-                            <span></span>
+                            <label class="youngo-auth-remember" for="remember_me">
+                                <input id="remember_me" type="checkbox" name="remember_me" value="1">
+                                <span><?php echo youngo_frontend_phrase_e('remember_me', 'Remember me', $youngo_login_language); ?></span>
+                            </label>
                             <a class="youngo-auth__small-link" href="<?php echo $youngo_login_forgot_url; ?>"><?php echo youngo_frontend_phrase_e('forgot_password?'); ?></a>
                         </div>
 
@@ -108,10 +111,10 @@ $youngo_login_sign_up_url = function_exists('youngo_frontend_sign_up_url') ? you
 
                         <?php if (get_frontend_settings('recaptcha_status_v3')): ?>
                             <button class="youngo-button youngo-button--auth g-recaptcha" data-sitekey="<?php echo get_frontend_settings('recaptcha_sitekey_v3'); ?>" data-callback="onLoginSubmit" data-action="submit">
-                                <?php echo youngo_frontend_phrase_e('log_in'); ?>
+                                <?php echo youngo_frontend_phrase_e('login_continue', 'Continue', $youngo_login_language); ?>
                             </button>
                         <?php else: ?>
-                            <button type="submit" class="youngo-button youngo-button--auth"><?php echo youngo_frontend_phrase_e('log_in'); ?></button>
+                            <button type="submit" class="youngo-button youngo-button--auth"><?php echo youngo_frontend_phrase_e('login_continue', 'Continue', $youngo_login_language); ?></button>
                         <?php endif; ?>
                     </form>
 
@@ -126,7 +129,7 @@ $youngo_login_sign_up_url = function_exists('youngo_frontend_sign_up_url') ? you
 
                     <?php if (get_settings('public_signup') == 'enable'): ?>
                         <p class="youngo-auth-switch">
-                            <?php echo youngo_frontend_phrase_e('new_to_youngo?'); ?>
+                            <?php echo youngo_frontend_phrase_e('dont_have_an_account?', "Don't have an account?", $youngo_login_language); ?>
                             <a href="<?php echo $youngo_login_sign_up_url; ?>"><?php echo youngo_frontend_phrase_e('sign_up'); ?></a>
                         </p>
                     <?php endif; ?>

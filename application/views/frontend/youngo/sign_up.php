@@ -99,6 +99,11 @@ $youngo_sign_up_login_url = function_exists('youngo_frontend_login_url') ? young
                             <input id="email" type="email" name="email" placeholder="<?php echo youngo_frontend_phrase_e('enter_your_email'); ?>" autocomplete="email" required>
                         </div>
 
+                        <div class="youngo-field">
+                            <label for="phone"><?php echo youngo_frontend_phrase_e('phone_number', 'Phone number'); ?></label>
+                            <input id="phone" type="tel" name="phone" placeholder="<?php echo youngo_frontend_phrase_e('enter_your_phone_number', 'Enter your phone number'); ?>" autocomplete="tel" required>
+                        </div>
+
                         <div class="youngo-field youngo-field--password">
                             <label for="password"><?php echo youngo_frontend_phrase_e('create_password'); ?></label>
                             <div class="youngo-password-control">
@@ -116,11 +121,6 @@ $youngo_sign_up_login_url = function_exists('youngo_frontend_login_url') ? young
                             </label>
 
                             <div id="become-instructor-fields" class="youngo-auth-extra <?php echo isset($_GET['instructor']) ? '' : 'is-hidden'; ?>">
-                                <div class="youngo-field">
-                                    <label for="phone"><?php echo youngo_frontend_phrase_e('phone'); ?></label>
-                                    <input id="phone" type="phone" name="phone" placeholder="<?php echo youngo_frontend_phrase_e('enter_your_phone_number'); ?>">
-                                </div>
-
                                 <div class="youngo-field">
                                     <label for="document"><?php echo youngo_frontend_phrase_e('document'); ?> <small>(doc, docs, pdf, txt, png, jpg, jpeg)</small></label>
                                     <input id="document" type="file" name="document">
