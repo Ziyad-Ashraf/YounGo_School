@@ -61,6 +61,7 @@ class User_model extends CI_Model
         $validity = $this->check_duplication('on_create', $this->input->post('email'));
         if ($validity == false) {
             $this->session->set_flashdata('error_message', get_phrase('email_duplication'));
+            return false;
         } else {
           //  $data['unique_identifier'] = 0;
             $data['first_name'] = html_escape($this->input->post('first_name'));
@@ -109,6 +110,7 @@ class User_model extends CI_Model
 
             $this->upload_user_image($data['image']);
             $this->session->set_flashdata('flash_message', get_phrase('user_added_successfully'));
+            return $user_id;
         }
     }
 
@@ -265,6 +267,9 @@ class User_model extends CI_Model
 
         $update_code['verification_code'] = $data['verification_code'];
         $update_code['password'] = $data['password'];
+        if (isset($data['phone'])) {
+            $update_code['phone'] = $data['phone'];
+        }
         $this->db->where('email', $data['email']);
         $this->db->update('users', $update_code);
     }

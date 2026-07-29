@@ -1330,6 +1330,26 @@ class Admin extends CI_Controller
         return youngo_user_has_capability($this->session->userdata('user_id'), 'grant_manual_access') ? true : false;
     }
 
+    private function youngo_assign_admin_role_to_created_admin($user_id)
+    {
+        $user_id = (int) $user_id;
+        if ($user_id <= 0 || !file_exists(APPPATH . 'models/Youngo_role_assignment_model.php')) {
+            return;
+        }
+
+        $this->load->model('Youngo_role_assignment_model', 'youngo_role_assignment_model');
+        $result = $this->youngo_role_assignment_model->update_assignments(
+            $user_id,
+            array('admin'),
+            (int) $this->session->userdata('user_id')
+        );
+
+        if (empty($result['ok'])) {
+            $message = isset($result['message']) ? $result['message'] : 'YounGo Admin role assignment failed.';
+            $this->session->set_flashdata('error_message', $message);
+        }
+    }
+
     private function is_drafted_course($course_id)
     {
         if ($this->session->userdata('admin_login') != true) {
@@ -2135,7 +2155,8 @@ class Admin extends CI_Controller
             // CHECK ACCESS PERMISSION
             check_permission('admin');
 
-            $this->user_model->add_user(false, true); // PROVIDING TRUE FOR INSTRUCTOR
+            $created_admin_id = $this->user_model->add_user(false, true); // PROVIDING TRUE FOR INSTRUCTOR
+            $this->youngo_assign_admin_role_to_created_admin($created_admin_id);
             redirect(site_url('admin/admins'), 'refresh');
         } elseif ($param1 == "edit") {
             // CHECK ACCESS PERMISSION

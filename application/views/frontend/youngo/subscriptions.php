@@ -79,11 +79,11 @@ if (!function_exists('youngo_subscriptions_e')) {
                         <div class="youngo-subscription-card__actions">
                             <a class="youngo-button" href="<?php echo youngo_subscriptions_e(site_url('youngo/checkout/subscription/start/' . (int) $plan['id'])); ?>" data-youngo-checkout-cta="local-subscription-plan">
                                 <i class="fa-solid fa-wallet"></i>
-                                <?php echo youngo_subscriptions_e(youngo_frontend_phrase('subscribe_with_instapay', 'Subscribe with Instapay', $youngo_subscriptions_language)); ?>
+                                <span><?php echo youngo_subscriptions_e(youngo_frontend_phrase('subscribe', 'Subscribe', $youngo_subscriptions_language)); ?></span>
                             </a>
                             <a class="youngo-button youngo-button--secondary" href="<?php echo youngo_subscriptions_e($youngo_subscriptions_contact_url); ?>">
                                 <i class="fa-regular fa-envelope"></i>
-                                <?php echo youngo_subscriptions_e(youngo_frontend_phrase('talk_to_us_about_subscriptions', $youngo_subscriptions_language)); ?>
+                                <span><?php echo youngo_subscriptions_e(youngo_frontend_phrase('talk_to_us_about_subscriptions', $youngo_subscriptions_language)); ?></span>
                             </a>
                         </div>
                     </article>

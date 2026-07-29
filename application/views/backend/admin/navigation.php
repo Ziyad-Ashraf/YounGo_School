@@ -9,9 +9,12 @@
         && youngo_user_has_capability($this->session->userdata('user_id'), 'grant_manual_access');
     $can_manage_youngo_roles = function_exists('youngo_user_has_capability')
         && youngo_user_has_capability($this->session->userdata('user_id'), 'manage_roles');
+    $can_manage_youngo_homepage = function_exists('youngo_user_has_capability')
+        && youngo_user_has_capability($this->session->userdata('user_id'), 'manage_homepage_content');
     $can_view_youngo_payment_settings = function_exists('youngo_is_root_admin')
         && youngo_is_root_admin($this->session->userdata('user_id'));
     $youngo_menu_active = in_array($page_name, array(
+        'youngo_homepage',
         'youngo_subscription_plans',
         'youngo_subscription_plan_form',
         'youngo_subscription_plan_view',
@@ -53,7 +56,7 @@
             </a>
         </li>
 
-        <?php if ($can_manage_youngo_subscriptions || $can_grant_youngo_manual_access || $can_manage_youngo_roles || $can_view_youngo_payment_settings): ?>
+        <?php if ($can_manage_youngo_homepage || $can_manage_youngo_subscriptions || $can_grant_youngo_manual_access || $can_manage_youngo_roles || $can_view_youngo_payment_settings): ?>
         <li class="side-nav-item<?php if ($youngo_menu_active) {
         echo 'active';
 }
@@ -64,6 +67,14 @@
                 <span class="menu-arrow"></span>
             </a>
             <ul class="side-nav-second-level" aria-expanded="false">
+                <?php if ($can_manage_youngo_homepage): ?>
+                <li class="<?php if ($page_name == 'youngo_homepage') {
+        echo 'active';
+}
+?>">
+                    <a href="<?php echo site_url('admin/youngo_homepage'); ?>">YounGo Home Page</a>
+                </li>
+                <?php endif; ?>
                 <?php if ($can_manage_youngo_subscriptions): ?>
                 <li class="<?php if ($page_name == 'youngo_subscription_plans' || $page_name == 'youngo_subscription_plan_form' || $page_name == 'youngo_subscription_plan_view') {
         echo 'active';
@@ -838,7 +849,7 @@
 
         <?php if (has_permission('settings')): ?>
         <li
-            class="side-nav-item<?php if ($page_name == 'system_settings' || $page_name == 'frontend_settings' || $page_name == 'youngo_homepage' || $page_name == 'payment_settings' || $page_name == 'manage_language' || $page_name == 'about' || $page_name == 'themes' || $page_name == 'custom_page' || $page_name == 'data_center' || $page_name == 'notification_settings' || $page_name == 'jitsi_live_class_settings' || $page_name == 'seo_settings' || $page_name == 'sitemap_settings'): ?> active<?php endif; ?>">
+            class="side-nav-item<?php if ($page_name == 'system_settings' || $page_name == 'frontend_settings' || $page_name == 'payment_settings' || $page_name == 'manage_language' || $page_name == 'about' || $page_name == 'themes' || $page_name == 'custom_page' || $page_name == 'data_center' || $page_name == 'notification_settings' || $page_name == 'jitsi_live_class_settings' || $page_name == 'seo_settings' || $page_name == 'sitemap_settings'): ?> active<?php endif; ?>">
             <a href="javascript: void(0);" class="side-nav-link">
                 <i class="dripicons-toggles"></i>
                 <span> <?php echo get_phrase('settings'); ?> </span>
@@ -857,13 +868,6 @@
                            }
                            ?>">
                     <a href="<?php echo site_url('admin/frontend_settings'); ?>"><?php echo get_phrase('website_settings'); ?></a>
-                </li>
-
-                <li class="<?php if ($page_name == 'youngo_homepage') {
-                                   echo 'active';
-                           }
-                           ?>">
-                    <a href="<?php echo site_url('admin/youngo_homepage'); ?>"><?php echo get_phrase('YounGo Homepage'); ?></a>
                 </li>
 
                 <!-- <li class="<?php if ($page_name == 'academy_cloud') {

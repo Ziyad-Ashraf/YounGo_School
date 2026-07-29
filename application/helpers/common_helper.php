@@ -416,6 +416,50 @@ if (!function_exists('get_frontend_settings')) {
     }
 }
 
+if (!function_exists('youngo_contact_info')) {
+    function youngo_contact_info()
+    {
+        $contact_info = json_decode((string) get_frontend_settings('contact_info'), true);
+        $defaults = array(
+            'email' => '',
+            'phone' => '',
+            'whatsapp_number' => '',
+            'address' => '',
+            'office_hours' => '',
+        );
+
+        return is_array($contact_info) ? array_merge($defaults, $contact_info) : $defaults;
+    }
+}
+
+if (!function_exists('youngo_whatsapp_visible_number')) {
+    function youngo_whatsapp_visible_number()
+    {
+        $contact_info = youngo_contact_info();
+        return trim((string) $contact_info['whatsapp_number']);
+    }
+}
+
+if (!function_exists('youngo_normalize_whatsapp_number')) {
+    function youngo_normalize_whatsapp_number($number)
+    {
+        return preg_replace('/[^0-9]+/', '', (string) $number);
+    }
+}
+
+if (!function_exists('youngo_whatsapp_url')) {
+    function youngo_whatsapp_url($number = '')
+    {
+        $number = trim((string) $number);
+        if ($number === '') {
+            $number = youngo_whatsapp_visible_number();
+        }
+
+        $normalized = youngo_normalize_whatsapp_number($number);
+        return $normalized !== '' ? 'https://wa.me/' . $normalized : '';
+    }
+}
+
 if (!function_exists('get_current_banner')) {
     function get_current_banner($key = '')
     {

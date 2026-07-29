@@ -55,6 +55,42 @@ class Login extends CI_Controller
         return site_phrase($phrase_key);
     }
 
+    private function youngo_normalize_phone_number($phone_number)
+    {
+        return preg_replace('/[^0-9]+/', '', trim((string) $phone_number));
+    }
+
+    private function youngo_find_active_user_by_phone($phone_number)
+    {
+        $normalized_phone = $this->youngo_normalize_phone_number($phone_number);
+        if ($normalized_phone === '') {
+            return array('status' => 'not_found');
+        }
+
+        $matches = array();
+        $users = $this->db
+            ->select('id, phone')
+            ->where('status', 1)
+            ->get('users')
+            ->result_array();
+
+        foreach ($users as $user) {
+            if ($this->youngo_normalize_phone_number(isset($user['phone']) ? $user['phone'] : '') === $normalized_phone) {
+                $matches[] = (int) $user['id'];
+            }
+        }
+
+        if (count($matches) > 1) {
+            return array('status' => 'duplicate');
+        }
+
+        if (count($matches) === 1) {
+            return array('status' => 'found', 'user_id' => $matches[0]);
+        }
+
+        return array('status' => 'not_found');
+    }
+
     public function index()
     {
         $this->youngo_store_public_auth_language();
@@ -87,12 +123,31 @@ class Login extends CI_Controller
             redirect(site_url('login'), 'refresh');
         }
 
-        $email = $this->input->post('email');
+        $email = trim((string) $this->input->post('email'));
         $password = $this->input->post('password');
-        $credential = array('email' => $email, 'password' => sha1($password), 'status' => 1);
 
-        // Checking login credential for admin
-        $query = $this->db->get_where('users', $credential);
+        if ($email === '' || trim((string) $password) === '') {
+            $this->session->set_flashdata('error_message', get_phrase('invalid_login_credentials'));
+            redirect(site_url('login'), 'refresh');
+        }
+
+        if (strpos($email, '@') !== false) {
+            $credential = array('email' => $email, 'password' => sha1($password), 'status' => 1);
+            $query = $this->db->get_where('users', $credential);
+        } else {
+            $phone_lookup = $this->youngo_find_active_user_by_phone($email);
+            if ($phone_lookup['status'] === 'duplicate') {
+                $this->session->set_flashdata('error_message', get_phrase('multiple_accounts_use_this_phone_number') . '. ' . get_phrase('please_log_in_with_your_email_address'));
+                redirect(site_url('login'), 'refresh');
+            }
+
+            if ($phone_lookup['status'] === 'found') {
+                $credential = array('id' => $phone_lookup['user_id'], 'password' => sha1($password), 'status' => 1);
+                $query = $this->db->get_where('users', $credential);
+            } else {
+                $query = $this->db->where('id', 0)->get('users');
+            }
+        }
 
         if ($query->num_rows() > 0) {
             $row = $query->row();
@@ -164,10 +219,11 @@ class Login extends CI_Controller
         $data['first_name'] = html_escape($this->input->post('first_name'));
         $data['last_name']  = html_escape($this->input->post('last_name'));
         $data['email']  = html_escape($this->input->post('email'));
+        $data['phone']  = html_escape(trim((string) $this->input->post('phone')));
         $data['password']  = sha1($this->input->post('password'));
 
-        if (empty($data['first_name']) || empty($data['last_name']) || empty($data['email']) || empty($data['password'])) {
-            $this->session->set_flashdata('error_message', site_phrase('your_sign_up_form_is_empty') . '. ' . site_phrase('fill_out_the_form with_your_valid_data'));
+        if (empty($data['first_name']) || empty($data['last_name']) || empty($data['email']) || empty($data['phone']) || empty($data['password'])) {
+            $this->session->set_flashdata('error_message', get_phrase('phone_number_is_required') . '. ' . site_phrase('fill_out_the_form with_your_valid_data'));
             redirect(site_url('sign_up'), 'refresh');
         }
 

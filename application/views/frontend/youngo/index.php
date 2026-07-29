@@ -17,6 +17,10 @@
         $youngo_body_classes[] = preg_replace('/[^A-Za-z0-9_-]+/', '-', $youngo_theme_mode);
     }
 
+    if (function_exists('youngo_whatsapp_url') && youngo_whatsapp_url() !== '') {
+        $youngo_body_classes[] = 'youngo-has-whatsapp-float';
+    }
+
     $page_name = array_key_exists('page_name', get_defined_vars()) ? $page_name : 'home';
     $page_title = isset($page_title) ? $page_title : get_settings('system_name');
     $page_file = $page_name === null ? '' : $page_name . '.php';

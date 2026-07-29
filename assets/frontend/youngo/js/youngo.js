@@ -43,7 +43,7 @@
             header.classList.toggle('is-scrolled', isPastTop);
 
             if (Math.abs(currentScrollY - lastScrollY) >= scrollDelta) {
-                if (isScrollingDown && currentScrollY > hideAfter && !header.matches(':focus-within')) {
+                if (isScrollingDown && currentScrollY > hideAfter && !header.matches(':focus-within') && !header.classList.contains('is-menu-open')) {
                     header.classList.add('is-hidden');
                 } else {
                     header.classList.remove('is-hidden');

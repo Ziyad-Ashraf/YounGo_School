@@ -263,6 +263,97 @@ body.show {
   overflow: hidden;
 }
 
+@media (max-width: 767.98px) {
+  .navbar-custom {
+    margin: -5px 0 0;
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+
+  .navbar-custom .container-fluid {
+    display: flex;
+    align-items: center;
+    min-width: 0;
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+
+  .topnav-navbar .topnav-logo {
+    flex: 0 0 auto;
+    margin-right: 8px;
+  }
+
+  .navbar-custom .button-menu-mobile {
+    flex: 0 0 44px;
+    width: 44px;
+    min-width: 44px;
+  }
+
+  .navbar-custom .visit_website {
+    display: none;
+  }
+
+  .navbar-custom .topbar-right-menu {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex: 1 1 auto;
+    min-width: 0;
+    margin-left: auto;
+  }
+
+  .navbar-custom .topbar-right-menu > li {
+    flex: 0 0 auto;
+  }
+
+  .navbar-custom .dropdown-menu:not(.show) {
+    display: none;
+  }
+
+  .navbar-custom .topbar-right-menu .nav-link {
+    margin: 0 3px;
+    min-width: 30px;
+  }
+
+  .navbar-custom .nav-user {
+    width: 44px;
+    min-width: 44px;
+    padding: 17px 6px !important;
+  }
+
+  .navbar-custom .nav-user .account-user-avatar {
+    position: static;
+    display: inline-flex;
+  }
+}
+
+@media (max-width: 390px) {
+  .navbar-custom {
+    padding-left: 6px;
+    padding-right: 6px;
+  }
+
+  .navbar-custom .container-fluid {
+    padding-left: 6px;
+    padding-right: 6px;
+  }
+
+  .topnav-navbar .topnav-logo {
+    margin-right: 4px;
+  }
+
+  .topnav-navbar .topnav-logo img {
+    width: 42px;
+    max-width: 42px;
+    object-fit: contain;
+  }
+
+  .navbar-custom .topbar-right-menu .nav-link {
+    margin: 0;
+    min-width: 28px;
+  }
+}
+
 .loader-modal{
   position: fixed;
   width: 100%;

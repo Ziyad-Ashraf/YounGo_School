@@ -6067,6 +6067,7 @@ class Crud_model extends CI_Model
     {
         $data['email'] = $this->input->post('email');
         $data['phone'] = $this->input->post('phone');
+        $data['whatsapp_number'] = $this->input->post('whatsapp_number');
         $data['address'] = $this->input->post('address');
         $data['office_hours'] = $this->input->post('office_hours');
         $contact_information = json_encode($data);

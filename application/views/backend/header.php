@@ -59,8 +59,15 @@
 
                         <div class="row row-paddingless" style="padding-left: 15px; padding-right: 15px;">
                             <!--begin:Item-->
+                            <div class="col-6 p-0 border-bottom border-right">
+                                <a href="<?php echo site_url('home'); ?>" target="" class="d-block text-center py-3 bg-hover-light">
+                                    <i class="mdi mdi-web text-20"></i>
+                                    <span class="w-100 d-block text-muted"><?php echo get_phrase('visit_website'); ?></span>
+                                </a>
+                            </div>
+
                             <?php if ($this->session->userdata('is_instructor') == 1 && !$this->session->userdata('admin_login')  || has_permission('course')) : ?>
-                                <div class="col-6 p-0 border-bottom border-right">
+                                <div class="col-6 p-0 border-bottom">
                                     <a href="#" class="d-block text-center py-3 bg-hover-light" onclick="showAjaxModal('<?= site_url($logged_in_user_role . '/course_form/add_course_shortcut'); ?>', '<?= get_phrase('create_course'); ?>')">
                                         <i class="dripicons-archive text-20"></i>
                                         <span class="w-100 d-block text-muted"><?= get_phrase('add_course'); ?></span>
