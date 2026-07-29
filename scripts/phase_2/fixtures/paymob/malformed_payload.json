@@ -1,7 +1,0 @@
-{
-  "fixture": "malformed",
-  "currency": "EGP",
-  "order": {
-    "merchant_order_id": "YGO-RUNTIME-ORDER-REFERENCE"
-  }
-}
